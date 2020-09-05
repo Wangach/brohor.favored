@@ -1,0 +1,1 @@
+CREATE TABLE `newtings`.`admin` ( `id` INT NOT NULL , `name` VARCHAR(1000) NOT NULL , `password` VARCHAR(1000) NOT NULL , `email` VARCHAR(1000) NOT NULL , `phone` INT(15) NOT NULL , `loggedstatus` INT NOT NULL DEFAULT '0' , `lastlogin` DATETIME on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ) ENGINE = InnoDB;
