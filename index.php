@@ -25,6 +25,7 @@
 			</div><!--/.beautify/-->
 			<div class="collection">
 				<div class="form-top">
+					<i class="fas fa-user"></i>
 					<h3>Admin Login</h3>
 				</div>
 				<form action="#" id="log-form">

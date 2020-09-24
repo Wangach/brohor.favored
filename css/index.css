@@ -1,7 +1,7 @@
 /*Importing google fonts from a local file*/
 @font-face {
 	font-family: Grandstander;
-	src: url(../assets/gfonts/Grandstander-VariableFont_wght.tff);
+	src: url(../assets/gfonts/Grandstander-VariableFont_wght.ttf);
 }
 * {
 	margin: 0;
@@ -13,8 +13,6 @@ body {
 }
 header {
 	height: 95vh;
-	border: 1px solid #ccc;
-	border-radius: 5px;
 
 }
 div#org {
@@ -36,6 +34,10 @@ div#org {
 	background-position: center;
 	height: 80vh;
 	position: relative;
+}
+.heading {
+	font-family: Grandstander;
+	text-transform: uppercase;
 }
 .text-box {
 	position: absolute;
