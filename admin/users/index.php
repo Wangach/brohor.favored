@@ -3,14 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Broad Horizons Ent | Welcome Admin </title>
+	<title>Broad Horizons Ent | Admin Users Page </title>
 	<!--/Precoded CSS files-->
-	<link rel="stylesheet" href="../css/bootstrap.css">
-	<link rel="stylesheet" href="../css/all.css">
-	<link rel="stylesheet" href="../css/solid.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/all.css">
+	<link rel="stylesheet" href="../../css/solid.css">
 	<!--own css files-->
-	<link rel="stylesheet" href="../css/admin.css">
-	<link rel="stylesheet" href="../css/media.css">
+	<link rel="stylesheet" href="../../css/admin.css">
+	<link rel="stylesheet" href="../../css/media.css">
 </head>
 <body>
 	
@@ -99,33 +99,16 @@
 	  </div>
 	</nav>	
 	
-	<section id="first">
+	<section id="usersf">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-9 ml-auto">
-					<div class="row pt-5 mt-3 mb-5">
-						<div class="col-sm-4 p-2">
+					<div class="row mt-3 mb-5 pt-5">
+						<div class="col-sm-6 p-2">
 							<div class="card">
 								<div class="card-body">
 									<div class="d-flex justify-content-between">
-										<i class="fas fa-futbol fa-3x text-danger"></i>
-										<div class="text-right text-secondary">
-											<h5>Games Played</h5>
-											<h3>1,000</h3>
-										</div>
-									</div>
-								</div><!--/.card-body/-->
-								<div class="card-footer">
-									<i class="fas fa-sync mr-3"></i>
-									<span>Update</span>
-								</div><!--/.card-footer/-->
-							</div><!--/card/-->
-						</div><!--/col-sm-6/-->
-						<div class="col-sm-4 p-2">
-							<div class="card">
-								<div class="card-body">
-									<div class="d-flex justify-content-between">
-										<i class="fas fa-users fa-3x text-info"></i>
+										<i class="fas fa-user-check fa-3x text-warning"></i>
 										<div class="text-right text-secondary">
 											<h5>Registered Users</h5>
 											<h3>100</h3>
@@ -138,14 +121,15 @@
 								</div><!--/.card-footer/-->
 							</div><!--/card/-->
 						</div><!--/col-sm-6/-->
-						<div class="col-sm-4 p-2">
+
+						<div class="col-sm-6 p-1">
 							<div class="card">
 								<div class="card-body">
 									<div class="d-flex justify-content-between">
-										<i class="fas fa-film fa-3x text-warning"></i>
+										<i class="fas fa-signal fa-3x text-success"></i>
 										<div class="text-right text-secondary">
-											<h5>Available Movies</h5>
-											<h3>500</h3>
+											<h5>Users Online</h5>
+											<h3>10</h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->
@@ -155,101 +139,81 @@
 								</div><!--/.card-footer/-->
 							</div><!--/card/-->
 						</div><!--/col-sm-6/-->
-					</div><!--/nested row/-->
-				</div><!--column/-->
+					</div>
+				</div><!--/.end of column/-->
 			</div><!--/.row/-->
-		</div><!--/#container-fluid/-->
-	</section><!--/#first/-->
-
-	<section id="sec">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-9 ml-auto">
-					<div class="row">
-						<div class="col-md-9 mb-2">
-							<h3 class="text-center text-muted">Recent Games</h3>
-						</div>
-						<div class="col-md-6">
-							<table class="table table-dark">
-								<thead>
-								<tr>
-								  <th scope="col">#</th>
-								  <th scope="col">First</th>
-								  <th scope="col">Last</th>
-								  <th scope="col">Handle</th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr>
-								  <th scope="row">1</th>
-								  <td>Mark</td>
-								  <td>Otto</td>
-								  <td>@mdo</td>
-								</tr>
-								<tr>
-								  <th scope="row">2</th>
-								  <td>Jacob</td>
-								  <td>Thornton</td>
-								  <td>@fat</td>
-								</tr>
-								<tr>
-								  <th scope="row">3</th>
-								  <td>Larry</td>
-								  <td>the Bird</td>
-								  <td>@twitter</td>
-								</tr>
-								</tbody>
-							</table>
-						</div><!--/col-md-6/-->
-
-						<div class="col-md-6">
-							<table class="table table-dark">
-								<thead>
-								<tr>
-								  <th scope="col">#</th>
-								  <th scope="col">First</th>
-								  <th scope="col">Last</th>
-								  <th scope="col">Handle</th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr>
-								  <th scope="row">1</th>
-								  <td>Mark</td>
-								  <td>Otto</td>
-								  <td>@mdo</td>
-								</tr>
-								<tr>
-								  <th scope="row">2</th>
-								  <td>Jacob</td>
-								  <td>Thornton</td>
-								  <td>@fat</td>
-								</tr>
-								<tr>
-								  <th scope="row">3</th>
-								  <td>Larry</td>
-								  <td>the Bird</td>
-								  <td>@twitter</td>
-								</tr>
-								</tbody>
-							</table>
-						</div><!--/col-md-6/-->
-					</div><!--/.nested row/-->
-				</div>
-			</div>
 		</div><!--/.container-fluid/-->
-	</section><!--sec/-->
+	</section>
 
-	<section id="third">
+	<section id="userssec">
+		<div class="contaiber-fluid">
+			<div class="row">
+				<div class="col-lg-9 ml-auto">
+					<div class="row style-bg">
+						<div class="col-md-6">
+							<div class="my-content">
+								<p>It's In The Game!</p>
+							</div>
+						</div><!--/.col-md-12/-->
+						<div class="col-md-6">
+							<div class="my-content">
+								<button class="btn btn-info" data-toggle="modal" data-target="#regUserModal">Add User <strong><i class="fas fa-user-plus"></i></strong></button>
+							</div>
+
+							<!--Registration Modal-->
+							<div class="modal fade" id="regUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title text-dark">Register User</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div><!--/.modal-header-->
+										<div class="modal-body">
+											<form action="#" id="registration-form">
+												<div class="form-group">
+													<label for="name">Customer's Name:</label>
+													<input type="text" class="form-control" placeholder="Customer Full Names...">
+												</div><!--/.form-group/-->
+												<div class="form-group">
+													<label for="phone">Phone No.:</label>
+													<input type="number" class="form-control" placeholder="+254712 000 000...">
+												</div><!--/.form-group/-->
+												<div class="form-group">
+													<label for="team">Favorite Team:</label>
+													<input type="text" class="form-control" placeholder="E.g. Arsenal...">
+												</div><!--/.form-group/-->
+												<div class="form-group">
+													<label for="name">Customer Alias:</label>
+													<input type="text" class="form-control" placeholder="Nick Name...">
+												</div><!--/.form-group/-->
+
+												<button type="submit" class="btn btn-success">Register</button>
+											</form>
+										</div><!--modal-body-->
+									</div><!--Modal content-->
+								</div><!--modal-dialog-->
+							</div><!--/#regUserModal/-->
+
+
+						</div><!--/.col-md-12/-->
+					</div>
+				</div><!--/.col-lg-9-->
+			</div><!--/.row/-->
+		</div><!--/.container-fluid/-->
+	</section><!--usersec-->
+
+	<section id="userthrd">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-9 ml-auto">
 					<div class="row">
-						<div class="col-md-9 mb-2">
-							<h3 class="text-center text-info text-muted">Recent Movies</h3>
+						<div class="col-md-9 mb-2 mt-4">
+							<h3 class="text-center text-muted">Recently Added Users</h3>
 						</div>
 						<div class="col-md-12">
-							<table class="table table-striped">
+							<table class="table table-dark">
 								<thead>
 								<tr>
 								  <th scope="col">#</th>
@@ -284,8 +248,7 @@
 				</div>
 			</div>
 		</div><!--/.container-fluid/-->
-	</section><!--third/-->
-
+	</section><!--sec/-->
 	<!--Footer-->
 	<div class="container-fluid">
 		<div class="row p-2 mt-2">
@@ -299,11 +262,11 @@
 		</div><!--row/-->
 	</div><!--/.container-fluid-->
 	<!--/Javascript files/-->
-	<script src="../js/jquery.js"></script>
-	<script src="../js/bootstrap.js" type="text/javascript"></script>
-	<script src="../js/all.js" type="text/javascript"></script>
-	<script src="../js/fontawesome.js" type="text/javascript"></script>
-	<script src="../js/regular.js" type="text/javascript"></script>
-	<script src="../js/index.js" type="text/javascript"></script>
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.js" type="text/javascript"></script>
+	<script src="../../js/all.js" type="text/javascript"></script>
+	<script src="../../js/fontawesome.js" type="text/javascript"></script>
+	<script src="../../js/regular.js" type="text/javascript"></script>
+	<script src="../../js/index.js" type="text/javascript"></script>
 </body>
 </html>

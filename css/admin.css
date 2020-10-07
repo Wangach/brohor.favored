@@ -19,6 +19,26 @@ body {
 	background-color: #444;
 	border-radius: 5px;
 }
+.my-footer {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
+	url(../assets/bgs/ft3.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #fff;
+	border-radius: 5px;
+}
+.style-bg {
+	background: rgba(245, 2, 18, 0.75);
+	color: #fff;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding: 20px;
+	border-radius: 5px;
+}
+#registration-form {
+	text-align: center;
+}
 
 @media (max-width: 768px){
 	.sidebar {
