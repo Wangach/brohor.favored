@@ -36,6 +36,11 @@ body {
 	padding: 20px;
 	border-radius: 5px;
 }
+/*LOOSER FORM ERROR CLASSES*/
+.error-hp{
+	color: #FF0000 !important;
+	display: block;
+}
 #registration-form {
 	text-align: center;
 }

@@ -234,33 +234,34 @@
 											</button>
 										</div><!--/.modal-header-->
 										<div class="modal-body">
-											<form action="#" id="looser-form">
+											<form action="scripts/looser.php" id="looser-form">
 												<div class="form-group">
 													<label for="homp">Home Player:</label>
-													<input type="text" class="form-control" placeholder="Enter Home Player Name...">
+													<input type="text" class="form-control" placeholder="Enter Home Player Name..." id="hp" name="">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="awap">Away Player:</label>
-													<input type="text" class="form-control" placeholder="Enter Away Player Name...">
+													<input type="text" class="form-control" placeholder="Enter Away Player Name..." id="ap" name="">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="homet">Home Team:</label>
-													<input type="text" class="form-control" placeholder="Enter Home Team...">
+													<input type="text" class="form-control" placeholder="Enter Home Team..." id="ht" name="">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="awat">Away Team:</label>
-													<input type="text" class="form-control" placeholder="Enter Away Team...">
+													<input type="text" class="form-control" placeholder="Enter Away Team..." id="at" name="">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="homsc">Home Score:</label>
-													<input type="number" class="form-control" placeholder="Home Player Score...">
+													<input type="number" class="form-control" placeholder="Home Player Score..." id="hsc" name="">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="awasc">Away Score:</label>
-													<input type="number" class="form-control" placeholder="Away Player Score...">
+													<input type="number" class="form-control" placeholder="Away Player Score..." id="asc" name="">
 												</div><!--/.form-group/-->
 												
-												<button type="submit" class="btn btn-warning">Record Match</button>
+												<button type="button" class="check btn btn-primary">Check Data</button>
+												<button type="submit" class="btn btn-warning" disabled>Record Match</button>
 											</form>
 										</div><!--modal-body-->
 									</div><!--Modal content-->
