@@ -1,0 +1,1 @@
+CREATE TABLE `newtings`.`customers` ( `username` VARCHAR(1000) NOT NULL , `phone` INT NOT NULL , `favteam` VARCHAR(1000) NOT NULL , `alias` VARCHAR(1000) NOT NULL , `userid` INT NOT NULL , `loggedstatus` INT NOT NULL DEFAULT '0' , `regdate` DATETIME on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ) ENGINE = InnoDB;

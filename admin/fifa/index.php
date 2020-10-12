@@ -211,7 +211,7 @@
 													<input type="number" class="form-control" placeholder="Away Player Score...">
 												</div><!--/.form-group/-->
 
-												<button type="submit" class="btn btn-success">Register</button>
+												<button type="submit" class="btn btn-primary">Record Match</button>
 											</form>
 										</div><!--modal-body-->
 									</div><!--Modal content-->
@@ -228,7 +228,7 @@
 								<div class="modal-dialog modal-dialog-centered" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
-											<h5 class="modal-title text-dark">Register User</h5>
+											<h5 class="modal-title text-dark">Looser Pay</h5>
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
@@ -260,7 +260,7 @@
 													<input type="number" class="form-control" placeholder="Away Player Score...">
 												</div><!--/.form-group/-->
 												
-												<button type="submit" class="btn btn-success">Register</button>
+												<button type="submit" class="btn btn-warning">Record Match</button>
 											</form>
 										</div><!--modal-body-->
 									</div><!--Modal content-->
