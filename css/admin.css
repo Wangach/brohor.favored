@@ -44,6 +44,12 @@ body {
 #registration-form {
 	text-align: center;
 }
+#looser-form {
+	text-align: center;
+}
+.form-group {
+	color: #14E1C7;
+}
 
 @media (max-width: 768px){
 	.sidebar {

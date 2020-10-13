@@ -234,34 +234,40 @@
 											</button>
 										</div><!--/.modal-header-->
 										<div class="modal-body">
-											<form action="scripts/looser.php" id="looser-form">
+											<form action="scripts/looser.php" id="looser-form" method="POST">
 												<div class="form-group">
 													<label for="homp">Home Player:</label>
-													<input type="text" class="form-control" placeholder="Enter Home Player Name..." id="hp" name="">
+													<input type="text" class="form-control" placeholder="Enter Home Player Name..." id="hp" name="hp" required>
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="awap">Away Player:</label>
-													<input type="text" class="form-control" placeholder="Enter Away Player Name..." id="ap" name="">
+													<input type="text" class="form-control" placeholder="Enter Away Player Name..." id="ap" name="ap" required>
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="homet">Home Team:</label>
-													<input type="text" class="form-control" placeholder="Enter Home Team..." id="ht" name="">
+													<input type="text" class="form-control" placeholder="Enter Home Team..." id="ht" name="ht" required>
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="awat">Away Team:</label>
-													<input type="text" class="form-control" placeholder="Enter Away Team..." id="at" name="">
+													<input type="text" class="form-control" placeholder="Enter Away Team..." id="at" name="at" required>
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="homsc">Home Score:</label>
-													<input type="number" class="form-control" placeholder="Home Player Score..." id="hsc" name="">
+													<input type="number" class="form-control" placeholder="Home Player Score..." id="hsc" name="hsc" required>
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="awasc">Away Score:</label>
-													<input type="number" class="form-control" placeholder="Away Player Score..." id="asc" name="">
+													<input type="number" class="form-control" placeholder="Away Player Score..." id="asc" name="asc" required>
+												</div><!--/.form-group/-->
+												<div class="form-group">
+													<label for="Extra Time">Added Extra Time:</label>
+													<p>Full Game</p>
+													<input type="radio" id="aet" name="charge" value="ft">
+													<p>Half Game</p>
+													<input type="radio" id="aet" name="charge" value="ht">
 												</div><!--/.form-group/-->
 												
-												<button type="button" class="check btn btn-primary">Check Data</button>
-												<button type="submit" class="btn btn-warning" disabled>Record Match</button>
+												<button type="submit" class="btn btn-warning" name="recordm">Record Match</button>
 											</form>
 										</div><!--modal-body-->
 									</div><!--Modal content-->
