@@ -58,7 +58,7 @@ if (isset($_POST['recordm'])) {
 		}
 
 		//Insert data into database
-		$ins = "INSERT INTO lmatches(Hplayer, Aplayer, Hteam, Ateam, Hscore, Ascore, winner, looser, tomatch, tarehe, wakati, debt, matchid) VALUES()";
+		$ins = "INSERT INTO lmatches(Hplayer, Aplayer, Hteam, Ateam, Hscore, Ascore, winner, looser, tomatch, tarehe, wakati, debt, matchid) VALUES('$fPerson', '$sPerson', '$fTeam', '$sTeam', '$fScore', '$sScore', '$champion', '$rMate', '$gType', '$dToday', '$tNow', '$amountToPay', '$holder')";
 		$psh = mysqli_query($initialize, $ins);
 
 		//check whether submission is successful
