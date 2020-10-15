@@ -29,14 +29,14 @@
 	    			<!--Navigation items-->
 	    			<ul class="navbar-nav flex-column">
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="../index.php" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-home text-light mr-3 fa-lg"></i>
 	    						Home
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="users/" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="../users/" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-users text-light mr-3 fa-lg"></i>
 	    						Users
 	    					</a>

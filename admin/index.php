@@ -57,7 +57,7 @@
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="payments/" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-money-check-alt text-light mr-3 fa-lg"></i>
 	    						Financials
 	    					</a>
