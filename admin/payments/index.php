@@ -179,15 +179,15 @@
 						<div class="col-md-9 mb-2 mt-4">
 							<h3 class="text-center text-white">Make Payments</h3>
 						</div>
-						<div class="col-sm-6 p-2">
-							<h4>New Customer</h4>
+						<div class="col-sm-12 p-2">
 							<div class="form-top-new">
+								<h4>Transact</h4>
 								<h5>Pay Here</h5>
 							</div>
-							<form action="payscr/paylooser.php" class="new-cs-form" method="POST">
+							<form action="payscr/transact.php" class="new-cs-form" method="POST">
 								<div class="form-group">
 									<label for="ptype">Type</label>
-									<select name="" id="" class="form-control">
+									<select name="aina" id="" class="form-control">
 										<option value=""></option>
 										<option value="cr">Credit</option>
 										<option value="db">Debit</option>
@@ -195,22 +195,20 @@
 								</div>
 								<div class="form-group">
 									<label for="cs-name">Name</label>
-									<input type="text" class="form-control" placeholder="Enter Name Here...">
+									<input type="text" class="form-control" placeholder="Enter Name Here..." name="cusjina" id="">
 								</div>
 								<div class="form-group">
 									<label for="amt">Amount</label>
-									<input type="number" class="form-control" placeholder="Enter Amount...">
+									<input type="number" class="form-control" placeholder="Enter Amount..." name="kiwango" id="">
 								</div>
 								<div class="form-group">
 									<label for="descr">Description</label>
-									<input type="text" class="form-control" placeholder="Add Description...">
+									<input type="text" class="form-control" placeholder="Add Description..." name="maelezo" id="">
 								</div>
-								<button type="submit" class="btn btn-success">Make Payment</button>
+								<button name="trans" type="submit" class="btn btn-success">Make Payment</button>
 							</form>
-						</div><!--/col-sm-6/-->
-						<div class="col-sm-6 p-2">
-							<h4>Existing Customer</h4>
-						</div><!--/col-sm-6/-->
+						</div><!--/col-sm-12/-->
+						
 
 					</div><!--end of row-->
 				</div><!--/.end of column/-->

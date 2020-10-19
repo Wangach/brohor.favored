@@ -34,27 +34,19 @@ if (isset($_POST['recordm'])) {
 			#the homeplayer has won
 			$champion = $fPerson;
 			$rMate = $sPerson;
-
-			//return $champion;
-			//return $rMate;
 		}elseif ($sScore > $fScore) {
 			#the away player has won
 			$champion = $sPerson;
 			$rMate = $fPerson;
-
-			//return $champion;
-			//return $rMate;
 		}
 
 		//Set The Payments
 		if ($gType == 'ft') {
 			$amountToPay = 25;
 
-			//return $amountToPay;
 		}elseif ($gType == 'ht') {
 			$amountToPay = 15;
 
-			//return $amountToPay;
 		}
 
 		//Insert data into database
@@ -69,20 +61,20 @@ if (isset($_POST['recordm'])) {
 
 			echo $output;
 		}else{
-			/*$output = "<script>";
+			$output = "<script>";
 			$output .= "alert('There Has Been An Error in Handling your request!!')";
 			$output .= "</script>";
 
-			echo $output;*/
-			echo "There Has Been An Error ".mysqli_error($initialize);
+			echo $output;
+			//echo "There Has Been An Error ".mysqli_error($initialize);
 		}
 
 	}else {
-		$output = "<script>";
-		$output .= "alert('Ensure All The Form fields are filled dproperly!')";
-		$output .= "</script>";
+		/*$output = "<script>";
+		$output .= "alert('Ensure All The Form fields are filled Properly!')";
+		$output .= "</script>";*/
 
-		echo $output;
+		echo "Empty field";
 	}
 }
  ?>

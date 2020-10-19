@@ -44,6 +44,26 @@ body {
 	background-position: center;
 	
 }
+.form-top-new{
+	padding: 20px;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.75);
+	color: #ccc;
+	width: 60%;
+	margin: 10px auto 0;
+	border-radius: 5px;
+	border: 1px solid #000;
+}
+.new-cs-form {
+	padding: 20px;
+	text-align: center;
+	width: 60%;
+	color: #000;
+	margin: 0px auto;
+	background: rgba(236, 229, 229, 0.75);
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
 /*LOOSER FORM ERROR CLASSES*/
 .error-hp{
 	color: #FF0000 !important;
