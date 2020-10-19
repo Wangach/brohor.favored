@@ -103,11 +103,168 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-9 ml-auto">
-					
-				</div>
+					<div class="row mt-3 mb-5 pt-5">
+						<div class="col-sm-12 p-2">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex justify-content-between">
+										<i class="fas fa-money-bill-wave fa-3x text-success"></i>
+										<div class="text-right text-secondary">
+											<h5>Transactions Made</h5>
+											<h3>100</h3>
+										</div>
+									</div>
+								</div><!--/.card-body/-->
+								<div class="card-footer">
+									<i class="fas fa-sync mr-3"></i>
+									<span>Update</span>
+								</div><!--/.card-footer/-->
+							</div><!--/card/-->
+						</div><!--/col-sm-6/-->
+					</div><!--end of row-->
+				</div><!--/.end of column/-->
 			</div>
 		</div><!--/.container-fluid/-->
 	</section>
+
+	<section id="search-tranx">
+		<div class="contaiber-fluid">
+			<div class="row">
+				<div class="col-lg-9 ml-auto">
+					<div class="row style-bg">
+						<div class="col-md-6">
+							<div class="my-content">
+								<p>Hello Admin</p>
+							</div>
+						</div><!--/.col-md-12/-->
+						<div class="col-md-6">
+							<div class="my-content">
+								<button class="btn btn-info" data-toggle="modal" data-target="#searchUserModal">Search <strong><i class="fas fa-search"></i></strong></button>
+							</div>
+
+							<!--Registration Modal-->
+							<div class="modal fade" id="searchUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title text-dark">Search Transactions</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div><!--/.modal-header-->
+										<div class="modal-body">
+											<form action="#" id="search-form">
+												<div class="form-group">
+													<label for="name">Customer's Name:</label>
+													<input type="text" class="form-control" placeholder="Customer Name...">
+												</div><!--/.form-group/-->
+												<button type="submit" class="btn btn-success">Search</button>
+											</form>
+										</div><!--modal-body-->
+									</div><!--Modal content-->
+								</div><!--modal-dialog-->
+							</div><!--/#searchUserModal/-->
+						</div><!--/.col-md-12/-->
+					</div>
+				</div><!--/.col-lg-9-->
+			</div><!--/.row/-->
+		</div><!--/.container-fluid/-->
+	</section><!--search-tranx-->
+
+	<section id="transact">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-9 ml-auto mt-5 purple-bg">
+					<div class="row mt-3 mb-5 pt-5">
+						<div class="col-md-9 mb-2 mt-4">
+							<h3 class="text-center text-white">Make Payments</h3>
+						</div>
+						<div class="col-sm-6 p-2">
+							<h4>New Customer</h4>
+							<div class="form-top-new">
+								<h5>Pay Here</h5>
+							</div>
+							<form action="payscr/paylooser.php" class="new-cs-form" method="POST">
+								<div class="form-group">
+									<label for="ptype">Type</label>
+									<select name="" id="" class="form-control">
+										<option value=""></option>
+										<option value="cr">Credit</option>
+										<option value="db">Debit</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="cs-name">Name</label>
+									<input type="text" class="form-control" placeholder="Enter Name Here...">
+								</div>
+								<div class="form-group">
+									<label for="amt">Amount</label>
+									<input type="number" class="form-control" placeholder="Enter Amount...">
+								</div>
+								<div class="form-group">
+									<label for="descr">Description</label>
+									<input type="text" class="form-control" placeholder="Add Description...">
+								</div>
+								<button type="submit" class="btn btn-success">Make Payment</button>
+							</form>
+						</div><!--/col-sm-6/-->
+						<div class="col-sm-6 p-2">
+							<h4>Existing Customer</h4>
+						</div><!--/col-sm-6/-->
+
+					</div><!--end of row-->
+				</div><!--/.end of column/-->
+			</div>
+		</div><!--/.container-fluid/-->
+	</section>
+
+	<section id="latest-transactions">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-9 ml-auto">
+					<div class="row">
+						<div class="col-md-9 mb-2 mt-4">
+							<h3 class="text-center text-muted">Latest Transactions</h3>
+						</div>
+						<div class="col-md-12">
+							<table class="table table-dark">
+								<thead>
+								<tr>
+								  <th scope="col">#</th>
+								  <th scope="col">First</th>
+								  <th scope="col">Last</th>
+								  <th scope="col">Handle</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+								  <th scope="row">1</th>
+								  <td>Mark</td>
+								  <td>Otto</td>
+								  <td>@mdo</td>
+								</tr>
+								<tr>
+								  <th scope="row">2</th>
+								  <td>Jacob</td>
+								  <td>Thornton</td>
+								  <td>@fat</td>
+								</tr>
+								<tr>
+								  <th scope="row">3</th>
+								  <td>Larry</td>
+								  <td>the Bird</td>
+								  <td>@twitter</td>
+								</tr>
+								</tbody>
+							</table>
+						</div><!--/col-md-12/-->
+					</div><!--/.nested row/-->
+				</div>
+			</div>
+		</div><!--/.container-fluid/-->
+	</section><!--latest-transactions/-->
+
+	
 
 	<!--Footer-->
 	<div class="container-fluid">

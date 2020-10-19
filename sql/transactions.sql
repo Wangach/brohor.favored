@@ -1,0 +1,1 @@
+CREATE TABLE `systwone`.`transactions` ( `trName` VARCHAR(1000) NOT NULL , `trId` VARCHAR(1000) NOT NULL , `credit` INT NOT NULL , `debit` INT NOT NULL , `amount` INT NOT NULL , `trDte` VARCHAR(100) NOT NULL , `trTme` VARCHAR(100) NOT NULL ) ENGINE = InnoDB;

@@ -36,6 +36,14 @@ body {
 	padding: 20px;
 	border-radius: 5px;
 }
+.purple-bg {
+	background: linear-gradient(to right, rgba(10, 124, 129, 0.4), rgba(10, 124, 129, 0.9)), 
+	url(../assets/bgs/shinyb.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
 /*LOOSER FORM ERROR CLASSES*/
 .error-hp{
 	color: #FF0000 !important;
