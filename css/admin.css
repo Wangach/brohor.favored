@@ -64,6 +64,26 @@ body {
 	border: 1px solid #ccc;
 	border-radius: 5px;
 }
+
+ /*Table Fonts*/
+  table#multichange {
+	  font-size: 12px;
+	  
+  }
+  h4#shrink {
+	  font-size: 8px;
+	  text-align: center;
+	  font-weight: bold;
+  }
+  div#results {
+	 margin: 0px auto;
+	  border: 1px solid silver;
+	  z-index: 9999;
+	  overflow: scroll;
+	  height: 250px;
+	  width: 500px;
+}
+
 /*LOOSER FORM ERROR CLASSES*/
 .error-hp{
 	color: #FF0000 !important;

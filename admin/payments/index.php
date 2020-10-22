@@ -153,14 +153,15 @@
 											</button>
 										</div><!--/.modal-header-->
 										<div class="modal-body">
-											<form action="#" id="search-form">
+											<form action="#" id="search-form" method="POST">
 												<div class="form-group">
 													<label for="name">Customer's Name:</label>
-													<input type="text" class="form-control" placeholder="Customer Name...">
+													<input type="text" class="form-control" placeholder="Customer Name..." name="cusname" id="cusname">
 												</div><!--/.form-group/-->
 												<button type="submit" class="btn btn-success">Search</button>
 											</form>
 										</div><!--modal-body-->
+										<div id="results"></div>
 									</div><!--Modal content-->
 								</div><!--modal-dialog-->
 							</div><!--/#searchUserModal/-->
@@ -225,36 +226,7 @@
 							<h3 class="text-center text-muted">Latest Transactions</h3>
 						</div>
 						<div class="col-md-12">
-							<table class="table table-dark">
-								<thead>
-								<tr>
-								  <th scope="col">#</th>
-								  <th scope="col">First</th>
-								  <th scope="col">Last</th>
-								  <th scope="col">Handle</th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr>
-								  <th scope="row">1</th>
-								  <td>Mark</td>
-								  <td>Otto</td>
-								  <td>@mdo</td>
-								</tr>
-								<tr>
-								  <th scope="row">2</th>
-								  <td>Jacob</td>
-								  <td>Thornton</td>
-								  <td>@fat</td>
-								</tr>
-								<tr>
-								  <th scope="row">3</th>
-								  <td>Larry</td>
-								  <td>the Bird</td>
-								  <td>@twitter</td>
-								</tr>
-								</tbody>
-							</table>
+							<?php include 'payscr/latest_transactions.php'; ?>
 						</div><!--/col-md-12/-->
 					</div><!--/.nested row/-->
 				</div>
