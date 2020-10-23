@@ -111,7 +111,7 @@
 										<i class="fas fa-futbol fa-3x text-danger"></i>
 										<div class="text-right text-secondary">
 											<h5>Games Played</h5>
-											<h3>1,000</h3>
+											<h3><?php include '../script/matches_played.php'; ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->

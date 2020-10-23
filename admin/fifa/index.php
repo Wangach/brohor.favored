@@ -111,7 +111,7 @@
 										<i class="fas fa-play fa-3x text-primary"></i>
 										<div class="text-right text-secondary">
 											<h5>Played Games</h5>
-											<h3>100</h3>
+											<h3><?php include '../../script/matches_played.php'; ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->
@@ -291,7 +291,7 @@
 							<h3 class="text-center text-muted">Recently Looser Games</h3>
 						</div>
 						<div class="col-md-12">
-							<table class="table table-dark">
+							<!--<table class="table table-dark">
 								<thead>
 								<tr>
 								  <th scope="col">#</th>
@@ -320,7 +320,8 @@
 								  <td>@twitter</td>
 								</tr>
 								</tbody>
-							</table>
+							</table>-->
+							<?php include 'scripts/recent_looser.php'; ?>
 						</div><!--/col-md-12/-->
 					</div><!--/.nested row/-->
 				</div>

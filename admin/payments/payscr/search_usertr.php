@@ -6,11 +6,10 @@ $showData = '';
 
 //get user name
 $searchTerm = mysqli_real_escape_string($initialize, $_POST['cusname']);
-$rightNow = date("d.y");
+$rightNow = date("m/Y");
 
 //We want to check the loosers table first for played matches
-function gtLoosr(){
-	$getLooser = "SELECT SUM(debt) AS madeni FROM lmatches WHERE looser = '$searchTerm'";
+$getLooser = "SELECT SUM(debt) AS madeni FROM lmatches WHERE looser = '$searchTerm'";
 	$found = mysqli_query($initialize, $getLooser);
 
 	//If data relating to the query is found
@@ -20,11 +19,9 @@ function gtLoosr(){
 			//echo $matchesInDebt;
 		}
 	}
-}
 
 //In the transactions table identify transactions made by the user
-function gtTrans(){
-	$getTransactions = "SELECT SUM(amount) AS trns FROM transactions WHERE trName = '$searchTerm'";
+$getTransactions = "SELECT SUM(amount) AS trns FROM transactions WHERE trName = '$searchTerm'";
 	$readDat = mysqli_query($initialize, $getTransactions);
 
 	if (mysqli_num_rows($readDat) > 0) {
@@ -34,19 +31,13 @@ function gtTrans(){
 			//echo $tramsactionsMade;
 		}
 	}
-}
 //Calculate the debt or advances according to the results obtained from above
-function doTheMath(){
-	gtLoosr();
-	gtTrans();
-	//debt or advance will be given by cash transacted minus matches played
-	$dbOrAdv = $transactionsMade - $matchesInDebt;
-	echo $dbOrAdv;
-}
+$dbOrAdv = $transactionsMade - $matchesInDebt;
 
 
 //show all the transaction dets for the current month
-$trList = "SELECT * FROM transactions WHERE trName = '$searchTerm'";
+$trList = "SELECT * FROM (SELECT * FROM transactions ORDER BY trDte DESC LIMIT 4) as r ORDER BY trDte";
+//$trList = "SELECT * FROM transactions WHERE trName = '$searchTerm'";
 $trGt = mysqli_query($initialize, $trList);
 
 if (mysqli_num_rows($trGt) > 0) {
@@ -61,12 +52,13 @@ if (mysqli_num_rows($trGt) > 0) {
 		//Html Data
 		$showData = "<table class='table table-dark' id='multichange'>
 						<caption>$transNme Transactions</caption>";
-		$showData .= "<tr>
-						<td colspan='3'>Debt: <?php doTheMath();?></td>
-						<td colspan='2'>Lorem Ipsum</td>
-					  </tr>";
 		$showData .= "
 					<thead>
+						<tr>
+							<td colspan='1' class='bg-primary'>Debt / Advance: $dbOrAdv</td>
+							<td colspan='1' class='bg-danger'>- For Debt, + For Advance</td>
+							<td colspan='3' class='bg-warning'><a href='view_fulltr.php?user=$transNme&month=$rightNow' target='_blank'>View Full Statement</a></td>
+					  	</tr>
 					    <tr>
 					      <th scope='col'>Transactor</th>
 					      <th scope='col'>Amount</th>
