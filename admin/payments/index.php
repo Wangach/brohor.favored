@@ -153,7 +153,7 @@
 											</button>
 										</div><!--/.modal-header-->
 										<div class="modal-body">
-											<form action="#" id="search-form" method="POST">
+											<form action="payscr/search_usertr.php" id="search-form" method="POST">
 												<div class="form-group">
 													<label for="name">Customer's Name:</label>
 													<input type="text" class="form-control" placeholder="Customer Name..." name="cusname" id="cusname">
@@ -254,6 +254,7 @@
 	<script src="../../js/all.js" type="text/javascript"></script>
 	<script src="../../js/fontawesome.js" type="text/javascript"></script>
 	<script src="../../js/regular.js" type="text/javascript"></script>
+	<script src="payjs/payments.js" type="text/javascript"></script>
 	<script src="../../js/index.js" type="text/javascript"></script>
 </body>
 </html>

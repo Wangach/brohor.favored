@@ -24,8 +24,8 @@ if (mysqli_num_rows($latestTrans) > 0) {
 			print_r($key . $value);
 		}*/
 		//html data
-		$showData = "<h4 id='shrink'>Latest transactions</h4>";
-		$showData .= "<table class='table table-dark' id='multichange'>";
+		$showData = "<table class='table table-dark' id='multichange'>
+						<caption>List of Latest Transactions</caption>";
 		$showData .= "
 					<thead>
 					    <tr>
