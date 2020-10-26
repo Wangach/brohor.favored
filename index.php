@@ -28,16 +28,16 @@
 					<i class="fas fa-user"></i>
 					<h3>Admin Login</h3>
 				</div>
-				<form action="#" id="log-form">
+				<form action="script/login.php" id="log-form" method="POST">
 					<div class="form-group">
 						<label for="uname" class="sr-only">Name: </label>
-						<input type="text" class="form-control" placeholder="Your Username...">
+						<input type="text" class="form-control" placeholder="Your Username..." name="username" id="username">
 					</div>
 					<div class="form-group">
 						<label for="password" class="sr-only">Password: </label>
-						<input type="password" class="form-control" placeholder="someone@example.com...">
+						<input type="password" class="form-control" placeholder="Password..." name="secret" id="secret">
 					</div>
-					<button type="submit" class="btn btn-success">Login</button>
+					<button type="submit" class="btn btn-success" name="lgn">Login</button>
 				</form>
 			</div><!--/.collection/-->
 		</div><!--/#organize/-->

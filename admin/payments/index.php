@@ -185,10 +185,10 @@
 								<h4>Transact</h4>
 								<h5>Pay Here</h5>
 							</div>
-							<form action="payscr/transact.php" class="new-cs-form" method="POST">
+							<form action="payscr/transact.php" class="new-cs-form" id="new-cs-form" method="POST">
 								<div class="form-group">
 									<label for="ptype">Type</label>
-									<select name="aina" id="" class="form-control">
+									<select name="aina" id="aina" class="form-control aina">
 										<option value=""></option>
 										<option value="cr">Credit</option>
 										<option value="db">Debit</option>
@@ -196,17 +196,18 @@
 								</div>
 								<div class="form-group">
 									<label for="cs-name">Name</label>
-									<input type="text" class="form-control" placeholder="Enter Name Here..." name="cusjina" id="">
+									<input type="text" class="form-control" placeholder="Enter Name Here..." name="cusjina" id="cusjina">
 								</div>
 								<div class="form-group">
 									<label for="amt">Amount</label>
-									<input type="number" class="form-control" placeholder="Enter Amount..." name="kiwango" id="">
+									<input type="number" class="form-control" placeholder="Enter Amount..." name="kiwango" id="kiwango">
 								</div>
 								<div class="form-group">
 									<label for="descr">Description</label>
-									<input type="text" class="form-control" placeholder="Add Description..." name="maelezo" id="">
+									<input type="text" class="form-control" placeholder="Add Description..." name="maelezo" id="maelezo">
 								</div>
-								<button name="trans" type="submit" class="btn btn-success">Make Payment</button>
+								<button id="trans" name="trans" type="submit" class="btn btn-success">Make Payment</button>
+								<div id="feedback"></div>
 							</form>
 						</div><!--/col-sm-12/-->
 						

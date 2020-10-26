@@ -2,12 +2,7 @@
 
 date_default_timezone_set("Africa/Nairobi");
 include '../../../script/database.php';
-
-//Predefined Variables
-$output = "";
-
-if (isset($_POST['trans'])) {
-	#get the data from the form fields
+#get the data from the form fields
 	$transType = mysqli_real_escape_string($initialize, $_POST['aina']);
 	$nameOfTransactor = mysqli_real_escape_string($initialize, $_POST['cusjina']);
 	$amountTransacted = mysqli_real_escape_string($initialize, $_POST['kiwango']);
@@ -39,17 +34,8 @@ if (isset($_POST['trans'])) {
 
 			//Check FOR A Successful transfer
 			if ($axn) {
-				$output = "<script>";
-				$output .= "alert('Transaction $holder Has Been Successful! Thank You!');";
-				$output .= "</script>";
-
-				echo $output;
+				echo "Transaction $holder Has Been Successful! Thank You!";
 			}else{
-				/*$output = "<script>";
-				$output .= "alert('Sorry But There Has Been An Error!');";
-				$output .= "</script>";
-
-				echo $output;*/
 				echo mysqli_error($initialize);
 			}
 			break;
@@ -75,28 +61,14 @@ if (isset($_POST['trans'])) {
 
 			//Check FOR A Successful transfer
 			if ($axn) {
-				$output = "<script>";
-				$output .= "alert('Transaction $holder Has Been Successful! Thank You!');";
-				$output .= "</script>";
-
-				echo $output;
+				echo "Transaction $holder Has Been Successful! Thank You!";;
 			}else{
-				$output = "<script>";
-				$output .= "alert('Sorry But There Has Been An Error!');";
-				$output .= "</script>";
-
-				echo $output;
+				echo "Sorry But There Has Been An Error!";
 			}
 			break;
 		default:
-			$output = "<script>";
-				$output .= "alert('This Operation Cannot be Performed!');";
-				$output .= "</script>";
-
-				echo $output;
+				echo "This Operation Cannot be Performed!";
 			break;
 	}
-
-}
 
  ?>
