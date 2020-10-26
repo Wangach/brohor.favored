@@ -1,3 +1,17 @@
+<?php 
+//Check session
+include '../script/login.php';
+
+if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
+	#redirect to login page
+	header("Location: ../index.php");
+}else{
+	//Assign the session to a variable
+	$admin = $_SESSION['administrator'];
+}
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +85,7 @@
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="../script/login.php?logout=1" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-sign-out-alt text-light mr-3 fa-lg"></i>
 	    						LogOut
 	    					</a>

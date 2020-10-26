@@ -1,3 +1,6 @@
+<?php 
+include 'script/login.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +31,7 @@
 					<i class="fas fa-user"></i>
 					<h3>Admin Login</h3>
 				</div>
-				<form action="script/login.php" id="log-form" method="POST">
+				<form action="index.php" id="log-form" method="POST">
 					<div class="form-group">
 						<label for="uname" class="sr-only">Name: </label>
 						<input type="text" class="form-control" placeholder="Your Username..." name="username" id="username">

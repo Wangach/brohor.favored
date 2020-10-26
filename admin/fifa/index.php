@@ -260,7 +260,7 @@
 													<input type="number" class="form-control" placeholder="Away Player Score..." id="asc" name="asc" required>
 												</div><!--/.form-group/-->
 												<div class="form-group">
-													<label for="Extra Time">Added Extra Time:</label>
+													<label for="Extra Time">FT Or HT:</label>
 													<p>Full Game</p>
 													<input type="radio" id="aet" name="charge" value="ft">
 													<p>Half Game</p>
@@ -268,6 +268,7 @@
 												</div><!--/.form-group/-->
 												
 												<button type="submit" class="btn btn-warning" name="recordm">Record Match</button>
+												<div id="recres"></div>
 											</form>
 										</div><!--modal-body-->
 									</div><!--Modal content-->
@@ -393,6 +394,6 @@
 	<script src="../../js/all.js" type="text/javascript"></script>
 	<script src="../../js/fontawesome.js" type="text/javascript"></script>
 	<script src="../../js/regular.js" type="text/javascript"></script>
-	<script src="../../js/index.js" type="text/javascript"></script>
+	<script src="fifajs/fifa.js" type="text/javascript"></script>
 </body>
 </html>
