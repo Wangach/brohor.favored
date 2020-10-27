@@ -36,7 +36,7 @@ $dbOrAdv = $transactionsMade - $matchesInDebt;
 
 
 //show all the transaction dets for the current month
-$trList = "SELECT * FROM (SELECT * FROM transactions ORDER BY trDte DESC LIMIT 4) as r ORDER BY trDte";
+$trList = "SELECT * FROM (SELECT * FROM transactions WHERE trName = '$searchTerm' ORDER BY trDte DESC LIMIT 4) as r ORDER BY trDte";
 //$trList = "SELECT * FROM transactions WHERE trName = '$searchTerm'";
 $trGt = mysqli_query($initialize, $trList);
 
@@ -78,6 +78,9 @@ if (mysqli_num_rows($trGt) > 0) {
 
 		echo $showData;
 	}
+}else{
+	$showData = $searchTerm." Has Not Made Any Transactions this Month!";
+	echo $showData;
 }
 
 

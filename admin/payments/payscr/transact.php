@@ -29,7 +29,7 @@ include '../../../script/database.php';
 				$holder = $holder.$genVal;
 			}
 			//Using The Values Obtained from the above
-			$mkTr = "INSERT INTO transactions(trName, trId, credit, debit, amount, trDte, trTme) VALUES('$nameOfTransactor', '$holder', '$moneyIn', '$moneyOut', '$totals', '$dToday', '$tNow')";
+			$mkTr = "INSERT INTO transactions(trName, trId, credit, debit, amount, trDesc, trDte, trTme) VALUES('$nameOfTransactor', '$holder', '$moneyIn', '$moneyOut', '$totals', '$transactionDesc', '$dToday', '$tNow')";
 			$axn = mysqli_query($initialize, $mkTr);
 
 			//Check FOR A Successful transfer

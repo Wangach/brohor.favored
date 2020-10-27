@@ -22,7 +22,7 @@ looserform.addEventListener('submit', function(event){
 	req.send(looserData);
 
 	//Execute clearing func
-	setTimeout(clearLooserForm, 5000);
+	setTimeout(clearLooserForm, 10000);
 });
 
 

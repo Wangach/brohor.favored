@@ -1,10 +1,10 @@
 <?php 
 //Check session
-include '../script/login.php';
+include '../../script/login.php';
 
 if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 	#redirect to login page
-	header("Location: ../index.php");
+	header("Location: ../../index.php");
 }else{
 	//Assign the session to a variable
 	$admin = $_SESSION['administrator'];
@@ -182,7 +182,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 			<div class="row">
 				<div class="col-lg-9 ml-auto">
 					<div class="row style-bg">
-						<div class="col-md-6">
+						<div class="col-md-4">
 
 							<div class="my-content">
 								<button class="btn btn-primary" data-toggle="modal" data-target="#fairPlay">Fair Play <strong><i class="fas fa-user-plus"></i></strong></button>
@@ -232,7 +232,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 								</div><!--modal-dialog-->
 							</div><!--/#regUserModal/-->
 						</div><!--/.col-md-12/-->
-						<div class="col-md-6">
+						<div class="col-md-4">
 							<div class="my-content">
 								<button class="btn btn-warning" data-toggle="modal" data-target="#looserPay">Looser-Pay <strong><i class="fas fa-user-plus"></i></strong></button>
 							</div>
@@ -291,6 +291,46 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 
 
 						</div><!--/.col-md-12/-->
+
+						<div class="col-md-4">
+
+							<div class="my-content">
+								<button class="btn btn-success" data-toggle="modal" data-target="#perfSearch">Search User<strong><i class="fas fa-user-search"></i></strong></button>
+							</div>
+
+							<!--Registration Modal-->
+							<div class="modal fade" id="perfSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title text-dark">Search User Matches</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div><!--/.modal-header-->
+										<div class="modal-body">
+											<form action="#" id="fair-form">
+												<div class="form-group">
+													<label for="homp">Type:</label>
+													<select class="form-control" name="watMatches" id="watMatches">
+														<option value=""></option>
+														<option value="wonmat">Won Matches</option>
+														<option value="losmat">Lost Matches</option>
+													</select>
+												</div><!--/.form-group/-->
+												<div class="form-group">
+													<label for="awap">Player Name:</label>
+													<input type="text" class="form-control" placeholder="Player Name..." name="nop" id="nop">
+												</div><!--/.form-group/-->
+
+												<button type="submit" class="btn btn-primary" name="">Search</button>
+											</form>
+										</div><!--modal-body-->
+									</div><!--Modal content-->
+								</div><!--modal-dialog-->
+							</div><!--/#regUserModal/-->
+						</div><!--/.col-md-12/-->
+
 					</div>
 				</div><!--/.col-lg-9-->
 			</div><!--/.row/-->

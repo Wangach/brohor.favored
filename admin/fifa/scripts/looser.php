@@ -28,7 +28,7 @@ $output = '';
 	}
 
 	//Check whwther all the fields have been filled
-	if (!empty($fPerson) && !empty($sPerson) && !empty($fTeam) && !empty($sTeam) && !empty($fScore) && !empty($sScore) && !empty($gType)) {
+	if (!empty($gType)) {
 		//find out who has won or lost the game depending on the scores
 		if ($fScore > $sScore) {
 			#the homeplayer has won
@@ -55,7 +55,7 @@ $output = '';
 
 		//check whether submission is successful
 		if ($psh) {
-			$output = $rMate."Has Lost While ".$champion." Has Won At ".$gType;
+			$output = $rMate." Has Lost While ".$champion." Has Won At ".$gType;
 
 			echo $output;
 		}else{
