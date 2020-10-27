@@ -4,9 +4,9 @@ date_default_timezone_set("Africa/Nairobi");
 include 'database.php';
 
 $output = '';
-//wheb the submit button is pressed
-if (isset($_POST['recordm'])) {
-	//Get the form values
+
+
+//Get the form values
 	$fPerson = mysqli_real_escape_string($initialize, $_POST['hp']);
 	$sPerson = mysqli_real_escape_string($initialize, $_POST['ap']);
 	$fTeam = mysqli_real_escape_string($initialize, $_POST['ht']);
@@ -55,15 +55,11 @@ if (isset($_POST['recordm'])) {
 
 		//check whether submission is successful
 		if ($psh) {
-			$output = "<script>";
-			$output .= "alert('Data Has Been Inserted Succefully!!')";
-			$output .= "</script>";
+			$output = $rMate."Has Lost While ".$champion." Has Won At ".$gType;
 
 			echo $output;
 		}else{
-			$output = "<script>";
-			$output .= "alert('There Has Been An Error in Handling your request!!')";
-			$output .= "</script>";
+			$output = "There Has Been An Error In Handling Your Request!";
 
 			echo $output;
 			//echo "There Has Been An Error ".mysqli_error($initialize);
@@ -76,5 +72,4 @@ if (isset($_POST['recordm'])) {
 
 		echo "Empty field";
 	}
-}
  ?>

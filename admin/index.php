@@ -103,7 +103,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 	    					
 	    				</div><!--/column/-->
 	    				<div class="col-md-4">
-	    					
+	    					<h4 class="text-light text-uppercase mb-0"><?php echo $admin; ?></h4>
 	    				</div><!--/column/-->
 	    			</div><!--/.row/-->
 	    		</div><!--/col-lg-9/-->

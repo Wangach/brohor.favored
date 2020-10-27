@@ -30,6 +30,6 @@ if (isset($_POST['lgn'])) {
 if (isset($_GET['logout'])) {
 	#destroy session and redirect
 	unset($_SESSION['administrator']);
-	header("Location: ../index.php")
+	header("Location: ../index.php");
 }
  ?>
