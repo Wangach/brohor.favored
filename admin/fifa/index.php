@@ -295,7 +295,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						<div class="col-md-4">
 
 							<div class="my-content">
-								<button class="btn btn-success" data-toggle="modal" data-target="#perfSearch">Search User<strong><i class="fas fa-user-search"></i></strong></button>
+								<button class="btn btn-success" data-toggle="modal" data-target="#perfSearch">Search User<strong> <i class="fas fa-search"></i></strong></button>
 							</div>
 
 							<!--Registration Modal-->
@@ -309,13 +309,14 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 											</button>
 										</div><!--/.modal-header-->
 										<div class="modal-body">
-											<form action="#" id="fair-form">
+											<form action="scripts/search_matches.php" id="search-form" method="POST">
 												<div class="form-group">
 													<label for="homp">Type:</label>
 													<select class="form-control" name="watMatches" id="watMatches">
 														<option value=""></option>
 														<option value="wonmat">Won Matches</option>
 														<option value="losmat">Lost Matches</option>
+														<option value="allmat">All Matches</option>
 													</select>
 												</div><!--/.form-group/-->
 												<div class="form-group">
