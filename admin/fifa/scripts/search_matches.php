@@ -17,7 +17,8 @@ switch ($searchType) {
 		//If there's data found
 		if (mysqli_num_rows($realSer) > 0) {
 			while ($data = mysqli_fetch_assoc($realSer)) {
-				
+				$homPl = $data[''];
+				$awaPl = $data['']
 			}
 		}
 		break;
