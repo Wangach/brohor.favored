@@ -47,3 +47,28 @@ function clearLooserForm(){
 	homeScr.value = '';
 	awayScr.value = '';
 }
+
+let searchForm = document.querySelector('form#search-form');
+let displayResults = document.querySelector('#results');
+let searchUrl = searchForm.getAttribute('action');
+
+searchForm.onsubmit = function(event){
+	event.preventDefault();
+
+	//alert('Search Has Been Initiated');
+	let searchRequest = new XMLHttpRequest;
+	searchRequest.open('POST', searchUrl);
+	searchRequest.onreadystatechange = function (){
+		if (this.readyState == 4 && this.status == 200) {
+			let dbResp = this.responseText;
+			//display response
+			//feedback.classList.add('alert');
+			//feedback.classList.add('alert-primary');
+			displayResults.innerHTML = dbResp;
+
+		}
+	}
+	let serData = new FormData(searchForm);
+	searchRequest.send(serData);
+
+}

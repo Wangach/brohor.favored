@@ -83,6 +83,14 @@ body {
 	  height: 250px;
 	  width: 500px;
 }
+#matches {
+	margin: 0px auto;
+	border: 1px solid silver;
+	z-index: 9999;
+	overflow: scroll;
+	height: 250px;
+	width: 500px;
+}
 
 /*LOOSER FORM ERROR CLASSES*/
 .error-hp{

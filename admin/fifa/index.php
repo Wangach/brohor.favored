@@ -316,7 +316,6 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 														<option value=""></option>
 														<option value="wonmat">Won Matches</option>
 														<option value="losmat">Lost Matches</option>
-														<option value="allmat">All Matches</option>
 													</select>
 												</div><!--/.form-group/-->
 												<div class="form-group">
@@ -327,6 +326,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 												<button type="submit" class="btn btn-primary" name="">Search</button>
 											</form>
 										</div><!--modal-body-->
+										<div id="results"></div>
 									</div><!--Modal content-->
 								</div><!--modal-dialog-->
 							</div><!--/#regUserModal/-->
