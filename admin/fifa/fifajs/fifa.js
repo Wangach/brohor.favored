@@ -1,74 +1,68 @@
-let looserform = document.querySelector('form#looser-form');
-let feedback = document.getElementById('recres');
-let looserUrl = looserform.getAttribute('action');
+let looserform = document.querySelector("form#looser-form");
+let feedback = document.getElementById("recres");
+let looserUrl = looserform.getAttribute("action");
 
-looserform.addEventListener('submit', function(event){
-	event.preventDefault();
+looserform.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-	//alert('Form Has Been Submitted!');
-	let req = new XMLHttpRequest;
-	req.open('POST', looserUrl);
-	req.onreadystatechange = function (){
-		if (this.readyState == 4 && this.status == 200) {
-			let dbResp = this.responseText;
-			//display response
-			feedback.classList.add('alert');
-			feedback.classList.add('alert-primary');
-			feedback.innerHTML = dbResp;
+  //alert('Form Has Been Submitted!');
+  let req = new XMLHttpRequest();
+  req.open("POST", looserUrl);
+  req.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      let dbResp = this.responseText;
+      //display response
+      feedback.classList.add("alert");
+      feedback.classList.add("alert-primary");
+      feedback.innerHTML = dbResp;
+    }
+  };
+  let looserData = new FormData(looserform);
+  req.send(looserData);
 
-		}
-	}
-	let looserData = new FormData(looserform);
-	req.send(looserData);
-
-	//Execute clearing func
-	setTimeout(clearLooserForm, 10000);
+  //Execute clearing func
+  setTimeout(clearLooserForm, 10000);
 });
 
-
-
-
 //clear the form fields
-function clearLooserForm(){
-	let homePlay = document.getElementById('hp');
-	let awayPlay = document.getElementById('ap');
-	let homeTeam = document.getElementById('ht');
-	let awayTeam = document.getElementById('at');
-	let homeScr = document.getElementById('hsc');
-	let awayScr = document.getElementById('asc');
+function clearLooserForm() {
+  let homePlay = document.getElementById("hp");
+  let awayPlay = document.getElementById("ap");
+  let homeTeam = document.getElementById("ht");
+  let awayTeam = document.getElementById("at");
+  let homeScr = document.getElementById("hsc");
+  let awayScr = document.getElementById("asc");
 
-	//reload and clear
-	location.reload();
+  //reload and clear
+  location.reload();
 
-	homePlay.value = '';
-	awayPlay.value = '';
-	homeTeam.value = '';
-	awayTeam.value = '';
-	homeScr.value = '';
-	awayScr.value = '';
+  homePlay.value = "";
+  awayPlay.value = "";
+  homeTeam.value = "";
+  awayTeam.value = "";
+  homeScr.value = "";
+  awayScr.value = "";
 }
 
-let searchForm = document.querySelector('form#search-form');
-let displayResults = document.querySelector('#results');
-let searchUrl = searchForm.getAttribute('action');
+let searchForm = document.querySelector("form#search-form");
+let displayResults = document.querySelector("#results");
+let searchUrl = searchForm.getAttribute("action");
 
-searchForm.onsubmit = function(event){
-	event.preventDefault();
+searchForm.onsubmit = function (event) {
+  event.preventDefault();
 
-	//alert('Search Has Been Initiated');
-	let searchRequest = new XMLHttpRequest;
-	searchRequest.open('POST', searchUrl);
-	searchRequest.onreadystatechange = function (){
-		if (this.readyState == 4 && this.status == 200) {
-			let dbResp = this.responseText;
-			//display response
-			//feedback.classList.add('alert');
-			//feedback.classList.add('alert-primary');
-			displayResults.innerHTML = dbResp;
-
-		}
-	}
-	let serData = new FormData(searchForm);
-	searchRequest.send(serData);
-
-}
+  //alert('Search Has Been Initiated');
+  let searchRequest = new XMLHttpRequest();
+  searchRequest.open("POST", searchUrl);
+  searchRequest.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      let dbResp = this.responseText;
+      //display response
+      //feedback.classList.add('alert');
+      //feedback.classList.add('alert-primary');
+      displayResults.innerHTML = dbResp;
+    }
+  };
+  let serData = new FormData(searchForm);
+  searchRequest.send(serData);
+};
