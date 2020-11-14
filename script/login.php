@@ -16,7 +16,7 @@ if (isset($_POST['lgn'])) {
 	if (mysqli_num_rows($conf) > 0) {
 		//Set The Session var and redirect
 		$_SESSION['administrator'] = $uName;
-		header("Location: ../admin/index.php");
+		header("Location: ../brohor.favored/admin/index.php");
 	}else{
 		$output = "<script>";
 		$output .= "alert('The Username or Password is Incorrect!');";
