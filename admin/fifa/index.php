@@ -124,7 +124,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 									<div class="d-flex justify-content-between">
 										<i class="fas fa-play fa-3x text-primary"></i>
 										<div class="text-right text-secondary">
-											<h5>Played Games</h5>
+											<h5>Looser Games</h5>
 											<h3><?php include '../../script/matches_played.php'; ?></h3>
 										</div>
 									</div>
@@ -142,7 +142,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 									<div class="d-flex justify-content-between">
 										<i class="fas fa-check fa-3x text-success"></i>
 										<div class="text-right text-secondary">
-											<h5>Paid Games</h5>
+											<h5>Fair Games</h5>
 											<h3>100</h3>
 										</div>
 									</div>
@@ -160,7 +160,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 									<div class="d-flex justify-content-between">
 										<i class="fas fa-times-circle fa-3x text-danger"></i>
 										<div class="text-right text-secondary">
-											<h5>Unpaid Games</h5>
+											<h5>Total Games</h5>
 											<h3>10</h3>
 										</div>
 									</div>
@@ -185,7 +185,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						<div class="col-md-4">
 
 							<div class="my-content">
-								<button class="btn btn-primary" data-toggle="modal" data-target="#fairPlay">Fair Play <strong><i class="fas fa-user-plus"></i></strong></button>
+								<button class="btn btn-primary" data-toggle="modal" data-target="#fairPlay">Fair Play <strong><i class="fas fa-balance-scale"></i></strong></button>
 							</div>
 
 							<!--Registration Modal-->
@@ -199,7 +199,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 											</button>
 										</div><!--/.modal-header-->
 										<div class="modal-body">
-											<form action="#" id="fair-form">
+											<form action="#" id="fair-form" method="POST">
 												<div class="form-group">
 													<label for="homp">Home Player:</label>
 													<input type="text" class="form-control" placeholder="Enter Home Player Name...">
@@ -234,7 +234,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						</div><!--/.col-md-12/-->
 						<div class="col-md-4">
 							<div class="my-content">
-								<button class="btn btn-warning" data-toggle="modal" data-target="#looserPay">Looser-Pay <strong><i class="fas fa-user-plus"></i></strong></button>
+								<button class="btn btn-warning" data-toggle="modal" data-target="#looserPay">Looser-Pay <strong><i class="fas fa-chess-king"></i></strong></button>
 							</div>
 
 							<!--Registration Modal-->
