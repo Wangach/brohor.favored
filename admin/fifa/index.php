@@ -199,33 +199,41 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 											</button>
 										</div><!--/.modal-header-->
 										<div class="modal-body">
-											<form action="#" id="fair-form" method="POST">
+											<form action="scripts/fair.php" id="fair-form" method="POST">
 												<div class="form-group">
 													<label for="homp">Home Player:</label>
-													<input type="text" class="form-control" placeholder="Enter Home Player Name...">
+													<input type="text" class="form-control" placeholder="Enter Home Player Name..." id="fhp" name="fhp">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="awap">Away Player:</label>
-													<input type="text" class="form-control" placeholder="Enter Away Player Name...">
+													<input type="text" class="form-control" placeholder="Enter Away Player Name..." id="fap" name="fap">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="homet">Home Team:</label>
-													<input type="text" class="form-control" placeholder="Enter Home Team...">
+													<input type="text" class="form-control" placeholder="Enter Home Team..." id="fht" name="fht">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="awat">Away Team:</label>
-													<input type="text" class="form-control" placeholder="Enter Away Team...">
+													<input type="text" class="form-control" placeholder="Enter Away Team..." id="fat" name="fat">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="homsc">Home Score:</label>
-													<input type="number" class="form-control" placeholder="Home Player Score...">
+													<input type="number" class="form-control" placeholder="Home Player Score..." id="fhsc" name="fhsc">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="awasc">Away Score:</label>
-													<input type="number" class="form-control" placeholder="Away Player Score...">
+													<input type="number" class="form-control" placeholder="Away Player Score..." id="fasc" name="fasc">
+												</div><!--/.form-group/-->
+												<div class="form-group">
+													<label for="Extra Time">FT Or HT:</label>
+													<p>Full Game</p>
+													<input type="radio" id="faet" name="fcharge" value="ft">
+													<p>Half Game</p>
+													<input type="radio" id="faet" name="fcharge" value="ht">
 												</div><!--/.form-group/-->
 
 												<button type="submit" class="btn btn-primary">Record Match</button>
+												<div id="fairfeed"></div>
 											</form>
 										</div><!--modal-body-->
 									</div><!--Modal content-->

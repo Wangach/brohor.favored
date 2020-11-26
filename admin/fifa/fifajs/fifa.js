@@ -44,6 +44,7 @@ function clearLooserForm() {
   awayScr.value = "";
 }
 
+//Search Form
 let searchForm = document.querySelector("form#search-form");
 let displayResults = document.querySelector("#results");
 let searchUrl = searchForm.getAttribute("action");
@@ -66,3 +67,50 @@ searchForm.onsubmit = function (event) {
   let serData = new FormData(searchForm);
   searchRequest.send(serData);
 };
+
+
+//Fair Play Form
+let fairForm = document.querySelector('#fair-form');
+let fairAction = fairForm.getAttribute('action');
+let fairRes = document.getElementById('fairfeed');
+
+fairForm.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+	let fairRequest = new XMLHttpRequest();
+	fairRequest.open("POST", fairAction);
+	fairRequest.onreadystatechange = () => {
+	    if (this.readyState == 4 && this.status == 200) {
+	      let fairResp = this.responseText;
+	      //display response
+	      fairRes.classList.add("alert");
+	      fairRes.classList.add("alert-success");
+	      fairRes.innerHTML = fairResp;
+	    }
+	  };
+	  let fairData = new FormData(fairForm);
+	  fairRequest.send(fairData);
+
+	  //Execute clearing func
+	  //setTimeout(clearFairForm, 10000);
+});
+
+let clearFairForm = () => {
+	let fHplayer = document.getElementById("#fhp");
+	let fAplayer = document.getElementById("#fap");
+	let fHteam = document.getElementById("#fht");
+	let fAteam = document.getElementById("#fat");
+	let fHscore = document.getElementById("#fhsc");
+	let fAscore = document.getElementById("#fasc");
+
+
+	//Reload And Clear
+	location.reload();
+
+	fHplayer.value = '';
+	fAplayer.value = '';
+	fHteam.value = '';
+	fAteam.value = '';
+	fHscore.value = '';
+	fAscore.value = '';
+}
