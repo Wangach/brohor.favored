@@ -72,7 +72,7 @@ searchForm.onsubmit = function (event) {
 //Fair Play Form
 let fairForm = document.querySelector('#fair-form');
 let fairAction = fairForm.getAttribute('action');
-let fairRes = document.getElementById('fairfeed');
+let fairGetter = document.querySelector('.fair-feed');
 
 fairForm.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -83,9 +83,9 @@ fairForm.addEventListener('submit', (e) => {
 	    if (this.readyState == 4 && this.status == 200) {
 	      let fairResp = this.responseText;
 	      //display response
-	      fairRes.classList.add("alert");
-	      fairRes.classList.add("alert-success");
-	      fairRes.innerHTML = fairResp;
+	      fairGetter.classList.add("alert");
+	      fairGetter.classList.add("alert-primary");
+	      fairGetter.innerHTML = fairResp;
 	    }
 	  };
 	  let fairData = new FormData(fairForm);

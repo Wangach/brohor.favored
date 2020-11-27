@@ -199,6 +199,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 											</button>
 										</div><!--/.modal-header-->
 										<div class="modal-body">
+											<div class="fair-feed"></div>
 											<form action="scripts/fair.php" id="fair-form" method="POST">
 												<div class="form-group">
 													<label for="homp">Home Player:</label>
@@ -233,7 +234,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 												</div><!--/.form-group/-->
 
 												<button type="submit" class="btn btn-primary">Record Match</button>
-												<div id="fairfeed"></div>
+												
 											</form>
 										</div><!--modal-body-->
 									</div><!--Modal content-->
