@@ -43,42 +43,42 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 	    			<!--Navigation items-->
 	    			<ul class="navbar-nav flex-column">
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="index.php" target="_blank" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-home text-light mr-3 fa-lg"></i>
 	    						Home
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="users/" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="users/" target="_blank" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-users text-light mr-3 fa-lg"></i>
 	    						Users
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="fifa/" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="fifa/" target="_blank" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-gamepad text-light mr-3 fa-lg"></i>
 	    						Games
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="movies/" target="_blank" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-video text-light mr-3 fa-lg"></i>
 	    						Movies
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="payments/" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="payments/" target="_blank" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-money-check-alt text-light mr-3 fa-lg"></i>
 	    						Financials
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="sales/" target="_blank" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-shopping-cart text-light mr-3 fa-lg"></i>
 	    						Sales
 	    					</a>
