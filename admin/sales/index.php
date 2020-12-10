@@ -119,11 +119,11 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 				<div class="col-lg-9 ml-auto">
 					<div class="row mt-3 mb-5 pt-5">
 						<div class="col-sm-3 p-2">
-							<div class="card">
+							<div class="card bg-success">
 								<div class="card-body">
 									<div class="d-flex justify-content-between">
-										<i class="fas fa-play fa-3x text-primary"></i>
-										<div class="text-right text-secondary">
+										<i class="fas fa-layer-group fa-4x text-white"></i>
+										<div class="text-right text-white">
 											<h5>Inventory</h5>
 											<h3><?php include '../../script/matches_played.php'; ?></h3>
 										</div>
@@ -137,17 +137,17 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						</div><!--/col-sm-6/-->
 
 						<div class="col-sm-3 p-2">
-							<div class="card">
+							<div class="card bg-danger">
 								<div class="card-body">
 									<div class="d-flex justify-content-between">
-										<i class="fas fa-check fa-3x text-success"></i>
-										<div class="text-right text-secondary">
+										<i class="fas fa-exchange-alt fa-4x text-white"></i>
+										<div class="text-right text-white">
 											<h5>Inventory</h5>
 											<h3>100</h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->
-								<div class="card-footer">
+								<div class="card-footer text-white">
 									<i class="fas fa-sync mr-3"></i>
 									<span>Update</span>
 								</div><!--/.card-footer/-->
@@ -155,11 +155,11 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						</div><!--/col-sm-6/-->
 
 						<div class="col-sm-3 p-1">
-							<div class="card">
+							<div class="card bg-warning">
 								<div class="card-body">
 									<div class="d-flex justify-content-between">
-										<i class="fas fa-times-circle fa-3x text-danger"></i>
-										<div class="text-right text-secondary">
+										<i class="fas fa-dollar-sign fa-4x text-white"></i>
+										<div class="text-right text-white">
 											<h5>Inventory Cost</h5>
 											<h3>10</h3>
 										</div>
@@ -173,17 +173,17 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						</div><!--/col-sm-6/-->
 
                         <div class="col-sm-3 p-2">
-							<div class="card">
+							<div class="card bg-info">
 								<div class="card-body">
 									<div class="d-flex justify-content-between">
-										<i class="fas fa-check fa-3x text-success"></i>
-										<div class="text-right text-secondary">
+										<i class="fas fa-shopping-basket fa-4x text-white"></i>
+										<div class="text-right text-white">
 											<h5>Sold Items</h5>
 											<h3>100</h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->
-								<div class="card-footer">
+								<div class="card-footer text-white">
 									<i class="fas fa-sync mr-3"></i>
 									<span>Update</span>
 								</div><!--/.card-footer/-->
@@ -196,14 +196,14 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 	</section>
 
 	<section id="userssec">
-		<div class="contaiber-fluid">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-9 ml-auto">
-					<div class="row style-bg">
+					<div class="row violet-bg">
 						<div class="col-md-4">
 
 							<div class="my-content">
-								<button class="btn btn-primary" data-toggle="modal" data-target="#fairPlay">Fair Play <strong><i class="fas fa-balance-scale"></i></strong></button>
+								<button class="btn btn-secondary" data-toggle="modal" data-target="#fairPlay">Add Stock <strong><i class="fas fa-cart-plus"></i></strong></button>
 							</div>
 
 							<!--Registration Modal-->
@@ -261,7 +261,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						</div><!--/.col-md-12/-->
 						<div class="col-md-4">
 							<div class="my-content">
-								<button class="btn btn-warning" data-toggle="modal" data-target="#looserPay">Looser-Pay <strong><i class="fas fa-chess-king"></i></strong></button>
+								<button class="btn btn-secondary" data-toggle="modal" data-target="#looserPay">Track Transaction <strong><i class="fas fa-chart-line"></i></strong></button>
 							</div>
 
 							<!--Registration Modal-->
@@ -322,7 +322,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						<div class="col-md-4">
 
 							<div class="my-content">
-								<button class="btn btn-success" data-toggle="modal" data-target="#perfSearch">Search User<strong> <i class="fas fa-search"></i></strong></button>
+								<button class="btn btn-secondary" data-toggle="modal" data-target="#perfSearch">Search Item<strong> <i class="fas fa-search"></i></strong></button>
 							</div>
 
 							<!--Registration Modal-->
@@ -374,7 +374,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							<h3 class="text-center text-muted">Recently Added Items</h3>
 						</div>
 						<div class="col-md-12">
-							<!--<table class="table table-dark">
+							<table class="table table-dark">
 								<thead>
 								<tr>
 								  <th scope="col">#</th>
@@ -403,8 +403,8 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 								  <td>@twitter</td>
 								</tr>
 								</tbody>
-							</table>-->
-							<?php include 'scripts/recent_looser.php'; ?>
+							</table>
+							
 						</div><!--/col-md-12/-->
 					</div><!--/.nested row/-->
 				</div>
