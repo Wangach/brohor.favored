@@ -25,6 +25,63 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 	<!--own css files-->
 	<link rel="stylesheet" href="../../css/admin.css">
 	<link rel="stylesheet" href="../../css/media.css">
+
+	<!--/Chart Import from google/-->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Category', 'Stock'],
+          ['Earphones',     12],
+          ['Chargers',      2],
+          ['USB Cables',  2],
+          ['P. Rings', 2],
+          ['Flash Disks',    7],
+          ['Mem Cards',     10]
+        ]);
+
+        var options = {
+          title: 'Stock Categories',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <!--/Line Charts/-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales'],
+          ['2016',  150],
+          ['2017',  120],
+          ['2018',  300],
+          ['2019',  500],
+          ['2020',  1000]
+        ]);
+
+        var options = {
+          title: 'Yearly Sales',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
+
 </head>
 <body>
 	
@@ -129,7 +186,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 										</div>
 									</div>
 								</div><!--/.card-body/-->
-								<div class="card-footer">
+								<div class="card-footer text-white">
 									<i class="fas fa-sync mr-3"></i>
 									<span>Update</span>
 								</div><!--/.card-footer/-->
@@ -165,7 +222,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 										</div>
 									</div>
 								</div><!--/.card-body/-->
-								<div class="card-footer">
+								<div class="card-footer text-white">
 									<i class="fas fa-sync mr-3"></i>
 									<span>Update</span>
 								</div><!--/.card-footer/-->
@@ -203,56 +260,48 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						<div class="col-md-4">
 
 							<div class="my-content">
-								<button class="btn btn-secondary" data-toggle="modal" data-target="#fairPlay">Add Stock <strong><i class="fas fa-cart-plus"></i></strong></button>
+								<button class="btn btn-secondary" data-toggle="modal" data-target="#stockAdd">Add Stock <strong><i class="fas fa-cart-plus"></i></strong></button>
 							</div>
 
 							<!--Registration Modal-->
-							<div class="modal fade" id="fairPlay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+							<div class="modal fade" id="stockAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 								<div class="modal-dialog modal-dialog-centered" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
-											<h5 class="modal-title text-dark">Fair Play</h5>
+											<h5 class="modal-title text-dark">Add Stock</h5>
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div><!--/.modal-header-->
 										<div class="modal-body">
 											<div class="fair-feed"></div>
-											<form action="scripts/fair.php" id="fair-form" method="POST">
+											<form action="#" id="addstocks-form" method="POST">
 												<div class="form-group">
-													<label for="homp">Home Player:</label>
-													<input type="text" class="form-control" placeholder="Enter Home Player Name..." id="fhp" name="fhp">
-												</div><!--/.form-group/-->
+													<label for="cn">Comodity Name:</label>
+													<input type="text" name="cmJina" placeholder="Name Of Comodity..." class="form-control" id="">
+												</div>
 												<div class="form-group">
-													<label for="awap">Away Player:</label>
-													<input type="text" class="form-control" placeholder="Enter Away Player Name..." id="fap" name="fap">
-												</div><!--/.form-group/-->
+													<label for="ct">Comodity Category:</label>
+													<select name="cmCat" class="form-control" id="">
+														<option value=""></option>
+														<option value="earphones">Earphones</option>
+														<option value="chargers">Chargers</option>
+														<option value="usb">USB Cables</option>
+														<option value="ring">Phone Rings</option>
+														<option value="flash">Flash Drives</option>
+														<option value="mem">Memory Card</option>
+														<option value="other">Others</option>
+													</select>
+												</div>
 												<div class="form-group">
-													<label for="homet">Home Team:</label>
-													<input type="text" class="form-control" placeholder="Enter Home Team..." id="fht" name="fht">
-												</div><!--/.form-group/-->
+													<label for="bp">Buying Price:</label>
+													<input type="text" name="cmbp" placeholder="Buying Price..." class="form-control" id="">
+												</div>
 												<div class="form-group">
-													<label for="awat">Away Team:</label>
-													<input type="text" class="form-control" placeholder="Enter Away Team..." id="fat" name="fat">
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="homsc">Home Score:</label>
-													<input type="number" class="form-control" placeholder="Home Player Score..." id="fhsc" name="fhsc">
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="awasc">Away Score:</label>
-													<input type="number" class="form-control" placeholder="Away Player Score..." id="fasc" name="fasc">
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="Extra Time">FT Or HT:</label>
-													<p>Full Game</p>
-													<input type="radio" id="faet" name="fcharge" value="ft">
-													<p>Half Game</p>
-													<input type="radio" id="faet" name="fcharge" value="ht">
-												</div><!--/.form-group/-->
+													<label for="mp">Marked Price:</label>
+													<input type="text" name="cmkp" placeholder="Marked Price..." class="form-control" id="">
+												</div>
 
-												<button type="submit" class="btn btn-primary">Record Match</button>
-												
 											</form>
 										</div><!--modal-body-->
 									</div><!--Modal content-->
@@ -261,15 +310,15 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						</div><!--/.col-md-12/-->
 						<div class="col-md-4">
 							<div class="my-content">
-								<button class="btn btn-secondary" data-toggle="modal" data-target="#looserPay">Track Transaction <strong><i class="fas fa-chart-line"></i></strong></button>
+								<button class="btn btn-secondary" data-toggle="modal" data-target="#txnSearch">Track Transaction <strong><i class="fas fa-chart-line"></i></strong></button>
 							</div>
 
 							<!--Registration Modal-->
-							<div class="modal fade" id="looserPay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+							<div class="modal fade" id="txnSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 								<div class="modal-dialog modal-dialog-centered" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
-											<h5 class="modal-title text-dark">Looser Pay</h5>
+											<h5 class="modal-title text-dark">Search Transaction</h5>
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
@@ -277,35 +326,8 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 										<div class="modal-body">
 											<form action="scripts/looser.php" id="looser-form" method="POST">
 												<div class="form-group">
-													<label for="homp">Home Player:</label>
-													<input type="text" class="form-control" placeholder="Enter Home Player Name..." id="hp" name="hp" required>
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="awap">Away Player:</label>
-													<input type="text" class="form-control" placeholder="Enter Away Player Name..." id="ap" name="ap" required>
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="homet">Home Team:</label>
-													<input type="text" class="form-control" placeholder="Enter Home Team..." id="ht" name="ht" required>
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="awat">Away Team:</label>
-													<input type="text" class="form-control" placeholder="Enter Away Team..." id="at" name="at" required>
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="homsc">Home Score:</label>
-													<input type="number" class="form-control" placeholder="Home Player Score..." id="hsc" name="hsc" required>
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="awasc">Away Score:</label>
-													<input type="number" class="form-control" placeholder="Away Player Score..." id="asc" name="asc" required>
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="Extra Time">FT Or HT:</label>
-													<p>Full Game</p>
-													<input type="radio" id="aet" name="charge" value="ft">
-													<p>Half Game</p>
-													<input type="radio" id="aet" name="charge" value="ht">
+													<label for="txno">Transaction Number:</label>
+													<input type="text" class="form-control" placeholder="Transaction No...." id="tno" name="tno" required>
 												</div><!--/.form-group/-->
 												
 												<button type="submit" class="btn btn-warning" name="recordm">Record Match</button>
@@ -365,6 +387,78 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 		</div><!--/.container-fluid/-->
 	</section><!--usersec-->
 
+	<section id="userfrth">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-9 ml-auto">
+					<div class="row">
+						<div class="col-md-9 mb-2 mt-4">
+							<h3 class="text-center text-muted">Graphical Representations</h3>
+						</div>
+						<div class="col-md-6">
+							<div class="column-heading">
+								<h3>Stock</h3>
+							</div>
+							<div id="piechart_3d" style="width: 430px; height: 330px;"></div>
+						</div><!--/col-md-6/-->
+						<div class="col-md-6">
+							<div class="column-heading">
+								<h3>Sales</h3>
+							</div>
+							<div id="curve_chart" style="width: 430px; height: 330px"></div>
+						</div><!--/col-md-6/-->
+					</div><!--/.nested row/-->
+				</div>
+			</div>
+		</div><!--/.container-fluid/-->
+	</section><!--sec/-->
+
+	<section id="userfifth">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-9 ml-auto">
+					<div class="row">
+						<div class="col-md-9 mb-2 mt-4">
+							<h3 class="text-center text-muted">Recently Sales Transactions</h3>
+						</div>
+						<div class="col-md-12">
+							<table class="table table-dark">
+								<thead>
+								<tr>
+								  <th scope="col">#</th>
+								  <th scope="col">First</th>
+								  <th scope="col">Last</th>
+								  <th scope="col">Handle</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+								  <th scope="row">1</th>
+								  <td>Mark</td>
+								  <td>Otto</td>
+								  <td>@mdo</td>
+								</tr>
+								<tr>
+								  <th scope="row">2</th>
+								  <td>Jacob</td>
+								  <td>Thornton</td>
+								  <td>@fat</td>
+								</tr>
+								<tr>
+								  <th scope="row">3</th>
+								  <td>Larry</td>
+								  <td>the Bird</td>
+								  <td>@twitter</td>
+								</tr>
+								</tbody>
+							</table>
+						</div><!--/col-md-12/-->
+					</div><!--/.nested row/-->
+				</div>
+			</div>
+		</div><!--/.container-fluid/-->
+	</section><!--sec/-->
+
 	<section id="userthrd">
 		<div class="container-fluid">
 			<div class="row">
@@ -412,51 +506,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 		</div><!--/.container-fluid/-->
 	</section><!--sec/-->
 
-	<section id="userfrth">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-9 ml-auto">
-					<div class="row">
-						<div class="col-md-9 mb-2 mt-4">
-							<h3 class="text-center text-muted">Recently Sales Transactions</h3>
-						</div>
-						<div class="col-md-12">
-							<table class="table table-dark">
-								<thead>
-								<tr>
-								  <th scope="col">#</th>
-								  <th scope="col">First</th>
-								  <th scope="col">Last</th>
-								  <th scope="col">Handle</th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr>
-								  <th scope="row">1</th>
-								  <td>Mark</td>
-								  <td>Otto</td>
-								  <td>@mdo</td>
-								</tr>
-								<tr>
-								  <th scope="row">2</th>
-								  <td>Jacob</td>
-								  <td>Thornton</td>
-								  <td>@fat</td>
-								</tr>
-								<tr>
-								  <th scope="row">3</th>
-								  <td>Larry</td>
-								  <td>the Bird</td>
-								  <td>@twitter</td>
-								</tr>
-								</tbody>
-							</table>
-						</div><!--/col-md-12/-->
-					</div><!--/.nested row/-->
-				</div>
-			</div>
-		</div><!--/.container-fluid/-->
-	</section><!--sec/-->
+	
 
 	<!--Footer-->
 	<div class="container-fluid">
