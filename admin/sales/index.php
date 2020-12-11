@@ -37,7 +37,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
           ['Earphones',     12],
           ['Chargers',      2],
           ['USB Cables',  2],
-          ['P. Rings', 2],
+          ['Phone Rings', 2],
           ['Flash Disks',    7],
           ['Mem Cards',     10]
         ]);
@@ -292,6 +292,10 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 														<option value="mem">Memory Card</option>
 														<option value="other">Others</option>
 													</select>
+												</div>
+												<div class="form-group">
+													<label for="q">Quantity:</label>
+													<input type="text" name="cmbp" placeholder="Buying Price..." class="form-control" id="">
 												</div>
 												<div class="form-group">
 													<label for="bp">Buying Price:</label>
