@@ -29,6 +29,15 @@ body {
   color: #fff;
   border-radius: 5px;
 }
+.trans-footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+    url(../assets/bgs/ft3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 5px;
+}
 .violet-bg {
   background: rgba(208, 5, 110, 0.912);
   color: #fff;
@@ -118,6 +127,15 @@ form#fair-form {
 }
 .form-group {
   color: #14e1c7;
+}
+/*Transactions Page*/
+.table-heading {
+  border: 1px solid rgb(21, 19, 19);
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.624);
+  color: #eee;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
