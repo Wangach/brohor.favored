@@ -129,6 +129,38 @@ form#fair-form {
   color: #14e1c7;
 }
 /*Transactions Page*/
+.business-details {
+  border: 3px solid #ccc;
+  width: 60%;
+  margin: 10px auto 2px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.customer-details {
+  border: 3px solid #ccc;
+  width: 50%;
+  margin: 10px auto 2px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.customer-details h4{
+  box-shadow: 10px 10px 20px #7ff5d5;
+}
+#mytme {
+  border: 1px solid #000;
+  right: 0;
+  width: 40%;
+  margin: 2px auto;
+  text-align: center;
+}
+#transactions-data {
+  width: 80%;
+  margin: 0px auto;
+}
 .table-heading {
   border: 1px solid rgb(21, 19, 19);
   border-radius: 5px;
@@ -136,6 +168,16 @@ form#fair-form {
   color: #eee;
   text-align: center;
   text-transform: uppercase;
+  width: 80%;
+  margin: 50px auto 0px;
+}
+#userdata {
+  margin-top: 50px;
+
+}
+#tr-footer{
+  position: fixed;
+  bottom: 0;
 }
 
 @media (max-width: 768px) {

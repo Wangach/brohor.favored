@@ -125,7 +125,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 										<i class="fas fa-money-bill-wave fa-3x text-success"></i>
 										<div class="text-right text-secondary">
 											<h5>Transactions Made</h5>
-											<h3>100</h3>
+											<h3><?php include 'payscr/transactions_made.php'; ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->
