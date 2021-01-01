@@ -147,7 +147,7 @@ form#fair-form {
   font-weight: bold;
   border-radius: 5px;
 }
-.customer-details h4{
+.customer-details h4 {
   box-shadow: 10px 10px 20px #7ff5d5;
 }
 #mytme {
@@ -173,11 +173,25 @@ form#fair-form {
 }
 #userdata {
   margin-top: 50px;
-
 }
-#tr-footer{
+#tr-footer {
   position: fixed;
   bottom: 0;
+}
+
+/*Movies Page*/
+.reduce-font > button {
+  font-size: 12px;
+}
+.movies-bg {
+  background: rgba(242, 86, 3, 0.912);
+  color: #fff;
+  padding: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.column-heading > h3 {
+  text-align: center;
 }
 
 @media (max-width: 768px) {
