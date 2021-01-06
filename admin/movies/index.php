@@ -176,28 +176,145 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						<div class="col-md-3">
 
 							<div class="my-content reduce-font">
-								<button class="btn btn-info" data-toggle="modal" data-target="#stockAdd">Add Movie <strong><i class="fas fa-folder-plus"></i></strong></button>
+								<button class="btn btn-info" data-toggle="modal" data-target="#movieAdd">Add Movie <strong><i class="fas fa-folder-plus"></i></strong></button>
 							</div>
-						</div><!--/.col-md-2/-->
+							<!--Add Movie Modal -->
+							<div class="modal fade" id="movieAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+							  <div class="modal-dialog modal-dialog-centered" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <h5 class="modal-title" id="exampleModalLongTitle">Add Movie</h5>
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          <span aria-hidden="true">&times;</span>
+							        </button>
+							      </div>
+							      <div class="modal-body">
+							        <form action="#" id="addmovie">
+							        	<div class="form-group">
+							        		<label for="mname">Movie Name:</label>
+							        		<input type="text" class="form-control" placeholder="Spiderman, Elite Sn 1..." id="" name="" required>
+							        	</div>
+							        	<div class="form-group">
+							        		<label for="mcat">Movie Category:</label>
+							        		<input type="text" class="form-control" placeholder="Action, Drama..." id="" name="" required>
+							        	</div>
+							        	<div class="form-group">
+							        		<label for="mloc">Movie Location:</label>
+							        		<input type="text" class="form-control" placeholder="HDD..." id="" name="" required>
+							        	</div>
+							        	<div class="form-group">
+							        		<label for="mrat">Movie Rating:</label>
+							        		<input type="number" class="form-control" placeholder="X / 10..." id="" name="" required>
+							        	</div>
+							        	<div class="form-group">
+							        		<label for="mprod">Movie Producer:</label>
+							        		<input type="text" class="form-control" placeholder="ABC, Hulu, Freeform..." id="" name="" required>
+							        	</div>
+							        	<div class="form-group">
+							        		<label for="mreld">Release Dates:</label>
+							        		<input type="date" class="form-control" id="" name="">
+							        	</div>
+							        	<div class="form-group">
+							        		<label for="mdesc">StoryLine:</label>
+							        		<textarea type="text" class="form-control" placeholder="Movie In A few words..." id="" name="" required>
+							        		</textarea>
+							        	</div>
+							        	<button class="btn btn-success" type="submit">Add Movie</button>
+							        </form> 
+							      </div><!--/.modal-body/-->
+							    </div>
+							  </div>
+							</div>
+						</div><!--/.col-md-3/-->
 
 						<div class="col-md-3">
 
 							<div class="my-content reduce-font">
-								<button class="btn btn-warning" data-toggle="modal" data-target="#stockAdd">B. Name <strong><i class="fas fa-sort-numeric-down"></i></strong></button>
+								<button class="btn btn-warning" data-toggle="modal" data-target="#searchByName">B. Name <strong><i class="fas fa-sort-numeric-down"></i></strong></button>
+							</div>
+							<!--Search By Name Modal -->
+							<div class="modal fade" id="searchByName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <h5 class="modal-title" id="exampleModalLabel">Search By Name</h5>
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          <span aria-hidden="true">&times;</span>
+							        </button>
+							      </div>
+							      <div class="modal-body">
+							        <form action="#" id="searByName">
+							        	<div class="form-group">
+							        		<label for="moviename">Movie Name:</label>
+							        		<input type="text" class="form-control" placeholder="Movie Name..." id="" name="">
+							        	</div>
+
+							        	<button type="submit" class="btn btn-info">Search</button>
+							        </form>
+							      </div><!--/.modal-body/-->
+							    </div>
+							  </div>
 							</div>
 						</div><!--/.col-md-3/-->
                         <div class="col-md-3">
 
 							<div class="my-content reduce-font">
-								<button class="btn btn-primary" data-toggle="modal" data-target="#stockAdd">B. Category <strong><i class="fas fa-object-group"></i></strong></button>
+								<button class="btn btn-primary" data-toggle="modal" data-target="#searByCategory">B. Category <strong><i class="fas fa-object-group"></i></strong></button>
+							</div>
+
+							<!--Search By Name Modal -->
+							<div class="modal fade" id="searByCategory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <h5 class="modal-title" id="exampleModalLabel">Search By Category</h5>
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          <span aria-hidden="true">&times;</span>
+							        </button>
+							      </div>
+							      <div class="modal-body">
+							        <form action="#" id="searByCat">
+							        	<div class="form-group">
+							        		<label for="moviename">Movie Name:</label>
+							        		<input type="text" class="form-control" placeholder="Movie Name..." id="" name="">
+							        	</div>
+							        	<button type="submit" class="btn btn-primary">Search</button>
+							        </form>
+							      </div><!--/.modal-body/-->
+							    </div>
+							  </div>
 							</div>
 						</div><!--/.col-md-3/-->
 
 						<div class="col-md-3">
 
 							<div class="my-content reduce-font">
-								<button class="btn btn-secondary" data-toggle="modal" data-target="#stockAdd">Old Data <strong><i class="fas fa-recycle"></i></strong></button>
+								<button class="btn btn-secondary" data-toggle="modal" data-target="#oldMv">Old Movies<strong><i class="fas fa-recycle"></i></strong></button>
 							</div>
+
+							<!--Search By Name Modal -->
+							<div class="modal fade" id="oldMv" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <h5 class="modal-title" id="exampleModalLabel">Search Old Movies</h5>
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          <span aria-hidden="true">&times;</span>
+							        </button>
+							      </div>
+							      <div class="modal-body">
+							        <form action="#" id="searoLmOV">
+							        	<div class="form-group">
+							        		<label for="moviename">Movie Name:</label>
+							        		<input type="text" class="form-control" placeholder="Movie Name..." id="" name="">
+							        	</div>
+							        	<button type="submit" class="btn btn-warning">Search</button>
+							        </form>
+							      </div><!--/.modal-body/-->
+							    </div>
+							  </div>
+							</div>
+							
 						</div><!--/.col-md-3/-->
 
 					</div><!--/.inner-row/-->
