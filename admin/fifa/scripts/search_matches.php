@@ -73,7 +73,7 @@ switch ($searchType) {
 
 				//html data
 				$showData = "<table class='table table-dark' id='multichange'>
-								<caption>$seachTerm Won Matches</caption>";
+								<caption>$seachTerm Lost Matches</caption>";
 				$showData .= "
 							<thead>
 							    <tr>

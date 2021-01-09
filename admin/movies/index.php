@@ -189,7 +189,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							        </button>
 							      </div>
 							      <div class="modal-body">
-							        <form action="#" id="addmovie">
+							        <form action="moviescr/addmovie.php" id="addmovie">
 							        	<div class="form-group">
 							        		<label for="mname">Movie Name:</label>
 							        		<input type="text" class="form-control" placeholder="Spiderman, Elite Sn 1..." id="" name="" required>
@@ -219,7 +219,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							        		<textarea type="text" class="form-control" placeholder="Movie In A few words..." id="" name="" required>
 							        		</textarea>
 							        	</div>
-							        	<button class="btn btn-success" type="submit">Add Movie</button>
+							        	<button name="addmov" class="btn btn-success" type="submit">Add Movie</button>
 							        </form> 
 							      </div><!--/.modal-body/-->
 							    </div>

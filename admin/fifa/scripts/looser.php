@@ -42,10 +42,10 @@ $output = '';
 
 		//Set The Payments
 		if ($gType == 'ft') {
-			$amountToPay = 25;
+			$amountToPay = 20;
 
 		}elseif ($gType == 'ht') {
-			$amountToPay = 15;
+			$amountToPay = 10;
 
 		}
 
