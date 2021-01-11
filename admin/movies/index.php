@@ -189,37 +189,38 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							        </button>
 							      </div>
 							      <div class="modal-body">
-							        <form action="moviescr/addmovie.php" id="addmovie">
+							        <form action="moviescr/addmovie.php" id="addmovie" method="POST">
+							        	<div class="form-group">
+							        		<label for="poster">Movie Poster</label>
+							        		<input type="file" accept="image/*" class="form-control" id="" name="picha">
+							        	</div><!--/.form-group/-->
 							        	<div class="form-group">
 							        		<label for="mname">Movie Name:</label>
-							        		<input type="text" class="form-control" placeholder="Spiderman, Elite Sn 1..." id="" name="" required>
+							        		<input type="text" class="form-control" placeholder="Spiderman, Elite Sn 1..." id="" name="jina" required>
 							        	</div>
 							        	<div class="form-group">
 							        		<label for="mcat">Movie Category:</label>
-							        		<input type="text" class="form-control" placeholder="Action, Drama..." id="" name="" required>
+							        		<input type="text" class="form-control" placeholder="Action, Drama..." id="" name="aina" required>
 							        	</div>
 							        	<div class="form-group">
 							        		<label for="mloc">Movie Location:</label>
-							        		<input type="text" class="form-control" placeholder="HDD..." id="" name="" required>
+							        		<input type="text" class="form-control" placeholder="HDD..." id="" name="pahala" required>
 							        	</div>
 							        	<div class="form-group">
 							        		<label for="mrat">Movie Rating:</label>
-							        		<input type="number" class="form-control" placeholder="X / 10..." id="" name="" required>
+							        		<input type="number" class="form-control" placeholder="X / 10..." id="" name="tathmini" required>
 							        	</div>
 							        	<div class="form-group">
 							        		<label for="mprod">Movie Producer:</label>
-							        		<input type="text" class="form-control" placeholder="ABC, Hulu, Freeform..." id="" name="" required>
+							        		<input type="text" class="form-control" placeholder="ABC, Hulu, Freeform..." id="" name="mtengenezaji" required>
 							        	</div>
 							        	<div class="form-group">
 							        		<label for="mreld">Release Dates:</label>
-							        		<input type="date" class="form-control" id="" name="">
+							        		<input type="date" class="form-control" id="" name="kuachiliwa" required>
 							        	</div>
-							        	<div class="form-group">
-							        		<label for="mdesc">StoryLine:</label>
-							        		<textarea type="text" class="form-control" placeholder="Movie In A few words..." id="" name="" required>
-							        		</textarea>
-							        	</div>
+							        	
 							        	<button name="addmov" class="btn btn-success" type="submit">Add Movie</button>
+							        	<div id="mdb"></div>
 							        </form> 
 							      </div><!--/.modal-body/-->
 							    </div>
@@ -243,15 +244,16 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							        </button>
 							      </div>
 							      <div class="modal-body">
-							        <form action="#" id="searByName">
+							        <form action="moviescr/searchbyname.php" id="searByName" method="POST">
 							        	<div class="form-group">
 							        		<label for="moviename">Movie Name:</label>
-							        		<input type="text" class="form-control" placeholder="Movie Name..." id="" name="">
+							        		<input type="text" class="form-control" placeholder="Movie Name..." id="nom" name="nom">
 							        	</div>
 
 							        	<button type="submit" class="btn btn-info">Search</button>
 							        </form>
 							      </div><!--/.modal-body/-->
+							      <div id="mbn-results"></div>
 							    </div>
 							  </div>
 							</div>
@@ -281,6 +283,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							        	<button type="submit" class="btn btn-primary">Search</button>
 							        </form>
 							      </div><!--/.modal-body/-->
+							      <div id="mbc-results"></div>
 							    </div>
 							  </div>
 							</div>
@@ -303,7 +306,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							        </button>
 							      </div>
 							      <div class="modal-body">
-							        <form action="#" id="searoLmOV">
+							        <form action="#" id="searOlMov" method="POST">
 							        	<div class="form-group">
 							        		<label for="moviename">Movie Name:</label>
 							        		<input type="text" class="form-control" placeholder="Movie Name..." id="" name="">
@@ -311,6 +314,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							        	<button type="submit" class="btn btn-warning">Search</button>
 							        </form>
 							      </div><!--/.modal-body/-->
+							      <div id="old-results"></div>
 							    </div>
 							  </div>
 							</div>

@@ -234,7 +234,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 												</div><!--/.form-group/-->
 
 												<button type="submit" class="btn btn-primary">Record Match</button>
-												
+												<div class="fair-feed"></div>
 											</form>
 										</div><!--modal-body-->
 									</div><!--Modal content-->

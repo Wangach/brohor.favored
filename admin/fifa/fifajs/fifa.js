@@ -14,6 +14,7 @@ looserform.addEventListener("submit", function (event) {
       //display response
       feedback.classList.add("alert");
       feedback.classList.add("alert-primary");
+      feedback.classList.add('sticky-top');
       feedback.innerHTML = dbResp;
     }
   };
@@ -74,12 +75,12 @@ let fairForm = document.querySelector('#fair-form');
 let fairAction = fairForm.getAttribute('action');
 let fairGetter = document.querySelector('.fair-feed');
 
-fairForm.addEventListener('submit', (e) => {
+fairForm.addEventListener('submit', function(e) {
 	e.preventDefault();
 
 	let fairRequest = new XMLHttpRequest();
 	fairRequest.open("POST", fairAction);
-	fairRequest.onreadystatechange = () => {
+	fairRequest.onreadystatechange = function() {
 	    if (this.readyState == 4 && this.status == 200) {
 	      let fairResp = this.responseText;
 	      //display response
