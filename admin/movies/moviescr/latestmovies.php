@@ -1,17 +1,12 @@
 <?php 
-
-include '../../../script/database.php';
-
 $feedb = '';
 
-$mCat = mysqli_real_escape_string($initialize, $_POST['ctom']);
+include 'db.php';
+$latest = "SELECT * FROM(SELECT * FROM bhmovies ORDER BY id DESC LIMIT 4) AS x ORDER BY id";
+$getem = mysqli_query($initialize, $latest);
 
-$searchQ = "SELECT * FROM bhmovies WHERE movieCat LIKE '%$mCat%'";
-$perform = mysqli_query($initialize, $searchQ);
-
-//Upon finding A Positive result
-if (mysqli_num_rows($perform) > 0) {
-	while ($row = mysqli_fetch_assoc($perform)) {
+if (mysqli_num_rows($getem) > 0) {
+	while ($row = mysqli_fetch_assoc($getem)) {
 		//Get The Movie Dets
 		$jina = $row['movieName'];
 		$ct = $row['movieCat'];
@@ -29,8 +24,6 @@ if (mysqli_num_rows($perform) > 0) {
 					      <th scope='col'>M. Name</th>
 					      <th scope='col'>M. Category</th>
 					      <th scope='col'>M. Location</th>
-					      <th scope='col'>M. Producer</th>
-					      <th scope='col'>M. Released</th>
 					      <th scope='col'>M. Key</th>
 					    </tr>
 					  </thead>";
@@ -39,8 +32,6 @@ if (mysqli_num_rows($perform) > 0) {
 							<td class='text-success'>$jina</td>
 							<td>$ct</td>
 							<td>$lc</td>
-							<td>$pr</td>
-							<td>$dr</td>
 							<td><a class='text-lg text-info' href='#'>$mkey</a></td>
 						</tr>
 					</tbody>";

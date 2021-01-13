@@ -173,7 +173,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 			<div class="row">
 				<div class="col-lg-9 ml-auto">
 					<div class="row movies-bg">
-						<div class="col-md-3">
+						<div class="col-md-3 col-xs-12 col-sm-12">
 
 							<div class="my-content reduce-font">
 								<button class="btn btn-info" data-toggle="modal" data-target="#movieAdd">Add Movie <strong><i class="fas fa-folder-plus"></i></strong></button>
@@ -228,7 +228,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							</div>
 						</div><!--/.col-md-3/-->
 
-						<div class="col-md-3">
+						<div class="col-md-3 col-xs-12 col-sm-12">
 
 							<div class="my-content reduce-font">
 								<button class="btn btn-warning" data-toggle="modal" data-target="#searchByName">B. Name <strong><i class="fas fa-sort-numeric-down"></i></strong></button>
@@ -258,7 +258,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							  </div>
 							</div>
 						</div><!--/.col-md-3/-->
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-xs-12 col-sm-12">
 
 							<div class="my-content reduce-font">
 								<button class="btn btn-primary" data-toggle="modal" data-target="#searByCategory">B. Category <strong><i class="fas fa-object-group"></i></strong></button>
@@ -275,10 +275,10 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							        </button>
 							      </div>
 							      <div class="modal-body">
-							        <form action="#" id="searByCat">
+							        <form action="moviescr/searchbycat.php" id="searByCat" method="POST">
 							        	<div class="form-group">
-							        		<label for="moviename">Movie Name:</label>
-							        		<input type="text" class="form-control" placeholder="Movie Name..." id="" name="">
+							        		<label for="moviename">Movie Category:</label>
+							        		<input type="text" class="form-control" placeholder="Fantasy, Drama, Action etc..." id="ctom" name="ctom">
 							        	</div>
 							        	<button type="submit" class="btn btn-primary">Search</button>
 							        </form>
@@ -289,7 +289,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							</div>
 						</div><!--/.col-md-3/-->
 
-						<div class="col-md-3">
+						<div class="col-md-3 col-xs-12 col-sm-12">
 
 							<div class="my-content reduce-font">
 								<button class="btn btn-secondary" data-toggle="modal" data-target="#oldMv">Old Movies<strong><i class="fas fa-recycle"></i></strong></button>
@@ -339,55 +339,9 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
                             <div class="column-heading">
 								<h3>Latest</h3>
 							</div>
-							<table class="table table-dark">
-								<thead>
-								<tr>
-								  <th scope="col">#</th>
-								  <th scope="col">First</th>
-								  <th scope="col">Last</th>
-								  <th scope="col">Handle</th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr>
-								  <th scope="row">1</th>
-								  <td>Mark</td>
-								  <td>Otto</td>
-								  <td>@mdo</td>
-								</tr>
-								<tr>
-								  <th scope="row">2</th>
-								  <td>Jacob</td>
-								  <td>Thornton</td>
-								  <td>@fat</td>
-								</tr>
-								<tr>
-								  <th scope="row">3</th>
-								  <td>Larry</td>
-								  <td>the Bird</td>
-								  <td>@twitter</td>
-                                </tr>
-                                <tr>
-								  <th scope="row">4</th>
-								  <td>Larry</td>
-								  <td>the Bird</td>
-								  <td>@twitter</td>
-                                </tr>
-                                <tr>
-								  <th scope="row">5</th>
-								  <td>Larry</td>
-								  <td>the Bird</td>
-								  <td>@twitter</td>
-                                </tr>
-                                <tr>
-								  <th scope="row">6</th>
-								  <td>Larry</td>
-								  <td>the Bird</td>
-								  <td>@twitter</td>
-                                </tr>
-                               
-								</tbody>
-							</table>
+							<div class="latest-movies">
+								<?php include 'moviescr/latestmovies.php'; ?>
+							</div><!--/latest-movies-->
                         </div><!--/col-md-6/-->
                         <div class="col-md-6">
 							<div class="column-heading">
