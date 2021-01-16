@@ -5,7 +5,7 @@ $feedb = '';
 
 $mName = mysqli_real_escape_string($initialize, $_POST['nom']);
 
-$searchQ = "SELECT * FROM bhmovies WHERE movieName = '$mName'";
+$searchQ = "SELECT * FROM bhmovies WHERE movieName LIKE '%$mName%'";
 $perform = mysqli_query($initialize, $searchQ);
 
 //Upon finding A Positive result
