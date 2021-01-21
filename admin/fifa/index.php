@@ -27,6 +27,12 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 	<link rel="stylesheet" href="../../css/media.css">
 </head>
 <body>
+	<!--/Custom Loaders/-->
+	<div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
 	
 	<nav class="navbar navbar-expand-md navbar-light bg-light">
 	  <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -459,5 +465,6 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 	<script src="../../js/fontawesome.js" type="text/javascript"></script>
 	<script src="../../js/regular.js" type="text/javascript"></script>
 	<script src="fifajs/fifa.js" type="text/javascript"></script>
+	<script src="../../js/index.js" type="text/javascript"></script>
 </body>
 </html>

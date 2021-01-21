@@ -1,4 +1,6 @@
 let loadingDiv =  document.querySelector('.loader');
-window.addEventListener('load', function(){
-	loadingDiv.style.display = 'none';
-});
+window.onload(setTimeout(
+	function(){
+		loadingDiv.style.display = 'none';
+	}, 3000
+));

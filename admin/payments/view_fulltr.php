@@ -23,6 +23,12 @@ if (isset($_GET['user']) && $_GET['month'] && !empty($_GET['month']) && !empty($
   <link rel="stylesheet" href="../../css/admin.css">
  </head>
  <body>
+ 	<!--/Custom Loaders/-->
+	<div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
 
  	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	  <a class="navbar-brand" href="<?php echo $_SERVER['PHP_SELF'];?>">My Transactions</a>
@@ -171,5 +177,6 @@ if (isset($_GET['user']) && $_GET['month'] && !empty($_GET['month']) && !empty($
   <script src="../../js/all.js" type="text/javascript"></script>
   <script src="../../js/fontawesome.js" type="text/javascript"></script>
   <script src="../../js/regular.js" type="text/javascript"></script>
+  <script src="../../js/index.js" type="text/javascript"></script>
  </body>
  </html>

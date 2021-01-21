@@ -17,7 +17,7 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Broad Horizons Ent | Welcome Admin </title>
+	<title>Broad Horizons Ent | Welcome <?php echo $admin; ?> </title>
 	<!--/Precoded CSS files-->
 	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="../css/all.css">
