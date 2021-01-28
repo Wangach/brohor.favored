@@ -4,6 +4,7 @@ $showData = '';
 	
 include '../../script/database.php';
 
+
 $matchGetter = "SELECT * FROM (SELECT * FROM lmatches ORDER BY id DESC LIMIT 4) as r ORDER BY id";
 $latestMatches = mysqli_query($initialize, $matchGetter);
 
