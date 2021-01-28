@@ -40,6 +40,13 @@ paymentForm.onsubmit = function(event){
 			fromDb.classList.add('fade');
 			fromDb.classList.add('show');
 			fromDb.innerHTML = res;
+		}else{
+			let res = this.responseText;
+			
+			fromDb.classList.add('alert');
+			fromDb.classList.add('alert-danger');
+			fromDb.classList.add('alert-dismissible');
+			fromDb.innerHTML = res;
 		}
 	}
 	let paymentData = new FormData(paymentForm);
