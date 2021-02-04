@@ -16,34 +16,32 @@ include 'script/login.php';
 	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+	<!--/Custom Loaders/-->
+	<div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
 	<header id="myHeader">
-		<div id="org">
-			<div class="beautify">
-				<div class="text-box">
-					<h1 class="heading">
-						<span class="heading-main">Broad Horizons</span>
-						<span class="heading-minor">Entertainment</span>
-					</h1>
+		<div class="loginformspace">
+			<div class="form-top">
+				<span class="form-top-primary">Broad Horizons Ent <i class="fa fa-user"></i></span>
+				<span class="form-top-main">Admin Login</span>
+			</div><!--.form-top/-->
+			<form action="index.php" id="admin-login" method="POST">
+				<div class="form-group">
+					<label for="uname">UserName:</label>
+					<input type="text" class="form-control" placeholder="Your UserName...">
 				</div>
-			</div><!--/.beautify/-->
-			<div class="collection">
-				<div class="form-top">
-					<i class="fas fa-user"></i>
-					<h3>Admin Login</h3>
+				<div class="form-group">
+					<label for="pass">Password:</label>
+					<input type="text" class="form-control" placeholder="Your Password...">
 				</div>
-				<form action="index.php" id="log-form" method="POST">
-					<div class="form-group">
-						<label for="uname" class="sr-only">Name: </label>
-						<input type="text" class="form-control" placeholder="Your Username..." name="username" id="username">
-					</div>
-					<div class="form-group">
-						<label for="password" class="sr-only">Password: </label>
-						<input type="password" class="form-control" placeholder="Password..." name="secret" id="secret">
-					</div>
-					<button type="submit" class="btn btn-success" name="lgn">Login</button>
-				</form>
-			</div><!--/.collection/-->
-		</div><!--/#organize/-->
+
+				<button type="submit" class="btn btn-primary" name="lgn"><i class="fa fa-sign-in-alt"></i></button>
+			</form>
+		</div><!--/.loginformspace/-->
 	</header>		
 	
 	<!--/Javascript files/-->

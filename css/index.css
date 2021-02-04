@@ -11,58 +11,37 @@
 body {
 	padding: 30px;
 }
-header {
+#myHeader {
+	position: relative;
 	height: 95vh;
+	background-image: linear-gradient(to right, rgba(33, 75, 187, 0.5), rgba(33, 75, 187, 0.85)),
+	 url(../assets/bgs/ft3.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
 }
-div#org {
-	display: grid;
-	position: relative;
-	padding: 30px;
-	grid-template-columns:100px 1fr 1fr 100px;
-	grid-template-areas: ". beaut coll ."
-}
-.beautify {
-	grid-area: beaut;
-	font-family: 'Grandstander', Sans-serif;
-	background: linear-gradient(to bottom right, 
-		rgba(241, 34, 41, 0.5), 
-		rgba(241, 34, 41, 0.8)), 
-	url(../assets/bgs/football2.jpg);
-	background-repeat: no-repeat;
-	background-attachment: unset;
-	background-position: center;
-	height: 80vh;
-	position: relative;
-}
-.heading {
-	font-family: Grandstander;
-	text-transform: uppercase;
-}
-.text-box {
+.loginformspace {
+	text-align: center;
+	width: 50%;
 	position: absolute;
-	top: 40%;
-	right: 50px;
-	text-align: center;
-	color: #fff;
-}
-.collection {
-	grid-area: coll;
-	background: rgba(252, 252, 252, 0.8);
-}
-.form-top {
-	margin: 50px auto 0px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #DCE3F4;
 	padding: 30px;
 	border: 1px solid #ccc;
-	text-align: center;
-	width: 90%;
 	border-radius: 5px;
 }
-#log-form {
-	padding: 30px;
-	text-align: center;
-	width: 90%;
-	margin: 0px auto;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+.form-top{
+	font-family:'Grandstander', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+.form-top-primary{
+	display: block;
+}
+.form-top-main{
+	display: block;
 }
