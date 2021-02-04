@@ -32,11 +32,11 @@ include 'script/login.php';
 			<form action="index.php" id="admin-login" method="POST">
 				<div class="form-group">
 					<label for="uname">UserName:</label>
-					<input type="text" class="form-control" placeholder="Your UserName...">
+					<input type="text" class="form-control" placeholder="Your UserName..." name="username">
 				</div>
 				<div class="form-group">
 					<label for="pass">Password:</label>
-					<input type="password" class="form-control" placeholder="Your Password...">
+					<input type="password" class="form-control" placeholder="Your Password..." name="secret">
 				</div>
 
 				<button type="submit" class="btn btn-primary" name="lgn"><i class="fa fa-sign-in-alt"></i></button>
