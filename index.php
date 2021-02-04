@@ -36,7 +36,7 @@ include 'script/login.php';
 				</div>
 				<div class="form-group">
 					<label for="pass">Password:</label>
-					<input type="text" class="form-control" placeholder="Your Password...">
+					<input type="password" class="form-control" placeholder="Your Password...">
 				</div>
 
 				<button type="submit" class="btn btn-primary" name="lgn"><i class="fa fa-sign-in-alt"></i></button>
