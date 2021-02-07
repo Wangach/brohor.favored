@@ -1,0 +1,10 @@
+@media all and (max-width: 480px) {
+	.loginformspace {
+	width: 90%;
+	padding: 5px;
+	font-size: 10px;
+}
+form-top {
+    font-size: 9px;
+}
+ }
