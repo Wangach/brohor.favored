@@ -26,28 +26,22 @@ if (mysqli_num_rows($latestMatches) > 0) {
 		}*/
 		//html data
 		$showData = "<table class='table table-dark' id='multichange'>
-						<caption>List of Recent Matches</caption>";
+						<caption>Looser Recent Matches</caption>";
 		$showData .= "
 					<thead>
 					    <tr>
 					      <th scope='col'>H. Player</th>
 					      <th scope='col'>A. Player</th>
-					      <th scope='col'>H. Team</th>
-					      <th scope='col'>A. Team</th>
 					      <th class='text-danger'>Looser</th>
 					      <th class='text-success'>Winner</th>
-					      <th>Match Id</th>
 					    </tr>
 					  </thead>";
 		$showData .= "<tbody>
 						<tr>
 							<td>$hmPl</td>
 							<td>$awPl</td>
-							<td>$hmTm</td>
-							<td>$awTm</td>
 							<td class='text-danger'>$loss</td>
 							<td class='text-success'>$wnr</td>
-							<td><a class='text-lg text-info' href='#'>$mId</a></td>
 						</tr>
 					</tbody>";
 		$showData .= "</table>";

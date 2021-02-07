@@ -190,11 +190,11 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 						<div class="col-md-9 mb-2">
 							<h3 class="text-center text-muted">Recent Games</h3>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-12 col-lg-6 col-sm-12">
 							<?php include 'fifa/scripts/recent_looser.php'; ?>
 						</div><!--/col-md-6/-->
 
-						<div class="col-md-6">
+						<div class="col-md-12 col-lg-6 col-sm-12">
 							<?php include 'fifa/scripts/recent_looser.php'; ?>
 						</div><!--/col-md-6/-->
 					</div><!--/.nested row/-->
