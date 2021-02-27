@@ -198,31 +198,31 @@ if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 							        <form action="moviescr/addmovie.php" id="addmovie" method="POST">
 							        	<div class="form-group">
 							        		<label for="poster">Movie Poster</label>
-							        		<input type="file" accept="image/*" class="form-control" id="" name="picha">
+							        		<input type="file" accept="image/*" class="form-control" id="picha" name="picha">
 							        	</div><!--/.form-group/-->
 							        	<div class="form-group">
 							        		<label for="mname">Movie Name:</label>
-							        		<input type="text" class="form-control" placeholder="Spiderman, Elite Sn 1..." id="" name="jina" required>
+							        		<input type="text" class="form-control" placeholder="Spiderman, Elite Sn 1..." id="jina" name="jina" required>
 							        	</div>
 							        	<div class="form-group">
 							        		<label for="mcat">Movie Category:</label>
-							        		<input type="text" class="form-control" placeholder="Action, Drama..." id="" name="aina" required>
+							        		<input type="text" class="form-control" placeholder="Action, Drama..." id="aina" name="aina" required>
 							        	</div>
 							        	<div class="form-group">
 							        		<label for="mloc">Movie Location:</label>
-							        		<input type="text" class="form-control" placeholder="HDD..." id="" name="pahala" required>
+							        		<input type="text" class="form-control" placeholder="HDD..." id="pahala" name="pahala" required>
 							        	</div>
 							        	<div class="form-group">
 							        		<label for="mrat">Movie Rating:</label>
-							        		<input type="number" class="form-control" placeholder="X / 10..." id="" name="tathmini" required>
+							        		<input type="number" class="form-control" placeholder="X / 10..." id="tathmini" name="tathmini" required>
 							        	</div>
 							        	<div class="form-group">
 							        		<label for="mprod">Movie Producer:</label>
-							        		<input type="text" class="form-control" placeholder="ABC, Hulu, Freeform..." id="" name="mtengenezaji" required>
+							        		<input type="text" class="form-control" placeholder="ABC, Hulu, Freeform..." id="mtengenezaji" name="mtengenezaji" required>
 							        	</div>
 							        	<div class="form-group">
 							        		<label for="mreld">Release Dates:</label>
-							        		<input type="date" class="form-control" id="" name="kuachiliwa" required>
+							        		<input type="date" class="form-control" id="kuachiliwa" name="kuachiliwa" required>
 							        	</div>
 							        	
 							        	<button name="addmov" class="btn btn-success" type="submit">Add Movie</button>

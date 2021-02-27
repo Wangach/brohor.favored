@@ -22,7 +22,33 @@ movieForm.addEventListener('submit', () => {
 	//console.log(movieData);
 	instantiator.send(movieData);
 
+	//Execute clearing func
+  setTimeout(clearMovieForm, 10000);
+
 });
+
+//clear the form fields
+function clearMovieForm() {
+  let mPoster = document.getElementById("picha");
+  let mName = document.getElementById("jina");
+  let mTyp = document.getElementById("aina");
+  let mLoc = document.getElementById("pahala");
+  let mCat = document.getElementById("tathmini");
+  let mProd= document.getElementById("mtengenezaji");
+  let rDates = document.getElementById("kuachiliwa");
+
+  //reload and clear
+  location.reload();
+
+  mPoster.value = "";
+  mName.value = "";
+  mTyp.value = "";
+  mCat.value = "";
+  mLoc.value = "";
+  mProd.value = "";
+  rDates.value = "";
+}
+
 
 //Search Movie By Name
 let sbnForm = document.querySelector('#searByName');
