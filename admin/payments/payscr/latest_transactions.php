@@ -4,7 +4,7 @@ $showData = '';
 	include '../../script/database.php';
 
 	//Fetching The latest transactions
-$transGetter = "SELECT * FROM (SELECT * FROM transactions ORDER BY trDte DESC LIMIT 3) as r ORDER BY trDte";
+$transGetter = "SELECT * FROM (SELECT * FROM transactions ORDER BY id DESC LIMIT 5) as r ORDER BY id";
 $latestTrans = mysqli_query($initialize, $transGetter);
 
 if (mysqli_num_rows($latestTrans) > 0) {
