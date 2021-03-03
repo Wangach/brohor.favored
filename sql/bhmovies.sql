@@ -1,1 +1,5 @@
 CREATE TABLE `systwone`.`bhmovies` ( `id` INT NOT NULL AUTO_INCREMENT , `movieName` INT(200) NOT NULL , `movieCat` INT(200) NOT NULL , `moviePoster` VARCHAR(200) NOT NULL , `movieLoc` VARCHAR(200) NOT NULL , `movieRating` INT(100) NOT NULL , `movieProducer` VARCHAR(100) NOT NULL , `dateReleased` VARCHAR(50) NOT NULL , `movieStatus` VARCHAR(50) NOT NULL DEFAULT 'complete' , `dateAdded` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+/*Current Movies Table;*/
+CREATE TABLE `systwone`.`bhmovies` ( `id` INT NOT NULL AUTO_INCREMENT , `moviePoster` VARCHAR(200) NOT NULL , `movieName` VARCHAR(200) NOT NULL , `movieCat` VARCHAR(200) NOT NULL , `movieLoc` VARCHAR(100) NOT NULL , `movieRating` INT(100) NOT NULL , `movieProducer` VARCHAR(100) NOT NULL , `dateReleased` VARCHAR(100) NOT NULL , `mSec` VARCHAR(100) NOT NULL , `dateAdded` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
