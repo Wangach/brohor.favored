@@ -3,7 +3,7 @@
  <head>
  	<meta charset="UTF-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	<title><?php echo $userInSearch; ?> Monthly Transactions</title>
+ 	<title>View Detailed Movie</title>
   <!--/Precoded CSS files-->
 	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<link rel="stylesheet" href="../../css/all.css">
@@ -20,7 +20,7 @@
     </div>
 
  	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <a class="navbar-brand" href="<?php echo $_SERVER['PHP_SELF'];?>">My Transactions</a>
+	  <a class="navbar-brand" href="<?php echo $_SERVER['PHP_SELF'];?>">My Movies</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -36,18 +36,32 @@
 	  </div>
 	</nav>
 	
-  <!--Footer-->
-	<div class="container-fluid" id="tr-footer">
-		<div class="row p-2 mt-2">
-			<div class="col-lg-12 mb-0 ml-auto" id="footer-div">
-				<footer class="trans-footer p-3">
-					<div class="text-center">
-						<p>Made With <i class="fa fa-heart text-danger"></i> and A Lot Of <i class="fas fa-coffee"></i> By John Kimani</p>
-					</div>
-				</footer>
-			</div><!--/col-lg-12-->
-		</div><!--row/-->
-	</div><!--/.container-fluid-->
+	<section id="view-movie">
+		<div id="customized-row">
+			<div class="col-1-of-3">
+				<img src="movie_avatars/tomjerry.jpg" alt="Movie Image" class="movie-avatar">
+			</div><!--/.col-1-->
+			<div class="col-1-of-3">
+				<div class="movie-dets">
+					<h2 class="movie-dets__heading">
+						<span class="movie-dets-title">Tom And Jerry 2021</span>
+						<span class="movie-dets-category">Animation, Action, Adventure</span>
+						<span class="movie-dets-dates">23/02/2021</span>
+						<span class="movie-dets-location">HDD</span>
+					</h2>
+				</div>
+			</div><!--/.col-2-->
+			<div class="col-1-of-3">
+				<div class="mkey">
+					<h2 class="movie-id">#FF2EU8OOP</h2>
+				</div>
+			</div><!--/.col-1-->
+		</div><!--/.row/-->
+	</section>
+
+	<footer class="movie-footer">
+			<h3>&copy; 2021</h3>
+	</footer>
 
   <!--/Javascript files/-->
   

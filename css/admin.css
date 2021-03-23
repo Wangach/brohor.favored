@@ -1,3 +1,8 @@
+/*Google*/
+@font-face{
+  font-family: Josef;
+  src: url(../assets/gfonts/JosefinSans-Italic-VariableFont_wght.ttf);
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,6 +11,7 @@
 body {
   background-color: #eee;
   padding: 20px;
+  position: relative;
 }
 
 /*Custom Loaders*/
@@ -272,25 +278,25 @@ div#old-results {
   border: 1px solid #000;
   right: 0;
   width: 40%;
-  margin: 2px auto;
+  margin: .2rem auto;
   text-align: center;
 }
 #transactions-data {
   width: 80%;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 .table-heading {
   border: 1px solid rgb(21, 19, 19);
-  border-radius: 5px;
+  border-radius: .5rem;
   background: rgba(0, 0, 0, 0.624);
   color: #eee;
   text-align: center;
   text-transform: uppercase;
   width: 80%;
-  margin: 50px auto 0px;
+  margin: 5rem auto 0;
 }
 #userdata {
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 #tr-footer {
   position: fixed;
@@ -299,18 +305,74 @@ div#old-results {
 
 /*Movies Page*/
 .reduce-font > button {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 .movies-bg {
   background: rgba(242, 86, 3, 0.912);
   color: #fff;
-  padding: 20px;
+  padding: 2rem;
   font-family: sans-serif;
   font-weight: bold;
 }
 .column-heading > h3 {
   text-align: center;
 }
+/*view movies*/
+#customized-row {
+  max-width: 114rem;
+  background-color: #777;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+#customized-row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col-1-of-3 {
+  width: calc((100% - 6rem)/3);
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 2rem 0 4rem;
+  float: left;
+}
+.col-1-of-3:not(:last-child){
+  margin-right: 2rem;
+}
+.movie-avatar {
+  max-width: 15rem;
+  border-radius: 100%;
+  margin: 1rem auto;
+  transform: translateX(2rem);
+}
+.movie-dets__heading {
+  padding: 2rem;
+  font-family: Josef;
+  font-size: 1.5rem;
+  display: block;
+}
+.movie-dets__heading > span {
+  display: inherit;
+  border: 1px solid #fff;
+  margin: 1rem;
+  border-radius: .5rem;
+  padding: .5rem;
+}
+.mkey {
+  text-align: center;
+  color: rgb(20, 63, 204);
+  text-decoration: none;
+}
+.movie-footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.796);
+  color: #fff;
+  max-width: 114rem;
+  padding: .2rem;
+  border-radius: .2rem;
+  transform: translateY(5rem);
+
+}
+
 
 @media (max-width: 768px) {
   .sidebar {
