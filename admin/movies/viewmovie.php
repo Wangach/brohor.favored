@@ -36,11 +36,11 @@
 	  </div>
 	</nav>
 	
-	<section id="view-movie">
+	<!--<section id="view-movie">
 		<div id="customized-row">
 			<div class="col-1-of-3">
 				<img src="movie_avatars/tomjerry.jpg" alt="Movie Image" class="movie-avatar">
-			</div><!--/.col-1-->
+			</div><!--/.col-1--
 			<div class="col-1-of-3">
 				<div class="movie-dets">
 					<h2 class="movie-dets__heading">
@@ -50,13 +50,33 @@
 						<span class="movie-dets-location">HDD</span>
 					</h2>
 				</div>
-			</div><!--/.col-2-->
+			</div><!--/.col-2--
 			<div class="col-1-of-3">
 				<div class="mkey">
 					<h2 class="movie-id">#FF2EU8OOP</h2>
 				</div>
-			</div><!--/.col-1-->
-		</div><!--/.row/-->
+			</div><!--/.col-1--
+		</div><!--/.row/--
+	</section>-->
+	<section id="view-movie">
+		<div class="customized-row">
+			<div class="col-1-of-3">
+				<div class="content">
+					<img src="../movies/movie_avatars/tomjerry.jpg" alt="movie-Avatar">
+				</div><!--/.content/-->
+			</div>
+			<div class="col-1-of-3">
+				<div class="movie">
+					<h3 class="movie__title">Tom And Jerry </h3>
+					<h3 class="movie__category">Animation, Adventure, Action</h3>
+					<h3 class="movie__location">HDD</h3>
+					<h3 class="movie__dates">23.01.2021</h3>
+				</div><!--/.movie-dets/-->
+			</div>
+			 <div class="col-1-of-3">
+			 	3
+			 </div>
+		</div><!--content-holder-->
 	</section>
 
 	<footer class="movie-footer">
