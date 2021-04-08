@@ -3,8 +3,70 @@
 	width: 90%;
 	padding: 5px;
 	font-size: 10px;
-}
-form-top {
-    font-size: 9px;
-}
+	}
+	form-top {
+	    font-size: 9px;
+	}
+
+	/*View Movies Page*/
+	#movie-body {
+		background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.514));
+		font-size: .5rem;
+	  }
+	.customized-row {
+	  display: grid;
+	  grid-auto-columns: 1fr;
+	  grid-template-areas: 
+	  
+	  "first"
+	  "second"
+	  "third"
+	  ;
+	  max-width: 43rem;
+	  padding: 1rem;
+	  margin: 0 auto;
+	  margin-top: 3rem;
+	  box-shadow: 2px 4px 15px #999;
+	}
+	.content {
+		width: 100%;
+		height: 10rem;
+	}
+	.content > img{
+	  position: absolute;
+	  top: 1rem;
+	  left: 50%;
+	  transform: translateX(-4rem);
+	  height: 8rem;
+	  width: 8rem;
+	  border-radius: 50%;
+	}
+	.movie {
+		display: grid;
+		grid-template-areas: 
+		"g-title"
+		"g-category"
+		"g-loc g-rat"
+		"g-reldate"
+		;
+	}
+	.movie-content:nth-child(1){
+		grid-area: g-title;
+	}
+	.movie-content:nth-child(2){
+		grid-area: g-category;
+	}
+	.movie-content:nth-child(3){
+		grid-area: g-loc;
+	}
+	.movie-content:nth-child(4){
+		grid-area: g-reldate;
+	}
+	.movie-content:nth-child(5){
+		grid-area: g-rat;
+	}
+	.movie-content > h3{
+		font-size: .5rem;
+	}
+	
  }

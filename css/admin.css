@@ -394,6 +394,9 @@ div#old-results {
 
 }
 */
+#movie-body {
+  background: linear-gradient(rgba(7, 31, 8, 0.6), rgba(7, 31, 8, 0.9));
+}
 #view-movie {
   height: 75vh;
 }
@@ -401,27 +404,37 @@ div#old-results {
   display: grid;
   grid-auto-columns: 1fr 1fr 1fr;
   grid-template-areas: 
-  "first second third"
+  "first second third fourth"
   ;
-  height: 60vh;
+  padding: 2rem;
   max-width: 114rem;
-  background-color: #777;
   margin: 0 auto;
-  margin-top: 8rem;
+  margin-top: 5rem;
+  background: linear-gradient(rgba(7, 31, 8, 0.6), rgba(7, 31, 8, 0.9)),
+    url(../admin/movies/movie_avatars/6underground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 5px 7px 25px #999;
 }
 .col-1-of-3:nth-child(1) {
   grid-area: first;
-  background: #ff0000;
+  background: linear-gradient(rgba(7, 31, 8, 0.6), rgba(7, 31, 8, 0.9));
   margin-right: 1rem;
 }
 .col-1-of-3:nth-child(2) {
   grid-area: second;
-  background: #ff0000;
+  background: linear-gradient(rgba(7, 31, 8, 0.6), rgba(7, 31, 8, 0.9));
   margin-right: 1rem;
 }
 .col-1-of-3:nth-child(3) {
   grid-area: third;
-  background: #ff0000;
+  background: linear-gradient(rgba(7, 31, 8, 0.6), rgba(7, 31, 8, 0.9));
+  margin-right: 1rem;
+}
+.col-1-of-3:nth-child(3) {
+  grid-area: fourth;
+  background: linear-gradient(rgba(7, 31, 8, 0.6), rgba(7, 31, 8, 0.9));
 }
 .content{
   position: relative;
@@ -436,8 +449,46 @@ div#old-results {
 }
 .movie {
   margin: 1rem;
-  font-family: Rye;
+}
+.movie-content {
+  border: 1px solid #fff;
+  margin: 1.5rem;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+.content-title {
   text-transform: uppercase;
+  font-weight: bolder;
+  font-family: Rye;
+  text-decoration: underline;
+  text-align: justify;
+  color: #fff;
+}.movie-content > h3{
+  font-family: Reggae;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.movie-id {
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  width: 60%;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+.mid {
+  text-transform: uppercase;
+  color: #046BE7;
+}
+.movie-footer {
+  background: linear-gradient(rgba(7, 31, 8, 0.6), rgba(7, 31, 8, 0.9));
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: .2rem;
+  margin-top: 1rem;
+}
+.movie-footer > h3{
+  font-size: .8rem;
 }
 @media (max-width: 768px) {
   .sidebar {

@@ -10,8 +10,9 @@
 	<link rel="stylesheet" href="../../css/solid.css">
 	<!--own css files-->
   <link rel="stylesheet" href="../../css/admin.css">
+  <link rel="stylesheet" href="../../css/media.css">
  </head>
- <body>
+ <body id="movie-body">
  	<!--/Custom Loaders/-->
 	<div class="loader">
         <div class="circle"></div>
@@ -19,7 +20,7 @@
         <div class="circle"></div>
     </div>
 
- 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	  <a class="navbar-brand" href="<?php echo $_SERVER['PHP_SELF'];?>">My Movies</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -67,20 +68,46 @@
 			</div>
 			<div class="col-1-of-3">
 				<div class="movie">
-					<h3 class="movie__title">Tom And Jerry </h3>
-					<h3 class="movie__category">Animation, Adventure, Action</h3>
-					<h3 class="movie__location">HDD</h3>
-					<h3 class="movie__dates">23.01.2021</h3>
-				</div><!--/.movie-dets/-->
+					<div class="movie-content">
+						<p class="content-title">Title</p>
+						<h3 class="movie__title">Tom And Jerry </h3>
+					</div>
+					<div class="movie-content">
+						<p class="content-title">Category</p>
+						<h3 class="movie__category">Animation, Adventure, Action</h3>
+					</div>
+					<div class="movie-content">
+						<p class="content-title">Location</p>
+						<h3 class="movie__location">HDD</h3>
+					</div>
+					<div class="movie-content">
+						<p class="content-title">Date Of Release</p>
+						<h3 class="movie__dates">23.01.2021</h3>
+					</div>
+					<div class="movie-content">
+						<p class="content-title">Rating</p>
+						<h3 class="movie__Rating">6.4 </h3>
+					</div>
+				</div><!--/.movie/-->
 			</div>
 			 <div class="col-1-of-3">
-			 	3
+			 	<div class="movie-id">
+			 		<p class="content-title">Movie ID</p>
+			 		<h3 class="mid">#ca21s98i</h3>
+			 	</div>
 			 </div>
 		</div><!--content-holder-->
 	</section>
 
 	<footer class="movie-footer">
-			<h3>&copy; 2021</h3>
+			<h3>&copy; Broad Horizons Ent
+				<script>
+					let allY = new Date;
+					let rNow = allY.getFullYear();
+
+					document.write(rNow);
+				</script>
+			</h3>
 	</footer>
 
   <!--/Javascript files/-->
