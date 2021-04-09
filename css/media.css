@@ -1,4 +1,4 @@
-@media all and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
 	.loginformspace {
 	width: 90%;
 	padding: 5px;
@@ -12,6 +12,7 @@
 	#movie-body {
 		background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.514));
 		font-size: .5rem;
+		position:relative;
 	  }
 	.customized-row {
 	  display: grid;
@@ -43,11 +44,12 @@
 	}
 	.movie {
 		display: grid;
+		grid-template-columns: 1fr 1fr;
 		grid-template-areas: 
-		"g-title"
-		"g-category"
+		"g-title g-title"
+		"g-category g-category"
 		"g-loc g-rat"
-		"g-reldate"
+		"g-reldate g-reldate"
 		;
 	}
 	.movie-content:nth-child(1){
@@ -67,6 +69,14 @@
 	}
 	.movie-content > h3{
 		font-size: .5rem;
+	}
+	.movie-footer {
+		position: absolute;
+		top: 65rem;
+		margin-top: 3rem;
+		display: block;
+		width: 100%;
+		transform: translateX(-25px);
 	}
 	
  }

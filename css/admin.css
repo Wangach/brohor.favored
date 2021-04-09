@@ -404,7 +404,7 @@ div#old-results {
   display: grid;
   grid-auto-columns: 1fr 1fr 1fr;
   grid-template-areas: 
-  "first second third fourth"
+  "first second third"
   ;
   padding: 2rem;
   max-width: 114rem;
@@ -430,12 +430,8 @@ div#old-results {
 .col-1-of-3:nth-child(3) {
   grid-area: third;
   background: linear-gradient(rgba(7, 31, 8, 0.6), rgba(7, 31, 8, 0.9));
-  margin-right: 1rem;
 }
-.col-1-of-3:nth-child(3) {
-  grid-area: fourth;
-  background: linear-gradient(rgba(7, 31, 8, 0.6), rgba(7, 31, 8, 0.9));
-}
+
 .content{
   position: relative;
 }
