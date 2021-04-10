@@ -1,9 +1,13 @@
+<?php 
+include '../../script/session_checker.php';
+include 'moviescr/midchecker.php';
+?>
 <!DOCTYPE html>
  <html lang="en">
  <head>
  	<meta charset="UTF-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	<title>View Detailed Movie</title>
+ 	<title><?php echo $nameOfMov; ?></title>
   <!--/Precoded CSS files-->
 	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<link rel="stylesheet" href="../../css/all.css">
@@ -21,7 +25,7 @@
     </div>
 
  	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  <a class="navbar-brand" href="<?php echo $_SERVER['PHP_SELF'];?>">My Movies</a>
+	  <a class="navbar-brand" href="<?php echo $_SERVER['PHP_SELF'];?>">My Movie</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -36,64 +40,41 @@
 	    </form>
 	  </div>
 	</nav>
-	
-	<!--<section id="view-movie">
-		<div id="customized-row">
-			<div class="col-1-of-3">
-				<img src="movie_avatars/tomjerry.jpg" alt="Movie Image" class="movie-avatar">
-			</div><!--/.col-1--
-			<div class="col-1-of-3">
-				<div class="movie-dets">
-					<h2 class="movie-dets__heading">
-						<span class="movie-dets-title">Tom And Jerry 2021</span>
-						<span class="movie-dets-category">Animation, Action, Adventure</span>
-						<span class="movie-dets-dates">23/02/2021</span>
-						<span class="movie-dets-location">HDD</span>
-					</h2>
-				</div>
-			</div><!--/.col-2--
-			<div class="col-1-of-3">
-				<div class="mkey">
-					<h2 class="movie-id">#FF2EU8OOP</h2>
-				</div>
-			</div><!--/.col-1--
-		</div><!--/.row/--
-	</section>-->
 	<section id="view-movie">
 		<div class="customized-row">
 			<div class="col-1-of-3">
 				<div class="content">
-					<img src="../movies/movie_avatars/tomjerry.jpg" alt="movie-Avatar">
+					<img src="../movies/movie_avatars/<?php echo $postOfMov; ?>" alt="movie-Avatar">
 				</div><!--/.content/-->
 			</div>
 			<div class="col-1-of-3">
 				<div class="movie">
 					<div class="movie-content">
 						<p class="content-title">Title</p>
-						<h3 class="movie__title">Tom And Jerry </h3>
+						<h3 class="movie__title"><?php echo $nameOfMov; ?> </h3>
 					</div>
 					<div class="movie-content">
 						<p class="content-title">Category</p>
-						<h3 class="movie__category">Animation, Adventure, Action</h3>
+						<h3 class="movie__category"><?php echo $categoryOfMov; ?></h3>
 					</div>
 					<div class="movie-content">
 						<p class="content-title">Location</p>
-						<h3 class="movie__location">HDD</h3>
+						<h3 class="movie__location"><?php echo $locationOfMov; ?></h3>
 					</div>
 					<div class="movie-content">
 						<p class="content-title">Date Of Release</p>
-						<h3 class="movie__dates">23.01.2021</h3>
+						<h3 class="movie__dates"><?php echo $relDatOfMov; ?></h3>
 					</div>
 					<div class="movie-content">
 						<p class="content-title">Rating</p>
-						<h3 class="movie__Rating">6.4 </h3>
+						<h3 class="movie__Rating"><?php echo $ratOfMov; ?> </h3>
 					</div>
 				</div><!--/.movie/-->
 			</div>
 			 <div class="col-1-of-3">
 			 	<div class="movie-id">
 			 		<p class="content-title">Movie ID</p>
-			 		<h3 class="mid">#ca21s98i</h3>
+			 		<h3 class="mid">#<?php echo $keyOfMov;?></h3>
 			 	</div>
 			 </div>
 		</div><!--content-holder-->

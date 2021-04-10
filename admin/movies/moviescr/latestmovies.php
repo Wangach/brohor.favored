@@ -32,7 +32,7 @@ if (mysqli_num_rows($getem) > 0) {
 							<td class='text-success'>$jina</td>
 							<td>$ct</td>
 							<td>$lc</td>
-							<td><a class='text-lg text-info' href='../movies/viewmovie.php?searchkey=$mkey'>$mkey</a></td>
+							<td><a target='_blank' class='text-lg text-info' href='../movies/viewmovie.php?moviekey=$mkey'>$mkey</a></td>
 						</tr>
 					</tbody>";
 		$feedb .= "</table>";

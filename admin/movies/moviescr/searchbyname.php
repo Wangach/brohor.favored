@@ -40,7 +40,7 @@ if (mysqli_num_rows($perform) > 0) {
 							<td>$lc</td>
 							<td>$pr</td>
 							<td>$dr</td>
-							<td><a class='text-lg text-info' href='#'>$mkey</a></td>
+							<td><a target='_blank' class='text-lg text-info' href='../movies/viewmovie.php?moviekey=$mkey'>$mkey</a></td>
 						</tr>
 					</tbody>";
 		$feedb .= "</table>";

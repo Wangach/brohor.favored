@@ -1,3 +1,28 @@
+/*Google*/
+@font-face{
+	font-family: Josef;
+	src: url(../assets/gfonts/JosefinSans-Italic-VariableFont_wght.ttf);
+  }
+  @font-face{
+	font-family: Berk;
+	src: url(../assets/gfonts/BerkshireSwash-Regular.ttf);
+  }
+  @font-face{
+	font-family: CodyL;
+	src: url(../assets/gfonts/Codystar-Light.ttf);
+  }
+  @font-face{
+	font-family: CodyR;
+	src: url(../assets/gfonts/Codystar-Regular.ttf);
+  }
+  @font-face{
+	font-family: Reggae;
+	src: url(../assets/gfonts/ReggaeOne-Regular.ttf);
+  }
+  @font-face{
+	font-family: Rye;
+	src: url(../assets/gfonts/Rye-Regular.ttf);
+  }
 @media (min-width: 320px) and (max-width: 480px) {
 	.loginformspace {
 	width: 90%;
@@ -69,6 +94,11 @@
 	}
 	.movie-content > h3{
 		font-size: .5rem;
+	}
+	.mid {
+		font-size: 1rem;
+		font-family: Berk;
+		color: rgb(214, 31, 159);
 	}
 	.movie-footer {
 		position: absolute;
