@@ -20,7 +20,7 @@ include '../../script/session_checker.php';
 
 	<!--/Chart Import from google/-->
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
@@ -42,7 +42,7 @@ include '../../script/session_checker.php';
         var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
         chart.draw(data, options);
       }
-    </script>
+    </script>-->
 
 </head>
 <body>
