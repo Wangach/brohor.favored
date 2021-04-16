@@ -183,25 +183,32 @@ include '../../script/session_checker.php';
 											</button>
 										</div><!--/.modal-header-->
 										<div class="modal-body">
-											<form action="#" id="registration-form">
+											<form action="userscr/reguser.php" id="registration-form" method="POST">
 												<div class="form-group">
 													<label for="name">Customer's Name:</label>
-													<input type="text" class="form-control" placeholder="Customer Full Names...">
+													<input type="text" class="form-control" placeholder="Customer Full Names..." id="cfn" name="fnam">
 												</div><!--/.form-group/-->
 												<div class="form-group">
-													<label for="phone">Phone No.:</label>
-													<input type="number" class="form-control" placeholder="+254712 000 000...">
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="team">Favorite Team:</label>
-													<input type="text" class="form-control" placeholder="E.g. Arsenal...">
+													<label for="team">Password:</label>
+													<input type="password" class="form-control" placeholder="preset password..." id="cpwd" name="pass">
 												</div><!--/.form-group/-->
 												<div class="form-group">
 													<label for="name">Customer Alias:</label>
-													<input type="text" class="form-control" placeholder="Nick Name...">
+													<input type="text" class="form-control" placeholder="Nick Name..." id="cal" name="nickn">
 												</div><!--/.form-group/-->
+												<div class="form-group">
+													<label for="team">Favorite Team:</label>
+													<input type="text" class="form-control" placeholder="E.g. Arsenal..." id="cft" name="favt">
+												</div><!--/.form-group/-->
+												<div class="form-group">
+													<label for="phone">Phone No.:</label>
+													<input type="number" class="form-control" placeholder="+254712 000 000..." id="cpn" name="phno">
+												</div><!--/.form-group/-->
+												
+												
 
-												<button type="submit" class="btn btn-success">Register</button>
+												<button id="reguser" type="submit" class="btn btn-success">Register</button>
+												<div id="regres"></div>
 											</form>
 										</div><!--modal-body-->
 									</div><!--Modal content-->
@@ -280,5 +287,6 @@ include '../../script/session_checker.php';
 	<script src="../../js/fontawesome.js" type="text/javascript"></script>
 	<script src="../../js/regular.js" type="text/javascript"></script>
 	<script src="../../js/index.js" type="text/javascript"></script>
+	<script src="userjs/users.js" type="text/javascript"></script>
 </body>
 </html>
