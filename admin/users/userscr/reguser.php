@@ -10,7 +10,7 @@ $favoriteTeam = mysqli_real_escape_string($initialize, $_POST['favt']);
 $phoneNum = mysqli_real_escape_string($initialize, $_POST['phno']);
 
 
-$psh = "INSERT INTO users(username, pwd, phone, alias, favteam) VALUES('$nameOfUser', '$userPass', '$phoneNum', '$sysName', '$favoriteTeam')";
+$psh = "INSERT INTO users(username, password, phone, alias, favteam) VALUES('$nameOfUser', '$userPass', '$phoneNum', '$sysName', '$favoriteTeam')";
 $ens = mysqli_query($initialize, $psh);
 
 if($ens){
@@ -20,5 +20,6 @@ if($ens){
     echo $output;
 }else{
     $output = "There Has Been An Error, ".mysqli_error($initialize);
+    echo $output;
 }
 ?>

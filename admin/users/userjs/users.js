@@ -6,7 +6,6 @@ userform.onsubmit = function(event){
     event.preventDefault();
     //console.log('form submitted');
     let register = new XMLHttpRequest;
-	register.open('POST', url);
 	register.onreadystatechange = function(){
 		if (this.readyState == 4 && this.status == 200) {
 			let frmdb = this.responseText;
@@ -16,6 +15,8 @@ userform.onsubmit = function(event){
 			mresults.innerHTML = frmdb;
 		}
 	}
+	register.open('POST', url);
     let fData = new FormData(userform);
+    //console.log(fData);
 	register.send(fData);
 }
