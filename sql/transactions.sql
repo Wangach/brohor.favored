@@ -1,1 +1,4 @@
-CREATE TABLE `systwone`.`transactions` ( `trName` VARCHAR(1000) NOT NULL , `trId` VARCHAR(1000) NOT NULL , `credit` INT NOT NULL , `debit` INT NOT NULL , `amount` INT NOT NULL , `trDte` VARCHAR(100) NOT NULL , `trTme` VARCHAR(100) NOT NULL ) ENGINE = InnoDB;
+CREATE TABLE `systwone`.`transactions` ( `id` INT NOT NULL AUTO_INCREMENT , `trName` VARCHAR(1000) NOT NULL , `trId` VARCHAR(1000) NOT NULL , `credit` INT NOT NULL , `debit` INT NOT NULL , `amount` INT NOT NULL , `trDesc` VARCHAR(100) NOT NULL , `trDte` VARCHAR(100) NOT NULL , `trTme` VARCHAR(100) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+#online
+CREATE TABLE `johnitox_systwone`.`transactions` ( `id` INT NOT NULL AUTO_INCREMENT , `trName` VARCHAR(100) NOT NULL , `trId` VARCHAR(100) NOT NULL , `credit` INT NOT NULL , `debit` INT NOT NULL , `amount` INT NOT NULL , `trDesc` VARCHAR(100) NOT NULL , `trDte` VARCHAR(100) NOT NULL , `trTme` VARCHAR(100) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 

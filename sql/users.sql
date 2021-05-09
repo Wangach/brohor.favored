@@ -1,1 +1,4 @@
 CREATE TABLE `systwone`. ( `id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(100) NOT NULL , `password` VARCHAR(1000) NOT NULL , `phone` INT NOT NULL , `alias` VARCHAR(100) NOT NULL , `favteam` INT NOT NULL DEFAULT '0' , `login` INT NOT NULL , `regdate` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+#online
+CREATE TABLE `johnitox_systwone`.`users` ( `id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(100) NOT NULL , `password` VARCHAR(100) NOT NULL , `phone` INT NOT NULL , `alias` VARCHAR(100) NOT NULL , `favteam` VARCHAR(100) NOT NULL , `login` INT NOT NULL DEFAULT '0' , `regdate` TIMESTAMP NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 

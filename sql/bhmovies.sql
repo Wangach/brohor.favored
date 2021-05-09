@@ -3,3 +3,5 @@ CREATE TABLE `systwone`.`bhmovies` ( `id` INT NOT NULL AUTO_INCREMENT , `movieNa
 
 /*Current Movies Table;*/
 CREATE TABLE `systwone`.`bhmovies` ( `id` INT NOT NULL AUTO_INCREMENT , `moviePoster` VARCHAR(200) NOT NULL , `movieName` VARCHAR(200) NOT NULL , `movieCat` VARCHAR(200) NOT NULL , `movieLoc` VARCHAR(100) NOT NULL , `movieRating` INT(100) NOT NULL , `movieProducer` VARCHAR(100) NOT NULL , `dateReleased` VARCHAR(100) NOT NULL , `mSec` VARCHAR(100) NOT NULL , `dateAdded` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+#online
+CREATE TABLE `johnitox_systwone`.`bhmovies` ( `id` INT NOT NULL AUTO_INCREMENT , `moviePoster` VARCHAR(200) NOT NULL , `movieName` VARCHAR(200) NOT NULL , `movieCat` VARCHAR(200) NOT NULL , `movieLoc` VARCHAR(100) NOT NULL , `movieRating` INT NOT NULL , `movieProducer` VARCHAR(100) NOT NULL , `dateReleased` VARCHAR(100) NOT NULL , `mSec` VARCHAR(100) NOT NULL , `dateAdded` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
