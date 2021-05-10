@@ -25,7 +25,8 @@ switch ($searchType) {
 				$mId = $data['matchid'];
 
 				//html data
-				$showData = "<table class='table table-dark' id='multichange'>
+				$showData = "<div class='table-responsive'>";
+				$showData .= "<table class='table table-dark' id='multichange'>
 								<caption>$seachTerm Won Matches</caption>";
 				$showData .= "
 							<thead>
@@ -49,6 +50,7 @@ switch ($searchType) {
 								</tr>
 							</tbody>";
 				$showData .= "</table>";
+				$showData .= "</div>";
 
 				echo $showData;
 			}
@@ -72,7 +74,8 @@ switch ($searchType) {
 				$mId = $data['matchid'];
 
 				//html data
-				$showData = "<table class='table table-dark' id='multichange'>
+				$showData = "<div class='table-responsive'>";
+				$showData .= "<table class='table table-dark' id='multichange'>
 								<caption>$seachTerm Lost Matches</caption>";
 				$showData .= "
 							<thead>
@@ -100,6 +103,7 @@ switch ($searchType) {
 								</tr>
 							</tbody>";
 				$showData .= "</table>";
+				$showData .= "</div>";
 
 				echo $showData;
 			}

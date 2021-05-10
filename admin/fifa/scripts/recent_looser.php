@@ -25,7 +25,8 @@ if (mysqli_num_rows($latestMatches) > 0) {
 			print_r($key . $value);
 		}*/
 		//html data
-		$showData = "<table class='table table-dark' id='multichange'>
+		$showData = "<div>";
+		$showData .= "<table class='table table-dark' id='multichange'>
 						<caption>Looser Recent Matches</caption>";
 		$showData .= "
 					<thead>
@@ -45,6 +46,7 @@ if (mysqli_num_rows($latestMatches) > 0) {
 						</tr>
 					</tbody>";
 		$showData .= "</table>";
+		$showData.= "</div>";
 
 		echo $showData;
 	}

@@ -50,7 +50,8 @@ if (mysqli_num_rows($trGt) > 0) {
 		$transWak = $trans['trTme'];
 
 		//Html Data
-		$showData = "<table class='table table-dark' id='multichange'>
+		$showData = "<div class='table-responsive'>";
+		$showData .= "<table class='table table-dark' id='multichange'>
 						<caption>$transNme Transactions</caption>";
 		$showData .= "
 					<thead>
@@ -75,6 +76,7 @@ if (mysqli_num_rows($trGt) > 0) {
 						</tr>
 					</tbody>";
 		$showData .= "</table>";
+		$showData .= "</div>";
 
 		echo $showData;
 	}

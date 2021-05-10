@@ -17,7 +17,8 @@ if (mysqli_num_rows($getem) > 0) {
 		$mkey = $row['mSec'];
 
 		//Organize and Display Data
-		$feedb = "<table class='table table-bordered table-dark' id='multichange'>";
+		$feedb = "<div class='table-responsive'>";
+		$feedb .= "<table class='table table-bordered table-dark' id='multichange'>";
 		$feedb .= "
 					<thead>
 					    <tr>
@@ -36,6 +37,7 @@ if (mysqli_num_rows($getem) > 0) {
 						</tr>
 					</tbody>";
 		$feedb .= "</table>";
+		$feedb .= "<div>";
 
 		echo $feedb;
 	}
