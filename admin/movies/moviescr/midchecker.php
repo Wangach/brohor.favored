@@ -1,4 +1,5 @@
 <?php
+include 'db.php';
 if(isset($_GET['moviekey']) && !empty($_GET['moviekey'])){
 	//assign the key to a variable
 	$searchkey = $_GET['moviekey'];
