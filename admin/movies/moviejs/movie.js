@@ -3,7 +3,7 @@ let movieForm = document.querySelector('#addmovie');
 let movieFeed = document.getElementById('mdb')
 let movAct = movieForm.getAttribute('action');
 
-movieForm.addEventListener('submit', () => {
+movieForm.addEventListener('submit', (event) => {
 	event.preventDefault();
 	let instantiator = new XMLHttpRequest();
 	instantiator.onreadystatechange = function() {
@@ -92,3 +92,4 @@ sbcForm.onsubmit = function(event){
 }
 
 //Search Old Movies Database
+

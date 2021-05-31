@@ -55,16 +55,16 @@ include 'moviescr/midchecker.php';
 					</div>
 					<div class="movie-content">
 						<p class="content-title">Location</p>
-						<form action="moviescr/eloc.php" method="POST" class="update-loc">
+						<form id="edit-loc-form" action="moviescr/eloc.php" method="POST" class="update-loc">
 							<div class="form-group">
 								<label class="sr-only">Key</label>
-								<input name="gotk" type="text" class="form-control" value="<?php echo $keyOfMov; ?>" disabled>
+								<input name="gotk" type="text" class="form-control" value="<?php echo $keyOfMov; ?>">
 							</div>
 							<div class="form-group">
 								<label class="sr-only">Location</label>
 								<input name="loca" type="text" class="form-control" value="<?php echo $locationOfMov; ?>">
 							</div>
-							<button name="edl" type="submit" class="btn btn-success">Update</button>
+							<button id="edit-locat" name="edl" type="submit" class="btn btn-success">Update</button>
 						</form>
 					</div>
 					<div class="movie-content">
