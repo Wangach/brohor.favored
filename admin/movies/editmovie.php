@@ -66,6 +66,7 @@ include 'moviescr/midchecker.php';
 							</div>
 							<button id="edit-locat" name="edl" type="submit" class="btn btn-success">Update</button>
 						</form>
+						<div id="mdb"></div>
 					</div>
 					<div class="movie-content">
 						<p class="content-title">Rating</p>

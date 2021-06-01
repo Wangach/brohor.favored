@@ -2,6 +2,7 @@
 //Check session
 
 include '../../script/session_checker.php';
+include 'userscr/usermaster.php';
 
  ?>
 <!DOCTYPE html>
@@ -123,7 +124,7 @@ include '../../script/session_checker.php';
 										<i class="fas fa-user-check fa-3x text-warning"></i>
 										<div class="text-right text-secondary">
 											<h5>Registered Users</h5>
-											<h3>100</h3>
+											<h3><?php calcTotUsers(); ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->
@@ -232,36 +233,7 @@ include '../../script/session_checker.php';
 							<h3 class="text-center text-muted">Recently Added Users</h3>
 						</div>
 						<div class="col-md-12">
-							<table class="table table-dark">
-								<thead>
-								<tr>
-								  <th scope="col">#</th>
-								  <th scope="col">First</th>
-								  <th scope="col">Last</th>
-								  <th scope="col">Handle</th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr>
-								  <th scope="row">1</th>
-								  <td>Mark</td>
-								  <td>Otto</td>
-								  <td>@mdo</td>
-								</tr>
-								<tr>
-								  <th scope="row">2</th>
-								  <td>Jacob</td>
-								  <td>Thornton</td>
-								  <td>@fat</td>
-								</tr>
-								<tr>
-								  <th scope="row">3</th>
-								  <td>Larry</td>
-								  <td>the Bird</td>
-								  <td>@twitter</td>
-								</tr>
-								</tbody>
-							</table>
+							<?php showUsers(); ?>
 						</div><!--/col-md-12/-->
 					</div><!--/.nested row/-->
 				</div>

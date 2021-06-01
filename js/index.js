@@ -31,5 +31,9 @@ movEditForm.onsubmit = function(event) {
 	instantiator.send(movieData);
 
 	//Execute clearing func
-  setTimeout(location.reload(), 10000);
+  setTimeout(rel, 7000);
 };
+
+function rel(){
+	location.reload()
+}
