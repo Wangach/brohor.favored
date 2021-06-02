@@ -10,7 +10,7 @@ $newLoc = mysqli_query($initialize, $getMov);
 
 if ($newLoc) {
     //Location updated
-    $res = "Edit Has Been Successful. New Location Set To ".$updatedLoc;
+    $res = "Edit Has Been Successful. New Location Set To <strong class='text text-danger'>".$updatedLoc. "</strong>";
 
     echo $res;
 }else{

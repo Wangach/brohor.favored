@@ -256,7 +256,7 @@ include '../../script/session_checker.php';
 							  </div>
 							</div>
 						</div><!--/.col-md-3/-->
-                        <div class="col-md-3 col-xs-12 col-sm-12">
+            <div class="col-md-3 col-xs-12 col-sm-12">
 
 							<div class="my-content reduce-font">
 								<button class="btn btn-primary" data-toggle="modal" data-target="#searByCategory">B. Category <strong><i class="fas fa-object-group"></i></strong></button>
@@ -333,20 +333,14 @@ include '../../script/session_checker.php';
 						<div class="col-md-9 mb-2 mt-4">
 							<h3 class="text-center text-muted">My Movies Data</h3>
 						</div>
-						<div class="col-md-6">
-                            <div class="column-heading">
+						<div class="col-md-12 col-sm-12">
+              <div class="column-heading">
 								<h3>Latest</h3>
 							</div>
 							<div class="latest-movies">
 								<?php include 'moviescr/latestmovies.php'; ?>
 							</div><!--/latest-movies-->
-                        </div><!--/col-md-6/-->
-                        <div class="col-md-6">
-							<div class="column-heading">
-								<h3>Movies</h3>
-							</div>
-							<div id="piechart_3d" style="width: 430px; height: 330px;"></div>
-						</div><!--/col-md-6/-->
+            </div><!--/col-md-6/-->
 
 					</div><!--/.nested row/-->
 				</div>

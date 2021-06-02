@@ -32,6 +32,7 @@ if (mysqli_num_rows($perform) > 0) {
 					      <th scope='col'>M. Producer</th>
 					      <th scope='col'>M. Released</th>
 					      <th scope='col'>M. Key</th>
+					      <th scope='col'>Action</th>
 					    </tr>
 					  </thead>";
 		$feedb .= "<tbody>
@@ -42,7 +43,7 @@ if (mysqli_num_rows($perform) > 0) {
 							<td>$pr</td>
 							<td>$dr</td>
 							<td><a target='_blank' class='text-lg text-info' href='../movies/viewmovie.php?moviekey=$mkey'>$mkey</a></td>
-							<td><a target='_blank' class='btn btn-sm btn-danger' href='../movies/editmovie.php?moviekey=$mkey'>Edit Entry</a></td>
+							<td><a target='_blank' class='text text-warning' href='../movies/editmovie.php?moviekey=$mkey'>Edit Entry</a></td>
 						</tr>
 					</tbody>";
 		$feedb .= "</table>";
