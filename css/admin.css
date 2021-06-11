@@ -217,7 +217,6 @@ div#results {
   z-index: 9999;
   overflow: scroll;
   height: 250px;
-  width: 500px;
 }
 div#mbn-results {
   margin: 0px auto;
@@ -225,7 +224,6 @@ div#mbn-results {
   z-index: 9999;
   overflow: scroll;
   height: 250px;
-  width: 500px;
 }
 div#mbc-results {
   margin: 0px auto;
@@ -233,7 +231,6 @@ div#mbc-results {
   z-index: 9999;
   overflow: scroll;
   height: 250px;
-  width: 500px;
 }
 div#old-results {
   margin: 0px auto;
@@ -241,7 +238,6 @@ div#old-results {
   z-index: 9999;
   overflow: scroll;
   height: 250px;
-  width: 500px;
 }
 #matches {
   margin: 0px auto;
