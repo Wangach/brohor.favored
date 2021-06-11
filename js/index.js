@@ -8,10 +8,11 @@ window.onload =setTimeout(
 //Edit Movie Entry Location
 let movEditForm = document.querySelector('.update-loc');
 let editFeed = document.getElementById('mdb');
-let editAct = movEditForm.getAttribute('action');
 
 movEditForm.onsubmit = function(event) {
 	event.preventDefault();
+
+	let editAct = movEditForm.getAttribute('action');
 	//alert('Form Has Been Submitted!');
 	let instantiator = new XMLHttpRequest();
 	instantiator.onreadystatechange = function() {
