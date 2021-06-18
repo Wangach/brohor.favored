@@ -25,9 +25,9 @@ if (isset($_GET['user']) && $_GET['month'] && !empty($_GET['month']) && !empty($
  <body>
  	<!--/Custom Loaders/-->
 	<div class="loader">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+		<div class="spinner-border text-success" role="status">
+			<span></span>
+		</div>
     </div>
 
  	<nav class="navbar navbar-expand-lg navbar-light bg-light">

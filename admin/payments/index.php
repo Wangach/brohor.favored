@@ -20,9 +20,9 @@ include '../../script/session_checker.php';
 <body>
 	<!--/Custom Loaders/-->
 	<div class="loader">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+		<div class="spinner-border text-success" role="status">
+			<span></span>
+		</div>
     </div>
 	
 	<nav class="navbar navbar-expand-md navbar-light bg-light">

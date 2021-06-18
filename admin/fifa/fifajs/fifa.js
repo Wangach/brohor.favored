@@ -4,6 +4,7 @@ let looserUrl = looserform.getAttribute("action");
 
 looserform.addEventListener("submit", function (event) {
   event.preventDefault();
+  looserform.removeEventListener("submit");
 
   //alert('Form Has Been Submitted!');
   let req = new XMLHttpRequest();
