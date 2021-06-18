@@ -1,10 +1,11 @@
 let looserform = document.querySelector("form#looser-form");
 let feedback = document.getElementById("recres");
 let looserUrl = looserform.getAttribute("action");
+let submitBtn = document.querySelector('');
 
 looserform.addEventListener("submit", function (event) {
   event.preventDefault();
-  looserform.removeEventListener("submit");
+
 
   //alert('Form Has Been Submitted!');
   let req = new XMLHttpRequest();
