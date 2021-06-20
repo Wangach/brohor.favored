@@ -287,7 +287,7 @@ include '../../script/session_checker.php';
 													<input type="radio" id="aet" name="charge" value="ht">
 												</div><!--/.form-group/-->
 												
-												<button type="submit" class="btn btn-warning" name="recordm">Record Match</button>
+												<button type="submit" id="looser" class="btn btn-warning" name="recordm">Record Match</button>
 												<div id="recres"></div>
 											</form>
 										</div><!--modal-body-->
@@ -400,7 +400,7 @@ include '../../script/session_checker.php';
 							<h3 class="text-center text-muted">Recently Fair Games</h3>
 						</div>
 						<div class="col-md-12">
-							<table class="table table-dark">
+							<!--<table class="table table-dark">
 								<thead>
 								<tr>
 								  <th scope="col">#</th>
@@ -429,7 +429,8 @@ include '../../script/session_checker.php';
 								  <td>@twitter</td>
 								</tr>
 								</tbody>
-							</table>
+							</table>-->
+							<?php include 'scripts/recent_fair.php'; ?>
 						</div><!--/col-md-12/-->
 					</div><!--/.nested row/-->
 				</div>

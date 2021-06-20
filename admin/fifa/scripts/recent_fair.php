@@ -5,7 +5,7 @@ $showData = '';
 include '../../script/database.php';
 
 
-$matchGetter = "SELECT * FROM (SELECT * FROM lmatches ORDER BY no DESC LIMIT 4) as r ORDER BY no";
+$matchGetter = "SELECT * FROM (SELECT * FROM fmatches ORDER BY id DESC LIMIT 4) as r ORDER BY id";
 $latestMatches = mysqli_query($initialize, $matchGetter);
 
 if (mysqli_num_rows($latestMatches) > 0) {
@@ -17,9 +17,9 @@ if (mysqli_num_rows($latestMatches) > 0) {
 		$awTm = $row['Ateam'];
 		$hmSc = $row['Hscore'];
 		$awSc = $row['Ascore'];
-		$loss = $row['looser'];
-		$wnr = $row['winner'];
+		$bazuus = $row['payers'];
 		$mId = $row['matchid'];
+		$mSt = $row['matchstatus'];
 
 		/*Display The Results Depending on thecredit or debit value
 		//Will do this later since I am on a deadline RN
@@ -39,8 +39,8 @@ if (mysqli_num_rows($latestMatches) > 0) {
 					      <th scope='col'>A. Team</th>
 					      <th scope='col'>H. Score</th>
 					      <th scope='col'>A. Score</th>
-					      <th class='text-danger'>Looser</th>
-					      <th class='text-success'>Winner</th>
+					      <th class='text-primary'>Payers</th>
+					      <th class='text-info'>Match Id</th>
 					    </tr>
 					  </thead>";
 		$showData .= "<tbody>
@@ -51,8 +51,8 @@ if (mysqli_num_rows($latestMatches) > 0) {
 							<td>$awTm</td>
 							<td>$hmSc</td>
 							<td>$awSc</td>
-							<td class='text-danger'>$loss</td>
-							<td class='text-success'>$wnr</td>
+							<td class='text-primary'>$bazuus</td>
+							<td class='text-info'>$mId</td>
 						</tr>
 					</tbody>";
 		$showData .= "</table>";

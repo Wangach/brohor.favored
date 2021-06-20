@@ -1,10 +1,11 @@
 let looserform = document.querySelector("form#looser-form");
 let feedback = document.getElementById("recres");
 let looserUrl = looserform.getAttribute("action");
-let submitBtn = document.querySelector('');
+let submitBtn = document.querySelector('#looser');
 
 looserform.addEventListener("submit", function (event) {
   event.preventDefault();
+  submitBtn.setAttribute('disabled', 'true');
 
 
   //alert('Form Has Been Submitted!');
@@ -87,7 +88,7 @@ fairForm.addEventListener('submit', function(e) {
 	      let fairResp = this.responseText;
 	      //display response
 	      fairGetter.classList.add("alert");
-	      fairGetter.classList.add("alert-primary");
+	      fairGetter.classList.add("alert-success");
 	      fairGetter.innerHTML = fairResp;
 	    }
 	  };
