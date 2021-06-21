@@ -159,7 +159,7 @@ include 'userscr/usermaster.php';
 	</section>
 
 	<section id="userssec">
-		<div class="contaiber-fluid">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-9 ml-auto">
 					<div class="row style-bg">

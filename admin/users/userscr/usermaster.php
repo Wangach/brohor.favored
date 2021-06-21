@@ -10,7 +10,7 @@ function showUsers() {
 	
 	include '../../script/database.php';
 
-	//Fetching The latest transactions
+	//Fetching The recently added users
 	$userGetter = "SELECT * FROM (SELECT * FROM users ORDER BY id DESC LIMIT 5) as r ORDER BY id";
 	$lastAddedUser = mysqli_query($initialize, $userGetter);
 
@@ -97,5 +97,55 @@ function onlineUsers(){
 	}
 }
 
+function bhentUsers(){
+	$showData = '';
+
+	include '../../script/database.php';
+
+	//get users from the database
+	$userGetter = "SELECT * FROM (SELECT * FROM users ORDER BY id DESC) as r ORDER BY id";
+	$allUsers = mysqli_query($initialize, $userGetter);
+
+	if (mysqli_num_rows($allUsers) > 0) {
+		while ($row = mysqli_fetch_assoc($allUsers)) {
+			#get the rows individual data
+			$nameOfUser = $row['username'];
+			$phNumber = $row['phone'];
+			$nameOfFavorite = $row['favteam'];
+			$dateOfRegistration = $row['regdate'];
+			$systName = $row['alias'];
+			
+
+			/*Display The Results Depending on thecredit or debit value
+			//Will do this later since I am on a deadline RN
+			foreach ($row as $key => $value) {
+				print_r($key . $value);
+			}*/
+			//html data
+			$showData = "<tbody>
+							<tr>
+								<td><a class='text-lg text-success' href='#'>$nameOfUser</a></td>
+								<td>$phNumber</td>
+								<td>$nameOfFavorite</td>
+								<td>$dateOfRegistration</td>
+								<td>
+									<a class='btn btn-primary' href='./viewuser.php?a=$systName'><i class='fas fa-eye'></i></a>
+									<a class='btn btn-danger' href='./viewuser.php?a=$systName'><i class='fas fa-trash-alt'></i></a>
+									<a class='btn btn-warning' href='./viewuser.php?a=$systName'><i class='fas fa-edit'></i></a>
+								</td>
+							</tr>
+						</tbody>";
+			$showData .= "</table>";
+			$showData .= "</div>";
+
+			echo $showData;
+		}
+	}else{
+		$showData = "There Are No Users In The Database. Try Adding some!";
+
+		echo $showData;
+	}
+
+}
 
  ?>
