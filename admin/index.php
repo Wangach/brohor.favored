@@ -1,6 +1,7 @@
 <?php 
 //Check session
 include '../script/session_checker.php';
+include 'users/userscr/usermaster.php';
 
  ?>
 <!DOCTYPE html>
@@ -140,7 +141,7 @@ include '../script/session_checker.php';
 										<i class="fas fa-users fa-3x text-info"></i>
 										<div class="text-right text-secondary">
 											<h5>Registered Users</h5>
-											<h3>100</h3>
+											<h3><?php calcTotUsers(); ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->
@@ -186,7 +187,7 @@ include '../script/session_checker.php';
 						</div><!--/col-md-6/-->
 
 						<div class="col-md-12 col-lg-6 col-sm-12">
-							<?php include 'fifa/scripts/recent_looser.php'; ?>
+							<?php include 'fifa/scripts/recent_fair.php'; ?>
 						</div><!--/col-md-6/-->
 					</div><!--/.nested row/-->
 				</div>
