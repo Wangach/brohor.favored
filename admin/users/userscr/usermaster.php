@@ -1,5 +1,8 @@
 <?php 
-include '../../script/database.php';
+$initialize = mysqli_connect('localhost', 'root', '','systwone');
+if (!$initialize) {
+	echo "Connection to the Database has not been successful!".mysqli_error($initialize);
+}
 
 //show list of users 
 function showUsers() {
@@ -64,7 +67,10 @@ function showUsers() {
 
 //count the total number of registered users
 function calcTotUsers() {
-	include '../../script/database.php';
+	$initialize = mysqli_connect('localhost', 'root', '','systwone');
+	if (!$initialize) {
+		echo "Connection to the Database has not been successful!".mysqli_error($initialize);
+	}
 	$totalUsers = "SELECT * FROM users";
 	$getUsers = mysqli_query($initialize, $totalUsers);
 
@@ -72,5 +78,24 @@ function calcTotUsers() {
 
 	echo $hesabu;
 }
+
+//Get Online Users
+function onlineUsers(){
+	$initialize = mysqli_connect('localhost', 'root', '','systwone');
+	if (!$initialize) {
+		echo "Connection to the Database has not been successful!".mysqli_error($initialize);
+	}
+	$totalUsers = "SELECT * FROM users WHERE login = '1'";
+	$getOnlineUsers = mysqli_query($initialize, $totalUsers);
+
+	$hesabu = mysqli_num_rows($getOnlineUsers);
+
+	if ($hesabu > 0) {
+		echo $hesabu;
+	}elseif($hesabu === 0){
+		echo 0;
+	}
+}
+
 
  ?>

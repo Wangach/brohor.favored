@@ -142,7 +142,7 @@ include 'userscr/usermaster.php';
 										<i class="fas fa-signal fa-3x text-success"></i>
 										<div class="text-right text-secondary">
 											<h5>Users Online</h5>
-											<h3>10</h3>
+											<h3><?php onlineUsers(); ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->
