@@ -123,7 +123,7 @@ function bhentUsers(){
 			}*/
 			//html data
 			$showData = "<tbody>
-							<tr>
+							<tr class='mt-5'>
 								<td><a class='text-lg text-success' href='#'>$nameOfUser</a></td>
 								<td>$phNumber</td>
 								<td>$nameOfFavorite</td>
@@ -135,8 +135,6 @@ function bhentUsers(){
 								</td>
 							</tr>
 						</tbody>";
-			$showData .= "</table>";
-			$showData .= "</div>";
 
 			echo $showData;
 		}
