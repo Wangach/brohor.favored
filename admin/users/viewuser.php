@@ -162,6 +162,5 @@ include 'userscr/usermaster.php';
 	<script src="../../js/fontawesome.js" type="text/javascript"></script>
 	<script src="../../js/regular.js" type="text/javascript"></script>
 	<script src="../../js/index.js" type="text/javascript"></script>
-	<script src="userjs/users.js" type="text/javascript"></script>
 </body>
 </html>
