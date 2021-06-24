@@ -149,6 +149,13 @@ include 'userscr/usermaster.php';
 		</div><!--row/-->
 	</div><!--/.container-fluid-->
 	<!--/Javascript files/-->
+	<script>
+		let deleteButton = document.getElementById('delbtn');
+		deleteButton.addEventListener('click', function(event){
+			event.preventDefault();
+			console.log(event);
+		});
+	</script>
 	<script src="../../js/jquery.js"></script>
 	<script src="../../js/bootstrap.js" type="text/javascript"></script>
 	<script src="../../js/all.js" type="text/javascript"></script>

@@ -109,6 +109,7 @@ function bhentUsers(){
 	if (mysqli_num_rows($allUsers) > 0) {
 		while ($row = mysqli_fetch_assoc($allUsers)) {
 			#get the rows individual data
+			$userId = $row['id'];
 			$nameOfUser = $row['username'];
 			$phNumber = $row['phone'];
 			$nameOfFavorite = $row['favteam'];
@@ -130,7 +131,7 @@ function bhentUsers(){
 								<td>$dateOfRegistration</td>
 								<td>
 									<a class='btn btn-primary' href='./viewuser.php?a=$systName'><i class='fas fa-eye'></i></a>
-									<a class='btn btn-danger' href='./viewuser.php?a=$systName'><i class='fas fa-trash-alt'></i></a>
+									<a id='delbtn' class='btn btn-danger' href='$systName'><i class='fas fa-trash-alt'></i></a>
 									<a class='btn btn-warning' href='./viewuser.php?a=$systName'><i class='fas fa-edit'></i></a>
 								</td>
 							</tr>

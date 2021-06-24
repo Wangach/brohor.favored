@@ -68,3 +68,4 @@ function clearFields(){
 	document.getElementById('cft').value = '';
 	document.getElementById('cpn').value = '';
 }
+

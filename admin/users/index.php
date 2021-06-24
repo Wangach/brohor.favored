@@ -129,8 +129,9 @@ include 'userscr/usermaster.php';
 									</div>
 								</div><!--/.card-body/-->
 								<div class="card-footer">
-									<i class="fas fa-sync mr-3"></i>
-									<span>Update</span>
+									<a class="btn btn-link" href="viewuser.php" target="_blank">
+									<i class="fas fa-eye" aria-hidden="true"></i>
+									</a>
 								</div><!--/.card-footer/-->
 							</div><!--/card/-->
 						</div><!--/col-sm-6/-->
