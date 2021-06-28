@@ -123,19 +123,35 @@ function bhentUsers(){
 				print_r($key . $value);
 			}*/
 			//html data
-			$showData = "<tbody>
+			$showData = "<div class='table-responsive'>";
+			$showData .= "<table class='table table-dark' id='multichange'>
+							<caption>Broad Horizons Users</caption>";
+			$showData .= "
+							<thead>
+                                <tr>
+                                <th scope='col'>Username</th>
+                                <th scope='col'>Phone</th>
+                                <th scope='col'>Favorite Team</th>
+                                <th scope='col'>Date Of Registration</th>
+                                <th scope='col'>Actions</th>
+                                </tr>
+                            </thead>";
+			$showData .= "<tbody>
 							<tr class='mt-5'>
 								<td><a class='text-lg text-success' href='#'>$nameOfUser</a></td>
 								<td>$phNumber</td>
 								<td>$nameOfFavorite</td>
 								<td>$dateOfRegistration</td>
 								<td>
-									<a class='btn btn-primary' href='./viewuser.php?a=$systName'><i class='fas fa-eye'></i></a>
-									<a id='delbtn' class='btn btn-danger' href='$systName'><i class='fas fa-trash-alt'></i></a>
-									<a class='btn btn-warning' href='./viewuser.php?a=$systName'><i class='fas fa-edit'></i></a>
+									<button class='btn btn-primary' name='$systName'><i class='fas fa-eye'></i></button>
+									<button id='delbtn' class='btn btn-danger my-people' name='$systName'><i class='fas fa-trash-alt'></i></button>
+
+									<button class='btn btn-warning' name='$systName'><i class='fas fa-edit'></i></button>
 								</td>
 							</tr>
 						</tbody>";
+			$showData .= "</table>";
+			$showData .= "</div>";
 
 			echo $showData;
 		}

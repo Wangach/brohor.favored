@@ -117,18 +117,9 @@ include 'userscr/usermaster.php';
 			<div class="row">
 				<div class="col-lg-9 ml-auto">
                     <div class="table-responsive mt-5">
-                        <table class="table table-bordered table-dark">
-                            <thead>
-                                <tr>
-                                <th scope="col">Username</th>
-                                <th scope="col">Phone</th>
-                                <th scope="col">Favorite Team</th>
-                                <th scope="col">Date Of Registration</th>
-                                <th scope="col">Actions</th>
-                                </tr>
-                            </thead>
-                            <?php bhentUsers(); ?>
-                        </table>
+
+
+                        <?php bhentUsers(); ?>
                     
                     </div><!--table-responsive-->
 				</div><!--/.end of column/-->
@@ -150,11 +141,24 @@ include 'userscr/usermaster.php';
 	</div><!--/.container-fluid-->
 	<!--/Javascript files/-->
 	<script>
-		let deleteButton = document.getElementById('delbtn');
-		deleteButton.addEventListener('click', function(event){
-			event.preventDefault();
-			console.log(event);
-		});
+		window.onload = loadJs();
+		function loadJs(){
+			//get all buttons
+			let deleteButton = document.getElementsByClassName('my-people');//object of buttons
+			//console.log(typeof deleteButton);
+			for(per in deleteButton){
+				console.log(deleteButton[per].name);
+			}
+			
+			/*
+			deleteButton.forEach(addEventListener('click', function(event){
+				event.preventDefault();
+				let travelDown = deleteButton.name;
+				let further = travelDown;
+				console.log(further);
+			})
+			);*/
+		}
 	</script>
 	<script src="../../js/jquery.js"></script>
 	<script src="../../js/bootstrap.js" type="text/javascript"></script>
