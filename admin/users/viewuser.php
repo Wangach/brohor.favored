@@ -141,14 +141,22 @@ include 'userscr/usermaster.php';
 	</div><!--/.container-fluid-->
 	<!--/Javascript files/-->
 	<script>
-		window.onload = loadJs();
-		function loadJs(){
+		//window.onload = loadJs();
+		function deleteData(user){
+			let req = new XMLHttpRequest;
+			req.onreadystatechange = function(){
+
+			}
+			req.open('POST', user);
+			console.log(user);
 			//get all buttons
-			let deleteButton = document.getElementsByClassName('my-people');//object of buttons
-			//console.log(typeof deleteButton);
+			//let deleteButton = document.getElementsByClassName('my-people');//object of buttons
+			//get the clicked button
+			
+			/*console.log(typeof deleteButton);
 			for(per in deleteButton){
 				console.log(deleteButton[per].name);
-			}
+			}*/
 			
 			/*
 			deleteButton.forEach(addEventListener('click', function(event){

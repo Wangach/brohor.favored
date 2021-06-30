@@ -144,7 +144,7 @@ function bhentUsers(){
 								<td>$dateOfRegistration</td>
 								<td>
 									<button class='btn btn-primary' name='$systName'><i class='fas fa-eye'></i></button>
-									<button id='delbtn' class='btn btn-danger my-people' name='$systName'><i class='fas fa-trash-alt'></i></button>
+									<button id='delbtn' class='btn btn-danger my-people' name='$systName' onclick='deleteData(this.name)'><i class='fas fa-trash-alt'></i></button>
 
 									<button class='btn btn-warning' name='$systName'><i class='fas fa-edit'></i></button>
 								</td>
