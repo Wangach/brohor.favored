@@ -143,29 +143,57 @@ include 'userscr/usermaster.php';
 	<script>
 		//window.onload = loadJs();
 		function deleteData(user){
-			let req = new XMLHttpRequest;
-			req.onreadystatechange = function(){
-
-			}
-			req.open('POST', user);
-			console.log(user);
-			//get all buttons
-			//let deleteButton = document.getElementsByClassName('my-people');//object of buttons
-			//get the clicked button
-			
-			/*console.log(typeof deleteButton);
-			for(per in deleteButton){
-				console.log(deleteButton[per].name);
-			}*/
-			
-			/*
-			deleteButton.forEach(addEventListener('click', function(event){
-				event.preventDefault();
-				let travelDown = deleteButton.name;
-				let further = travelDown;
-				console.log(further);
+			Swal.fire({
+			  title: 'Are you sure?',
+			  text: "Delete "+ user + "?",
+			  icon: 'warning',
+			  showCancelButton: true,
+			  confirmButtonColor: '#3085d6',
+			  cancelButtonColor: '#d33',
+			  confirmButtonText: 'Yes Please'
 			})
-			);*/
+			.then((result) => {
+			  if (result.isConfirmed) {
+			  	let req = new XMLHttpRequest;
+				req.onreadystatechange = function(){
+					if (this.readyState == 4 && this.status == 200) {
+						let frmdb = this.responseText;
+						console.log(frmdb);
+						//check the text for error or success
+						if (frmdb.includes('Successful') > 0) {
+							//successful request
+							Swal.fire(
+						      'Deleted!',
+						      user + ' has been deleted Successfully.',
+						      'success'
+						    )
+						}else if(frmdb.includes('Error') > 0){
+							//failed request
+							Swal.fire(
+						      'Network!',
+						      'Issue In Handling Request.',
+						      'error'
+			    			)
+						}else{
+							Swal.fire(
+						      'Uknown!',
+						      'What Are You Saying?',
+						      'error'
+						    )
+						}
+					}
+				}
+				req.open('GET', 'userscr/del_user.php?uname='+user);
+				req.send();
+			  }
+			  else if (result.dismiss === Swal.DismissReason.cancel) {
+			    swalWithBootstrapButtons.fire(
+			      'Cancelled',
+			      'Process Has Been Terminated',
+			      'error'
+			    )
+			  }
+			})
 		}
 	</script>
 	<script src="../../js/jquery.js"></script>
@@ -173,6 +201,7 @@ include 'userscr/usermaster.php';
 	<script src="../../js/all.js" type="text/javascript"></script>
 	<script src="../../js/fontawesome.js" type="text/javascript"></script>
 	<script src="../../js/regular.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="../../js/index.js" type="text/javascript"></script>
 </body>
 </html>
