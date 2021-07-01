@@ -186,8 +186,8 @@ include 'userscr/usermaster.php';
 				req.open('GET', 'userscr/del_user.php?uname='+user);
 				req.send();
 			  }
-			  else if (result.dismiss === Swal.DismissReason.cancel) {
-			    swalWithBootstrapButtons.fire(
+			  else if (result.dismiss) {
+			    swal.fire(
 			      'Cancelled',
 			      'Process Has Been Terminated',
 			      'error'
