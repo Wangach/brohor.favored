@@ -456,6 +456,7 @@ include '../../script/session_checker.php';
 	<script src="../../js/all.js" type="text/javascript"></script>
 	<script src="../../js/fontawesome.js" type="text/javascript"></script>
 	<script src="../../js/regular.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="fifajs/fifa.js" type="text/javascript"></script>
 	<script src="../../js/index.js" type="text/javascript"></script>
 </body>

@@ -8,24 +8,62 @@ looserform.addEventListener("submit", function (event) {
   submitBtn.setAttribute('disabled', 'true');
 
 
-  //alert('Form Has Been Submitted!');
-  let req = new XMLHttpRequest();
-  req.open("POST", looserUrl);
-  req.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      let dbResp = this.responseText;
-      //display response
-      feedback.classList.add("alert");
-      feedback.classList.add("alert-primary");
-      feedback.classList.add('sticky-top');
-      feedback.innerHTML = dbResp;
-    }
-  };
-  let looserData = new FormData(looserform);
-  req.send(looserData);
+  Swal.fire({
+        title: 'Are you sure?',
+        text: "Record Match",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Record'
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          let req = new XMLHttpRequest();
+          req.open("POST", looserUrl);
+          req.onreadystatechange = function () {
 
-  //Execute clearing func
-  setTimeout(clearLooserForm, 10000);
+            if (this.readyState == 4 && this.status == 200){
+              let frmdb = this.responseText;
+              console.log(frmdb);
+              //check the text for error or success
+              if (frmdb.includes('Successful') > 0) {
+                //successful request
+                Swal.fire(
+                    'Recorded!',
+                      frmdb,
+                    'success'
+                  )
+              }else if(frmdb.includes('Error') > 0){
+                //failed request
+                Swal.fire(
+                    'Network!',
+                    'Issue In Handling Request.',
+                    'error'
+                  )
+              }else{
+                Swal.fire(
+                    'Uknown!',
+                    'What Are You Saying?',
+                    'error'
+                  )
+              }
+            }
+        }
+        let looserData = new FormData(looserform);
+        req.send(looserData);
+        //Execute clearing func
+        setTimeout(clearLooserForm, 10000);
+
+        }
+        else if (result.dismiss) {
+          swal.fire(
+            'Cancelled',
+            'Process Has Been Terminated',
+            'error'
+          )
+        }
+      })
 });
 
 //clear the form fields
@@ -80,6 +118,63 @@ let fairGetter = document.querySelector('.fair-feed');
 
 fairForm.addEventListener('submit', function(e) {
 	e.preventDefault();
+
+ /* Swal.fire({
+        title: 'Are you sure?',
+        text: "Record Match",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Record'
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          let fairRequest = new XMLHttpRequest();
+          fairRequest.open("POST", fairAction);
+          fairRequest.onreadystatechange = function() {
+
+            if (this.readyState == 4 && this.status == 200){
+              let frmdb = this.responseText;
+              console.log(frmdb);
+              //check the text for error or success
+              if (frmdb.includes('Successful') > 0) {
+                //successful request
+                Swal.fire(
+                    'Recorded!',
+                      frmdb,
+                    'success'
+                  )
+              }else if(frmdb.includes('Error') > 0){
+                //failed request
+                Swal.fire(
+                    'Network!',
+                    'Issue In Handling Request.',
+                    'error'
+                  )
+              }else{
+                Swal.fire(
+                    'Uknown!',
+                    'What Are You Saying?',
+                    'error'
+                  )
+              }
+            }
+        }
+        let looserData = new FormData(looserform);
+        req.send(looserData);
+        //Execute clearing func
+        setTimeout(clearLooserForm, 10000);
+
+        }
+        else if (result.dismiss) {
+          swal.fire(
+            'Cancelled',
+            'Process Has Been Terminated',
+            'error'
+          )
+        }
+      })*/
 
 	let fairRequest = new XMLHttpRequest();
 	fairRequest.open("POST", fairAction);

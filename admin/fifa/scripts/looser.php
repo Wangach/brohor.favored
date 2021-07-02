@@ -55,7 +55,7 @@ $output = '';
 
 		//check whether submission is successful
 		if ($psh) {
-			$output = $rMate." Has Lost While ".$champion." Has Won At ".$gType;
+			$output = "Successful! ".$rMate." Has Lost While ".$champion." Has Won At ".$gType;
 
 			echo $output;
 		}else{
