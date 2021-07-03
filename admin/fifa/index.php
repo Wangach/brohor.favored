@@ -1,6 +1,7 @@
 <?php 
 //Check session
 include '../../script/session_checker.php';
+include '../../script/total_matches.php';
 
  ?>
 <!DOCTYPE html>
@@ -122,7 +123,7 @@ include '../../script/session_checker.php';
 										<i class="fas fa-play fa-3x text-primary"></i>
 										<div class="text-right text-secondary">
 											<h5>Looser Games</h5>
-											<h3><?php include '../../script/matches_played.php'; ?></h3>
+											<h3><?php include '../../script/lmatches_played.php'; ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->
@@ -140,7 +141,7 @@ include '../../script/session_checker.php';
 										<i class="fas fa-check fa-3x text-success"></i>
 										<div class="text-right text-secondary">
 											<h5>Fair Games</h5>
-											<h3>100</h3>
+											<h3><?php include '../../script/fmatches_played.php'; ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->
@@ -158,7 +159,7 @@ include '../../script/session_checker.php';
 										<i class="fas fa-times-circle fa-3x text-danger"></i>
 										<div class="text-right text-secondary">
 											<h5>Total Games</h5>
-											<h3>10</h3>
+											<h3><?php getTotalMatches(); ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->

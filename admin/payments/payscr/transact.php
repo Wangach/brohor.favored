@@ -34,7 +34,7 @@ include '../../../script/database.php';
 
 			//Check FOR A Successful transfer
 			if ($axn) {
-				echo "Transaction $holder Has Been Successful! Thank You!";
+				echo "Transaction "."<strong class='text text-success'>".$holder."</strong>" . "  Has Been Successful! Thank You!";
 			}else{
 				echo mysqli_error($initialize);
 			}
@@ -61,7 +61,7 @@ include '../../../script/database.php';
 
 			//Check FOR A Successful transfer
 			if ($axn) {
-				echo "Transaction "."<strong>".$holder."</strong>" . "  Has Been Successful! Thank You!";
+				echo "Transaction "."<strong class='text text-danger'>".$holder."</strong>" . "  Has Been Successful! Thank You!";
 			}else{
 				echo "Sorry But There Has Been An Error!";
 			}

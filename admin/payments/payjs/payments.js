@@ -59,13 +59,13 @@ paymentForm.addEventListener("submit", function(e){
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Record'
+        confirmButtonText: 'Pay'
       })
       .then((result) => {
         if (result.isConfirmed) {
          	payBtn.setAttribute('disabled', 'true');
-			let paymentRequest = new XMLHttpRequest;
-			paymentRequest.open('POST', paymentUrl);
+					let paymentRequest = new XMLHttpRequest;
+					paymentRequest.open('POST', paymentUrl);
           	paymentRequest.onreadystatechange = function() {
 
             if (this.readyState == 4 && this.status == 200){

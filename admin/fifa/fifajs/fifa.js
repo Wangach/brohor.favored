@@ -5,7 +5,6 @@ let submitBtn = document.querySelector('#looser');
 
 looserform.addEventListener("submit", function (event) {
   event.preventDefault();
-  submitBtn.setAttribute('disabled', 'true');
 
 
   Swal.fire({
@@ -19,6 +18,7 @@ looserform.addEventListener("submit", function (event) {
       })
       .then((result) => {
         if (result.isConfirmed) {
+          submitBtn.setAttribute('disabled', 'true');
           let req = new XMLHttpRequest();
           req.open("POST", looserUrl);
           req.onreadystatechange = function () {
