@@ -89,7 +89,7 @@ include '../../script/session_checker.php';
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="../movies/" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="index.php" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-video text-light mr-3 fa-lg"></i>
 	    						Movies
 	    					</a>
@@ -110,7 +110,7 @@ include '../../script/session_checker.php';
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="../script/login.php?logout=1" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-sign-out-alt text-light mr-3 fa-lg"></i>
 	    						LogOut
 	    					</a>
@@ -150,7 +150,7 @@ include '../../script/session_checker.php';
 										<i class="fas fa-file-video fa-4x text-white"></i>
 										<div class="text-right text-white">
 											<h5>Available Animes, Movies & Series</h5>
-											<h3><?php include '../../script/matches_played.php'; ?></h3>
+											<h3><?php include 'moviescr/totmovies.php'; ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->

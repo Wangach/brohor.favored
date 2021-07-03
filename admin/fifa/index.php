@@ -54,35 +54,35 @@ include '../../script/session_checker.php';
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="index.php" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-gamepad text-light mr-3 fa-lg"></i>
 	    						Games
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="../movies/" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-video text-light mr-3 fa-lg"></i>
 	    						Movies
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="../payments/" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-money-check-alt text-light mr-3 fa-lg"></i>
 	    						Financials
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="../sales/" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-shopping-cart text-light mr-3 fa-lg"></i>
 	    						Sales
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="../script/login.php?logout=1" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-sign-out-alt text-light mr-3 fa-lg"></i>
 	    						LogOut
 	    					</a>

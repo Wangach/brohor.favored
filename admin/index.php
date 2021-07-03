@@ -158,7 +158,7 @@ include 'users/userscr/usermaster.php';
 										<i class="fas fa-film fa-3x text-warning"></i>
 										<div class="text-right text-secondary">
 											<h5>Available Movies</h5>
-											<h3>500</h3>
+											<h3><?php include 'movies/moviescr/totmovies.php'; ?></h3>
 										</div>
 									</div>
 								</div><!--/.card-body/-->

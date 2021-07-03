@@ -47,7 +47,7 @@ $output = '';
 
 		//check whether submission is successful
 		if ($psh) {
-			$output = "Both ". $dongas. " Are Sharing The Cost Of ".$amountToPay.".";
+			$output = "Match id: ". "<strong>".$holder."</strong>". " has been recorded Successfully.Cost =  ".$amountToPay.".";
 
 			echo $output;
 		}else{

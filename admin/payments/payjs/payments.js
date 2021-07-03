@@ -42,30 +42,73 @@ paymentForm.addEventListener("submit", function(e){
 	checkTrans(formVals);
 	if (transError === true) {
 		//errors in the form
-		fromDb.classList.add('alert');
-		fromDb.classList.add('alert-error');
-		fromDb.innerHTML = 'Ensure That All Form Fields Are Duly Filled!';
-		console.log(formVals)
+		Swal.fire({
+		  icon: 'error',
+		  title: 'Oops...',
+		  text: 'Ensure That All Form Fields Are Duly Filled!'
+		})
+		console.log(formVals);
 		return false;
 	}else if(transError === false){
 		//No Errors found
-		payBtn.setAttribute('disabled', 'true');
-		let paymentRequest = new XMLHttpRequest;
-		paymentRequest.open('POST', paymentUrl);
-		paymentRequest.onreadystatechange = function(){
-			if (this.readyState == 4 && this.status == 200) {
-				let res = this.responseText;
-				//show the results
-				fromDb.classList.add('alert');
-				fromDb.classList.add('alert-success');
-				fromDb.innerHTML = res;
-			}
-		}
-		let paymentData = new FormData(paymentForm);
+
+		Swal.fire({
+        title: 'You Sure?',
+        text: "Pay "+ document.getElementById('kiwango').value+ " By "+document.getElementById('cusjina').value,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Record'
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+         	payBtn.setAttribute('disabled', 'true');
+			let paymentRequest = new XMLHttpRequest;
+			paymentRequest.open('POST', paymentUrl);
+          	paymentRequest.onreadystatechange = function() {
+
+            if (this.readyState == 4 && this.status == 200){
+              let frmdb = this.responseText;
+              //check the text for error or success
+              if (frmdb.includes('Successful') > 0) {
+                //successful request
+                Swal.fire(
+                    'Paid!',
+                      frmdb,
+                    'success'
+                  )
+              }else if(frmdb.includes('Error') > 0){
+                //failed request
+                Swal.fire(
+                    'Uh-oh!',
+                    'Issue In Handling Request.',
+                    'error'
+                  )
+              }else{
+                Swal.fire(
+                    'Uknown!',
+                    'What Are You Saying?',
+                    'error'
+                  )
+              }
+            }
+        }
+        let paymentData = new FormData(paymentForm);
 		paymentRequest.send(paymentData);
 
-		//
+		//clear fields
 		setTimeout(clearFields, 4500);
+
+        }
+        else if (result.dismiss) {
+          swal.fire(
+            'Cancelled',
+            'The Payment Process Has Been Terminated!',
+            'error'
+          )
+        }
+      })
 	}
 });
 

@@ -61,7 +61,7 @@ include '../../../script/database.php';
 
 			//Check FOR A Successful transfer
 			if ($axn) {
-				echo "Transaction $holder Has Been Successful! Thank You!";;
+				echo "Transaction "."<strong>".$holder."</strong>" . "  Has Been Successful! Thank You!";
 			}else{
 				echo "Sorry But There Has Been An Error!";
 			}

@@ -119,9 +119,9 @@ let fairGetter = document.querySelector('.fair-feed');
 fairForm.addEventListener('submit', function(e) {
 	e.preventDefault();
 
- /* Swal.fire({
+  Swal.fire({
         title: 'Are you sure?',
-        text: "Record Match",
+        text: "Record Match?",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -138,7 +138,7 @@ fairForm.addEventListener('submit', function(e) {
               let frmdb = this.responseText;
               console.log(frmdb);
               //check the text for error or success
-              if (frmdb.includes('Successful') > 0) {
+              if (frmdb.includes('Successfully') > 0) {
                 //successful request
                 Swal.fire(
                     'Recorded!',
@@ -161,37 +161,20 @@ fairForm.addEventListener('submit', function(e) {
               }
             }
         }
-        let looserData = new FormData(looserform);
-        req.send(looserData);
+        let fairData = new FormData(fairForm);
+        fairRequest.send(fairData);
         //Execute clearing func
-        setTimeout(clearLooserForm, 10000);
+        setTimeout(clearFairForm, 10000);
 
         }
         else if (result.dismiss) {
           swal.fire(
             'Cancelled',
-            'Process Has Been Terminated',
+            'The Match In Question Has Not Been Recorded!',
             'error'
           )
         }
-      })*/
-
-	let fairRequest = new XMLHttpRequest();
-	fairRequest.open("POST", fairAction);
-	fairRequest.onreadystatechange = function() {
-	    if (this.readyState == 4 && this.status == 200) {
-	      let fairResp = this.responseText;
-	      //display response
-	      fairGetter.classList.add("alert");
-	      fairGetter.classList.add("alert-success");
-	      fairGetter.innerHTML = fairResp;
-	    }
-	  };
-	  let fairData = new FormData(fairForm);
-	  fairRequest.send(fairData);
-
-	  //Execute clearing func
-	  //setTimeout(clearFairForm, 10000);
+      })
 });
 
 let clearFairForm = () => {
