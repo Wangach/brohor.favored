@@ -52,8 +52,8 @@ if (mysqli_num_rows($perform) > 0) {
 		echo $feedb;
 	}
 }else{
-
-	echo "There exists No such Movie In The DB!";
+	$feedb = "<p>There exists No such Movie In The DB!</p>";
+	echo $feedb;
 }
 
  ?>
