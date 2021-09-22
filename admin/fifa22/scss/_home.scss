@@ -57,9 +57,18 @@
     a {
         color: $white;
         display: block;
+        text-decoration: none;
         // width: 100%;
         line-height: 6rem;
-        padding-left: 6rem;
+        padding-left: 4rem;
         box-sizing: border-box;
+        transition: .5s;
+        transition-property: background;
+        &:hover {
+            background: $swift;
+        }
+    }
+    i{
+        padding: 1rem;
     }
 }

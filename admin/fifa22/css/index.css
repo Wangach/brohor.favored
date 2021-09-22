@@ -69,9 +69,18 @@ html {
 .f2-sidebar a {
   color: #fff;
   display: block;
+  text-decoration: none;
   line-height: 6rem;
-  padding-left: 6rem;
+  padding-left: 4rem;
   box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+.f2-sidebar a:hover {
+  background: #19833D;
+}
+.f2-sidebar i {
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
