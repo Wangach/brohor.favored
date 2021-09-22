@@ -9,10 +9,10 @@
   }
   #f2-header {
     position: fixed;
-    background: $color-primary;
-    padding: 2rem;
+    background: $theme;
+    padding: 2.1rem;
     width: 100%;
-    height: 3rem;
+    height: 3.5rem;
 }
 .left-area{
     h3{
@@ -36,12 +36,15 @@
 }
 .f2-sidebar {
     background: $color-side;
-    margin-top: 7rem;
+    margin-top: 2.8rem;
     padding-top: 3rem;
     position: fixed;
     left: 0;
-    width: 25rem;
+    transition: 1s;
+    transition-property: left;
+    width: 15rem;
     height: 100vh;
+    border-radius: .5rem;
 
     .profile-image{
         width: 10rem;
@@ -58,7 +61,7 @@
         color: $white;
         display: block;
         text-decoration: none;
-        // width: 100%;
+        width: 100%;
         line-height: 6rem;
         padding-left: 4rem;
         box-sizing: border-box;
@@ -69,6 +72,45 @@
         }
     }
     i{
-        padding: 1rem;
+        padding-right: 1rem;
+    }
+}
+#sidebar-btn{
+    z-index: 1;
+    color: $white;
+    position: fixed;
+    cursor: pointer;
+    left: 30rem;
+    font-size: 2rem;
+    margin: 5px 0;
+    &:hover{
+        color: $swift;
+    }
+}
+main {
+    display: grid;
+    position: fixed;
+    right: 1rem;
+    margin-top: 2.8rem;
+    padding-top: 3rem;
+    width: 72.5rem;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgba(6, 10, 20, 0.842), rgba(3, 7, 19, 0.925)),
+	 url(../images/goulson.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    #matchstats {
+        background: rgba(0, 0, 0, 0.712);
+        width: 90%;
+        max-width: 70rem;
+        clip-path: polygon(100% 2%, 100% 100%, 50% 75%, 0 99%, 0 2%);
+        margin: 0 auto;
+        position: relative;
+        .f2-container {
+            display: flex;
+            justify-content: space-between;
+            
+        }
     }
 }
