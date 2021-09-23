@@ -1,0 +1,41 @@
+.profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.f2-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 210px 100px 50px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+    &-image {
+        grid-area: image;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-size: cover;
+      }
+      &:hover {
+        transform: scale(1.15);
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      }
+  }
+.transactions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "transact" "records";
+    
+}
+.form-side {
+    grid-area: transact;
+}
+.trns-side {
+    grid-area: records;
+}

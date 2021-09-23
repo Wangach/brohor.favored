@@ -169,7 +169,7 @@
     grid-area: stats; 
   }
   .image-1{
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    background-image: linear-gradient(to right, #4d64faa9, #4d64faa8),
      url(../images/cards/22mbappe.jpg);
   }
   .image-2{
@@ -216,6 +216,15 @@
     color: white;
     padding:10px;
   }
+
+  // Section 2
+  .f2-records {
+    background: #eee;
+    margin-left: 2rem;
+    border-radius: .5rem;
+    padding: 2rem;
+  }
+  // section 3
   .my-footer {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
       url(../assets/bgs/ft3.jpg);

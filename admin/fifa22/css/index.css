@@ -53,7 +53,7 @@ body {
   display: block;
 }
 .sidebar .sidebar-link:hover {
-  background-color: #19833D;
+  background-color: #ff4c52;
   border-radius: 5px;
 }
 
@@ -70,7 +70,7 @@ body {
 }
 
 .image-1 {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url(../images/cards/22mbappe.jpg);
+  background-image: linear-gradient(to right, #4d64faa9, #4d64faa8), url(../images/cards/22mbappe.jpg);
 }
 
 .image-2 {
@@ -117,6 +117,13 @@ body {
   padding: 10px;
 }
 
+.f2-records {
+  background: #eee;
+  margin-left: 2rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
 .my-footer {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../assets/bgs/ft3.jpg);
   background-position: center;
@@ -124,37 +131,6 @@ body {
   background-repeat: no-repeat;
   color: #fff;
   border-radius: 5px;
-}
-
-.profile {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-}
-
-.f2-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 210px 100px 50px;
-  grid-template-areas: "image" "text" "stats";
-  border-radius: 18px;
-  background: white;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  font-family: roboto;
-  text-align: center;
-  transition: 0.5s ease;
-  cursor: pointer;
-  margin: 30px;
-}
-.f2-card-image {
-  grid-area: image;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-size: cover;
-}
-.f2-card:hover {
-  transform: scale(1.15);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
 .card-success {
@@ -194,6 +170,51 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.f2-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 210px 100px 50px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
+  text-align: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin: 30px;
+}
+.f2-card-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.f2-card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.transactions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "transact" "records";
+}
+
+.form-side {
+  grid-area: transact;
+}
+
+.trns-side {
+  grid-area: records;
 }
 
 /*# sourceMappingURL=index.css.map */
