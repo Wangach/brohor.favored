@@ -1,62 +1,130 @@
-.return {
-    left: -19rem;
-    transition: 1s;
-    transition-property: left;
-}
-.theme {
-    background: $theme;
-    color: $white;
+// .return {
+//     left: -19rem;
+//     transition: 1s;
+//     transition-property: left;
+// }
+// .theme {
+//     background: $theme;
+//     color: $white;
+// }
+// .f2-card {
+//     width: 10%;
+//     margin-right: 1rem;
+//     border-radius: .3rem;
+//     height: 15rem;
+//     padding: .7rem;
+//     color: $white;
+//     flex-basis: 20%;
+//     .f2-card__title {
+//         background: rgba(0,0,0,0.85);
+//         border-radius: 2rem;
+//         text-align: center;
+//         padding: .45rem;
+//     }
+//     .f2-card__body {
+//         display: block;
+//         background: rgba(0,0,0,0.85);
+//         border-radius: 100%;
+//         text-align: center;
+//         padding: 2.5rem;
+//         height: 20px;
+//         width: 2.5rem;
+//         margin: .5rem auto;
+//     }
+//     .f2-card__footer {
+//         margin-top: .8rem;
+//         background: rgba(0,0,0,0.85);
+//         border-radius: 2rem;
+//         text-align: center;
+//         padding: .45rem;
+//     }
+// }
+// .card-success {
+//     background: rgba(18, 97, 16, 0.911);
+//     flex: 1;
+// }
+// .card-danger {
+//     background: rgba(133, 5, 5, 0.911);
+//     flex: 1;
+// }
+// .card-warning {
+//     background: rgba(151, 93, 16, 0.911);
+//     flex: 1;
+// }
+
+// // .hide {
+// //     display: none;
+// // }
+// // .show-ic {
+// //     font-size: 2rem;
+// //     margin-left: 17rem;
+// //     width: 8rem;
+// // }
+
+.profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
 }
 .f2-card {
-    width: 10%;
-    margin-right: 1rem;
-    border-radius: .3rem;
-    height: 15rem;
-    padding: .7rem;
-    color: $white;
-    flex-basis: 20%;
-    .f2-card__title {
-        background: rgba(0,0,0,0.85);
-        border-radius: 2rem;
-        text-align: center;
-        padding: .45rem;
-    }
-    .f2-card__body {
-        display: block;
-        background: rgba(0,0,0,0.85);
-        border-radius: 100%;
-        text-align: center;
-        padding: 2.5rem;
-        height: 20px;
-        width: 2.5rem;
-        margin: .5rem auto;
-    }
-    .f2-card__footer {
-        margin-top: .8rem;
-        background: rgba(0,0,0,0.85);
-        border-radius: 2rem;
-        text-align: center;
-        padding: .45rem;
-    }
-}
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 210px 100px 50px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+    &-image {
+        grid-area: image;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-size: cover;
+      }
+      &:hover {
+        transform: scale(1.15);
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      }
+  }
 .card-success {
-    background: rgba(18, 97, 16, 0.911);
-    flex: 1;
+    background: #05a85c;
+    color: $white;
 }
 .card-danger {
-    background: rgba(133, 5, 5, 0.911);
-    flex: 1;
+    background: #8f1919ef;
+    color: $white;
 }
 .card-warning {
-    background: rgba(151, 93, 16, 0.911);
-    flex: 1;
+    background: orangered;
+    color: $white;
 }
-
-// .hide {
-//     display: none;
-// }
-// .show-ic {
-//     font-size: 2rem;
-//     margin-left: 17rem;
-//     width: 8rem;
-// }
+.violet-bg {
+    background: rgba(208, 5, 110, 0.912);
+    color: #fff;
+    padding: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+  .style-bg {
+    background: rgba(2, 6, 245, 0.623);
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .purple-bg {
+    background: linear-gradient(
+        to right,
+        rgba(10, 124, 129, 0.4),
+        rgba(10, 124, 129, 0.9)
+      ),
+      url(../assets/bgs/shinyb.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }

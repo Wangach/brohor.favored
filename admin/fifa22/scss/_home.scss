@@ -1,116 +1,227 @@
-.sidebar {
+// .sidebar {
+//     height: 100vh;
+//     background: linear-gradient(rgba(255,255,255,0), rgba(7, 31, 8, 0.9)),
+//       url(../assets/bgs/football1.jpg);
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     box-shadow: 5px 7px 25px #999;
+//   }
+//   #f2-header {
+//     position: fixed;
+//     background: $theme;
+//     padding: 2.1rem;
+//     width: 100%;
+//     height: 3.5rem;
+// }
+// .left-area{
+//     h3{
+//         color: $white;
+//         margin: 0;
+//         text-transform: uppercase;
+//         font-size: 22px;
+//         font-weight: 900;
+//     }
+//     span {
+//         color: $color-info;
+//     }
+// }
+// .logout-btn {
+//     float: right;
+//     margin-top: -3rem;
+//     margin-right: 4rem;
+//     background: $color-danger !important;
+//     color: $white;
+//     font-weight: 600;
+// }
+// .f2-sidebar {
+//     background: $color-side;
+//     margin-top: 2.8rem;
+//     padding-top: 3rem;
+//     position: fixed;
+//     left: 0;
+//     transition: 1s;
+//     transition-property: left;
+//     width: 15rem;
+//     height: 100vh;
+//     border-radius: .5rem;
+
+//     .profile-image{
+//         width: 10rem;
+//         height: 10rem;
+//         border-radius: 10rem;
+//         margin-bottom: 1rem;
+//     }
+//     h4{
+//         color: $white;
+//         margin-top: 0;
+//         margin-bottom: 2rem;
+//     }
+//     a {
+//         color: $white;
+//         display: block;
+//         text-decoration: none;
+//         width: 100%;
+//         line-height: 6rem;
+//         padding-left: 4rem;
+//         box-sizing: border-box;
+//         transition: .5s;
+//         transition-property: background;
+//         &:hover {
+//             background: $swift;
+//         }
+//     }
+//     i{
+//         padding-right: 1rem;
+//     }
+// }
+// #sidebar-btn{
+//     z-index: 1;
+//     color: $white;
+//     position: fixed;
+//     cursor: pointer;
+//     left: 30rem;
+//     font-size: 2rem;
+//     margin: 5px 0;
+//     &:hover{
+//         color: $swift;
+//     }
+// }
+// main {
+//     display: grid;
+//     position: fixed;
+//     right: 1rem;
+//     margin-top: 2.8rem;
+//     padding-top: 3rem;
+//     width: 72.5rem;
+//     height: 100%;
+//     background-image: linear-gradient(to bottom right, rgba(6, 10, 20, 0.842), rgba(3, 7, 19, 0.925)),
+// 	 url(../images/goulson.jpg);
+// 	background-position: center;
+// 	background-repeat: no-repeat;
+// 	background-size: cover;
+//     #matchstats {
+//         background: rgba(0, 0, 0, 0.712);
+//         width: 90%;
+//         max-width: 70rem;
+//         clip-path: polygon(100% 2%, 100% 100%, 50% 75%, 0 99%, 0 2%);
+//         margin: 0 auto;
+//         position: relative;
+//         .f2-container {
+//             display: flex;
+//             justify-content: space-between;
+            
+//         }
+//     }
+// }
+/*Custom Loaders*/
+.loader {
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+  }
+  .spinner-border {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    width: 4rem !important;
+    height: 4rem !important;
+    
+  }
+  .top-navbar {
+      background: #ff4c52;
+      color: $white;
+  }
+  .sidebar {
     height: 100vh;
-    background: linear-gradient(rgba(255,255,255,0), rgba(7, 31, 8, 0.9)),
-      url(../assets/bgs/football1.jpg);
+    background: linear-gradient(#0bb2d4, rgba(7, 31, 8, 0.9)),
+      url(../images/bgs/goulson.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 5px 7px 25px #999;
-  }
-  #f2-header {
-    position: fixed;
-    background: $theme;
-    padding: 2.1rem;
-    width: 100%;
-    height: 3.5rem;
-}
-.left-area{
-    h3{
-        color: $white;
-        margin: 0;
-        text-transform: uppercase;
-        font-size: 22px;
-        font-weight: 900;
-    }
-    span {
-        color: $color-info;
-    }
-}
-.logout-btn {
-    float: right;
-    margin-top: -3rem;
-    margin-right: 4rem;
-    background: $color-danger !important;
-    color: $white;
-    font-weight: 600;
-}
-.f2-sidebar {
-    background: $color-side;
-    margin-top: 2.8rem;
-    padding-top: 3rem;
-    position: fixed;
-    left: 0;
-    transition: 1s;
-    transition-property: left;
-    width: 15rem;
-    height: 100vh;
-    border-radius: .5rem;
-
-    .profile-image{
-        width: 10rem;
-        height: 10rem;
-        border-radius: 10rem;
-        margin-bottom: 1rem;
-    }
-    h4{
-        color: $white;
-        margin-top: 0;
-        margin-bottom: 2rem;
-    }
-    a {
-        color: $white;
+    // box-shadow: 5px 7px 25px #999;
+    .bottom-border {
+        border-bottom: 1px groove #eee;
+      }
+      .sidebar-link {
+        transition: all 0.4s;
         display: block;
-        text-decoration: none;
-        width: 100%;
-        line-height: 6rem;
-        padding-left: 4rem;
-        box-sizing: border-box;
-        transition: .5s;
-        transition-property: background;
-        &:hover {
-            background: $swift;
+        &:hover{
+            background-color: $swift;
+            border-radius: 5px;
         }
-    }
-    i{
-        padding-right: 1rem;
-    }
-}
-#sidebar-btn{
-    z-index: 1;
-    color: $white;
-    position: fixed;
-    cursor: pointer;
-    left: 30rem;
-    font-size: 2rem;
-    margin: 5px 0;
-    &:hover{
-        color: $swift;
-    }
-}
-main {
+      }
+  }
+  .f2-card-image {
+    grid-area: image;
+  }
+  .f2-card-text {
+    grid-area: text;
+  }
+  .f2-card-stats {
+    grid-area: stats; 
+  }
+  .image-1{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+     url(../images/cards/22mbappe.jpg);
+  }
+  .image-2{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+     url(../images/cards/22cover.jpg);
+  }
+  .image-3{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+     url(../images/cards/22field.jpg);
+  }
+  .f2-card-text {
+    grid-area: text;
+    margin: 2px;
+    p {
+        // color: grey;
+        font-size:15px;
+        font-weight: 300;
+      }
+      h2 {
+        margin-top:0px;
+        font-size:28px;
+      }
+  }
+  .f2-card-text .date {
+    // color: rgb(255, 7, 110);
+    font-size:13px;
+  }
+  .f2-card-stats {
+    grid-area: stats; 
     display: grid;
-    position: fixed;
-    right: 1rem;
-    margin-top: 2.8rem;
-    padding-top: 3rem;
-    width: 72.5rem;
-    height: 100%;
-    background-image: linear-gradient(to bottom right, rgba(6, 10, 20, 0.842), rgba(3, 7, 19, 0.925)),
-	 url(../images/goulson.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-    #matchstats {
-        background: rgba(0, 0, 0, 0.712);
-        width: 90%;
-        max-width: 70rem;
-        clip-path: polygon(100% 2%, 100% 100%, 50% 75%, 0 99%, 0 2%);
-        margin: 0 auto;
-        position: relative;
-        .f2-container {
-            display: flex;
-            justify-content: space-between;
-            
-        }
-    }
-}
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: $theme;
+  }
+  .f2-card-stats .stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    color: white;
+    padding:10px;
+  }
+  .my-footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+      url(../assets/bgs/ft3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    border-radius: 5px;
+  }

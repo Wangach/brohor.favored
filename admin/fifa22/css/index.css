@@ -1,188 +1,199 @@
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
-html {
-  width: 90vw;
+body {
+  background-color: #4d64fa;
+  padding: 30px;
+  position: relative;
+}
+
+/*Custom Loaders*/
+.loader {
+  position: fixed;
+  background-color: black;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+.spinner-border {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
+.top-navbar {
+  background: #ff4c52;
+  color: #fff;
 }
 
 .sidebar {
   height: 100vh;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(7, 31, 8, 0.9)), url(../assets/bgs/football1.jpg);
+  background: linear-gradient(#0bb2d4, rgba(7, 31, 8, 0.9)), url(../images/bgs/goulson.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 5px 7px 25px #999;
 }
-
-#f2-header {
-  position: fixed;
-  background: rgba(16, 24, 32, 0.863);
-  padding: 2.1rem;
-  width: 100%;
-  height: 3.5rem;
+.sidebar .bottom-border {
+  border-bottom: 1px groove #eee;
 }
-
-.left-area h3 {
-  color: #fff;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 22px;
-  font-weight: 900;
-}
-.left-area span {
-  color: #1DC4E7;
-}
-
-.logout-btn {
-  float: right;
-  margin-top: -3rem;
-  margin-right: 4rem;
-  background: #DE2F13 !important;
-  color: #fff;
-  font-weight: 600;
-}
-
-.f2-sidebar {
-  background: #2F323A;
-  margin-top: 2.8rem;
-  padding-top: 3rem;
-  position: fixed;
-  left: 0;
-  transition: 1s;
-  transition-property: left;
-  width: 15rem;
-  height: 100vh;
-  border-radius: 0.5rem;
-}
-.f2-sidebar .profile-image {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 10rem;
-  margin-bottom: 1rem;
-}
-.f2-sidebar h4 {
-  color: #fff;
-  margin-top: 0;
-  margin-bottom: 2rem;
-}
-.f2-sidebar a {
-  color: #fff;
+.sidebar .sidebar-link {
+  transition: all 0.4s;
   display: block;
-  text-decoration: none;
-  width: 100%;
-  line-height: 6rem;
-  padding-left: 4rem;
-  box-sizing: border-box;
-  transition: 0.5s;
-  transition-property: background;
 }
-.f2-sidebar a:hover {
-  background: #19833D;
-}
-.f2-sidebar i {
-  padding-right: 1rem;
+.sidebar .sidebar-link:hover {
+  background-color: #19833D;
+  border-radius: 5px;
 }
 
-#sidebar-btn {
-  z-index: 1;
-  color: #fff;
-  position: fixed;
-  cursor: pointer;
-  left: 30rem;
-  font-size: 2rem;
-  margin: 5px 0;
-}
-#sidebar-btn:hover {
-  color: #19833D;
+.f2-card-image {
+  grid-area: image;
 }
 
-main {
+.f2-card-text {
+  grid-area: text;
+}
+
+.f2-card-stats {
+  grid-area: stats;
+}
+
+.image-1 {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url(../images/cards/22mbappe.jpg);
+}
+
+.image-2 {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url(../images/cards/22cover.jpg);
+}
+
+.image-3 {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url(../images/cards/22field.jpg);
+}
+
+.f2-card-text {
+  grid-area: text;
+  margin: 2px;
+}
+.f2-card-text p {
+  font-size: 15px;
+  font-weight: 300;
+}
+.f2-card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.f2-card-text .date {
+  font-size: 13px;
+}
+
+.f2-card-stats {
+  grid-area: stats;
   display: grid;
-  position: fixed;
-  right: 1rem;
-  margin-top: 2.8rem;
-  padding-top: 3rem;
-  width: 72.5rem;
-  height: 100%;
-  background-image: linear-gradient(to bottom right, rgba(6, 10, 20, 0.842), rgba(3, 7, 19, 0.925)), url(../images/goulson.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-main #matchstats {
-  background: rgba(0, 0, 0, 0.712);
-  width: 90%;
-  max-width: 70rem;
-  clip-path: polygon(100% 2%, 100% 100%, 50% 75%, 0 99%, 0 2%);
-  margin: 0 auto;
-  position: relative;
-}
-main #matchstats .f2-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.return {
-  left: -19rem;
-  transition: 1s;
-  transition-property: left;
-}
-
-.theme {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   background: rgba(16, 24, 32, 0.863);
+}
+
+.f2-card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+
+.my-footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../assets/bgs/ft3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #fff;
+  border-radius: 5px;
+}
+
+.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
 }
 
 .f2-card {
-  width: 10%;
-  margin-right: 1rem;
-  border-radius: 0.3rem;
-  height: 15rem;
-  padding: 0.7rem;
-  color: #fff;
-  flex-basis: 20%;
-}
-.f2-card .f2-card__title {
-  background: rgba(0, 0, 0, 0.85);
-  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 210px 100px 50px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
   text-align: center;
-  padding: 0.45rem;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin: 30px;
 }
-.f2-card .f2-card__body {
-  display: block;
-  background: rgba(0, 0, 0, 0.85);
-  border-radius: 100%;
-  text-align: center;
-  padding: 2.5rem;
-  height: 20px;
-  width: 2.5rem;
-  margin: 0.5rem auto;
+.f2-card-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
 }
-.f2-card .f2-card__footer {
-  margin-top: 0.8rem;
-  background: rgba(0, 0, 0, 0.85);
-  border-radius: 2rem;
-  text-align: center;
-  padding: 0.45rem;
+.f2-card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
 .card-success {
-  background: rgba(18, 97, 16, 0.911);
-  flex: 1;
+  background: #05a85c;
+  color: #fff;
 }
 
 .card-danger {
-  background: rgba(133, 5, 5, 0.911);
-  flex: 1;
+  background: #8f1919ef;
+  color: #fff;
 }
 
 .card-warning {
-  background: rgba(151, 93, 16, 0.911);
-  flex: 1;
+  background: orangered;
+  color: #fff;
+}
+
+.violet-bg {
+  background: rgba(208, 5, 110, 0.912);
+  color: #fff;
+  padding: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.style-bg {
+  background: rgba(2, 6, 245, 0.623);
+  color: #fff;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.purple-bg {
+  background: linear-gradient(to right, rgba(10, 124, 129, 0.4), rgba(10, 124, 129, 0.9)), url(../assets/bgs/shinyb.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*# sourceMappingURL=index.css.map */
