@@ -18,9 +18,16 @@
     margin:30px;
     &-image {
         grid-area: image;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        background-size: cover;
+        // border-top-left-radius: 15px;
+        // border-top-right-radius: 15px;
+        // background-size: cover;
+        span{
+            font-size: 4rem;
+            font-weight: bold;
+            display: block;
+            margin-top: 4rem;
+            transform: scale(2rem);
+          }
       }
       &:hover {
         transform: scale(1.15);
@@ -29,8 +36,12 @@
   }
 .transactions {
     display: grid;
+    grid-gap: 1rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "transact" "records";
+    // grid-template-rows: 5rem 1fr;
+    grid-template-areas: "transact records";
+    padding: 2rem;
+    border-radius: .5rem;
     
 }
 .form-side {

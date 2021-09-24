@@ -136,13 +136,14 @@
     
   }
   .top-navbar {
-      background: #ff4c52;
+      background: #32325d;
       color: $white;
   }
   .sidebar {
     height: 100vh;
-    background: linear-gradient(#0bb2d4, rgba(7, 31, 8, 0.9)),
-      url(../images/bgs/goulson.jpg);
+    // background: linear-gradient(#0bb2d4, rgba(7, 31, 8, 0.9)),
+    //   url(../images/bgs/goulson.jpg);
+    background: #5e72e4;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,25 +165,10 @@
   }
   .f2-card-text {
     grid-area: text;
-  }
-  .f2-card-stats {
-    grid-area: stats; 
-  }
-  .image-1{
-    background-image: linear-gradient(to right, #4d64faa9, #4d64faa8),
-     url(../images/cards/22mbappe.jpg);
-  }
-  .image-2{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
-     url(../images/cards/22cover.jpg);
-  }
-  .image-3{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
-     url(../images/cards/22field.jpg);
-  }
-  .f2-card-text {
-    grid-area: text;
     margin: 2px;
+    background: #32325d;
+    color: $white;
+    border: .5px solid #32325d;
     p {
         // color: grey;
         font-size:15px;
@@ -196,6 +182,18 @@
   .f2-card-text .date {
     // color: rgb(255, 7, 110);
     font-size:13px;
+  }
+  .f2-card-stats {
+    grid-area: stats; 
+  }
+  .image-1{
+    background:#32325d;
+  }
+  .image-2{
+    background: #32325d;
+  }
+  .image-3{
+    background: #32325d;
   }
   .f2-card-stats {
     grid-area: stats; 
@@ -219,12 +217,23 @@
 
   // Section 2
   .f2-records {
-    background: #eee;
+    background: #32325d;
     margin-left: 2rem;
     border-radius: .5rem;
     padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   }
   // section 3
+  .transactions {
+    background: #32325d;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  }
+  .form-top {
+    @include myforms;
+  }
+  #payments-form {
+    @include myforms;
+  }
   .my-footer {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
       url(../assets/bgs/ft3.jpg);

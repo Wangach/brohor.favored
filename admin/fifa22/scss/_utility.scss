@@ -62,17 +62,30 @@
 // // }
 
 
-.card-success {
-    background: #05a85c;
-    color: $white;
+// .card-success {
+//     background: #05a85c;
+//     color: $white;
+// }
+// .card-danger {
+//     background: #8f1919ef;
+//     color: $white;
+// }
+// .card-warning {
+//     background: orangered;
+//     color: $white;
+// }
+.icon-success {
+  color: #2bffc6;
 }
-.card-danger {
-    background: #8f1919ef;
-    color: $white;
+.icon-pinkie {
+  color: #e14eca;
 }
-.card-warning {
-    background: orangered;
-    color: $white;
+.icon-info {
+  color: #5e72e4;;
+}
+.f2-table {
+  background: #32325d;
+  color: #2bffc6;
 }
 .violet-bg {
     background: rgba(208, 5, 110, 0.912);

@@ -6,9 +6,61 @@
 }
 
 body {
-  background-color: #4d64fa;
+  background-color: #32325d;
   padding: 30px;
   position: relative;
+}
+
+.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.f2-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 210px 100px 50px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
+  text-align: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin: 30px;
+}
+.f2-card-image {
+  grid-area: image;
+}
+.f2-card-image span {
+  font-size: 4rem;
+  font-weight: bold;
+  display: block;
+  margin-top: 4rem;
+  transform: scale(2rem);
+}
+.f2-card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.transactions {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "transact records";
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.form-side {
+  grid-area: transact;
+}
+
+.trns-side {
+  grid-area: records;
 }
 
 /*Custom Loaders*/
@@ -34,13 +86,13 @@ body {
 }
 
 .top-navbar {
-  background: #ff4c52;
+  background: #32325d;
   color: #fff;
 }
 
 .sidebar {
   height: 100vh;
-  background: linear-gradient(#0bb2d4, rgba(7, 31, 8, 0.9)), url(../images/bgs/goulson.jpg);
+  background: #5e72e4;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,27 +115,10 @@ body {
 
 .f2-card-text {
   grid-area: text;
-}
-
-.f2-card-stats {
-  grid-area: stats;
-}
-
-.image-1 {
-  background-image: linear-gradient(to right, #4d64faa9, #4d64faa8), url(../images/cards/22mbappe.jpg);
-}
-
-.image-2 {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url(../images/cards/22cover.jpg);
-}
-
-.image-3 {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url(../images/cards/22field.jpg);
-}
-
-.f2-card-text {
-  grid-area: text;
   margin: 2px;
+  background: #32325d;
+  color: #fff;
+  border: 0.5px solid #32325d;
 }
 .f2-card-text p {
   font-size: 15px;
@@ -96,6 +131,22 @@ body {
 
 .f2-card-text .date {
   font-size: 13px;
+}
+
+.f2-card-stats {
+  grid-area: stats;
+}
+
+.image-1 {
+  background: #32325d;
+}
+
+.image-2 {
+  background: #32325d;
+}
+
+.image-3 {
+  background: #32325d;
 }
 
 .f2-card-stats {
@@ -118,10 +169,36 @@ body {
 }
 
 .f2-records {
-  background: #eee;
+  background: #32325d;
   margin-left: 2rem;
   border-radius: 0.5rem;
   padding: 2rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.transactions {
+  background: #32325d;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.form-top {
+  background: #32325d;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  border: 0.1rem solid #32325d;
+  border-radius: 0.5rem;
+}
+
+#payments-form {
+  background: #32325d;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  border: 0.1rem solid #32325d;
+  border-radius: 0.5rem;
 }
 
 .my-footer {
@@ -133,19 +210,21 @@ body {
   border-radius: 5px;
 }
 
-.card-success {
-  background: #05a85c;
-  color: #fff;
+.icon-success {
+  color: #2bffc6;
 }
 
-.card-danger {
-  background: #8f1919ef;
-  color: #fff;
+.icon-pinkie {
+  color: #e14eca;
 }
 
-.card-warning {
-  background: orangered;
-  color: #fff;
+.icon-info {
+  color: #5e72e4;
+}
+
+.f2-table {
+  background: #32325d;
+  color: #2bffc6;
 }
 
 .violet-bg {
@@ -170,51 +249,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.profile {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-}
-
-.f2-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 210px 100px 50px;
-  grid-template-areas: "image" "text" "stats";
-  border-radius: 18px;
-  background: white;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  font-family: roboto;
-  text-align: center;
-  transition: 0.5s ease;
-  cursor: pointer;
-  margin: 30px;
-}
-.f2-card-image {
-  grid-area: image;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-size: cover;
-}
-.f2-card:hover {
-  transform: scale(1.15);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-}
-
-.transactions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "transact" "records";
-}
-
-.form-side {
-  grid-area: transact;
-}
-
-.trns-side {
-  grid-area: records;
 }
 
 /*# sourceMappingURL=index.css.map */

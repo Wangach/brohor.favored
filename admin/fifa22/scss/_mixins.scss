@@ -1,0 +1,9 @@
+@mixin myforms {
+    background: #32325d;
+    padding: 2rem;
+    color: $white;
+    text-align: center;
+    font-family: Roboto;
+    border: .1rem solid #32325d;
+    border-radius: .5rem;
+}
