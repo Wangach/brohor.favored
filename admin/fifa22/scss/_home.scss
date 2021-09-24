@@ -165,10 +165,9 @@
   }
   .f2-card-text {
     grid-area: text;
-    margin: 2px;
     background: #32325d;
     color: $white;
-    border: .5px solid #32325d;
+    outline: .5px solid #e14eca;
     p {
         // color: grey;
         font-size:15px;
@@ -203,14 +202,13 @@
   
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background: $theme;
+    background: #32325d;
   }
   .f2-card-stats .stat {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  
     color: white;
     padding:10px;
   }
@@ -222,6 +220,7 @@
     border-radius: .5rem;
     padding: 2rem;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+
   }
   // section 3
   .transactions {
@@ -235,8 +234,7 @@
     @include myforms;
   }
   .my-footer {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
-      url(../assets/bgs/ft3.jpg);
+    background: rgba(0,0,0,0.9);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

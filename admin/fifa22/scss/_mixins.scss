@@ -6,4 +6,10 @@
     font-family: Roboto;
     border: .1rem solid #32325d;
     border-radius: .5rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
+@mixin mobilePsn {
+    width: 70%;
+    margin: 0 auto;
+    transform: translateX(-5px);
 }

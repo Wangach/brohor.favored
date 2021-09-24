@@ -20,7 +20,7 @@ body {
 .f2-card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 210px 100px 50px;
+  grid-template-rows: 100px 100px 50px;
   grid-template-areas: "image" "text" "stats";
   border-radius: 18px;
   background: white;
@@ -38,8 +38,7 @@ body {
   font-size: 4rem;
   font-weight: bold;
   display: block;
-  margin-top: 4rem;
-  transform: scale(2rem);
+  margin-top: 0rem;
 }
 .f2-card:hover {
   transform: scale(1.15);
@@ -55,6 +54,15 @@ body {
   border-radius: 0.5rem;
 }
 
+.trans-holder {
+  background: #32325d;
+  border: 0.1rem solid #32325d;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  height: 27.1rem;
+  overflow: scroll;
+}
+
 .form-side {
   grid-area: transact;
 }
@@ -63,6 +71,60 @@ body {
   grid-area: records;
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .top-navbar {
+    position: static;
+  }
+
+  .section-heading {
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    outline: 0.5px solid #e14ecbe0;
+    outline-offset: 0.1em;
+  }
+  .section-heading h4 {
+    font-size: 1rem;
+  }
+
+  .mini-heading, .form-top, #payments-form {
+    width: 70%;
+    margin: 0 auto;
+    transform: translateX(-5px);
+  }
+
+  .f2-records {
+    transform: translateX(-12px);
+  }
+
+  .form-side, .trns-side {
+    transform: translateX(-15px);
+  }
+
+  .transactions {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "transact" "records";
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+
+  .form-top h4 {
+    font-size: 1rem;
+  }
+
+  .trans-holder {
+    width: 70%;
+    margin: 0 auto;
+    transform: translateX(-5px);
+  }
+}
 /*Custom Loaders*/
 .loader {
   position: fixed;
@@ -115,10 +177,9 @@ body {
 
 .f2-card-text {
   grid-area: text;
-  margin: 2px;
   background: #32325d;
   color: #fff;
-  border: 0.5px solid #32325d;
+  outline: 0.5px solid #e14eca;
 }
 .f2-card-text p {
   font-size: 15px;
@@ -156,7 +217,7 @@ body {
   grid-template-rows: 1fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background: rgba(16, 24, 32, 0.863);
+  background: #32325d;
 }
 
 .f2-card-stats .stat {
@@ -189,6 +250,7 @@ body {
   font-family: Roboto;
   border: 0.1rem solid #32325d;
   border-radius: 0.5rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
 #payments-form {
@@ -199,15 +261,25 @@ body {
   font-family: Roboto;
   border: 0.1rem solid #32325d;
   border-radius: 0.5rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
 .my-footer {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../assets/bgs/ft3.jpg);
+  background: rgba(0, 0, 0, 0.9);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   border-radius: 5px;
+}
+
+@font-face {
+  font-family: Rye;
+  src: url(../assets/gfonts/Rye-Regular.ttf);
+}
+.nav-f2-bg {
+  background: #5e72e4;
+  color: #ccc;
 }
 
 .icon-success {
@@ -220,6 +292,56 @@ body {
 
 .icon-info {
   color: #5e72e4;
+}
+
+.f2-btn {
+  background: #5e72e4;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.section-heading {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 2rem;
+  font-family: "Roboto";
+  width: 60%;
+  margin: 0 auto;
+  border: 0.5px solid #2bffc6;
+  outline: 1px solid #e14ecbe0;
+  outline-offset: 0.5em;
+  margin-bottom: 1rem;
+}
+
+.mini-heading {
+  text-align: center;
+  color: #ccc;
+  background: #32325d;
+  padding: 1.5rem;
+  border: 1px solid #e14ecbe0;
+  border-radius: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-family: "Rye";
+}
+
+#nav-fair-tab {
+  background: #23294b6b;
+  padding: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+#nav-looser-tab {
+  background: #23294b6b;
+  padding: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.active {
+  background: #1d8cf8 !important;
+  color: #fff;
 }
 
 .f2-table {
