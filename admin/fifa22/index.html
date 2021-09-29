@@ -128,7 +128,7 @@
 									</div><!--f2-card-text-->
 									<div class="f2-card-stats">
 									  <div class="stat">
-										<button class="btn f2-btn">Record</button>
+										<button class="btn f2-btn" data-toggle="modal" data-target="#looserModal">Looser-Pay</button>
 									  </div><!--stat-->
 									</div><!--f2-card-stats-->
 								</div><!--f2-card-->
@@ -148,7 +148,7 @@
 									</div><!--f2-card-text-->
 									<div class="f2-card-stats">
 									  <div class="stat">
-										<button class="btn f2-btn">Record</button>
+										<button class="btn f2-btn" data-toggle="modal" data-target="#fairModal">Fair-Play</button>
 									  </div><!--stat-->
 									</div><!--f2-card-stats-->
 								</div><!--f2-card-->
@@ -176,6 +176,65 @@
 						</div>
 					</div><!--/.end of column/-->
 				</div><!--/.row/-->
+
+				<!--Modals-->
+
+				<!--Looser Pay-->
+				<div class="modal fade" id="looserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-sm" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Looser Pay</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        <form action="#" id="f2-looser-form" method="POST">
+							<div class="form-group">
+								<label for="homp">Home Player:</label>
+								<input type="text" class="form-control" placeholder="Enter Home Player Name..." id="hp" name="hp">
+							</div><!--/.form-group/-->
+							<div class="form-group">
+								<label for="awap">Away Player:</label>
+								<input type="text" class="form-control" placeholder="Enter Away Player Name..." id="ap" name="ap">
+							</div><!--/.form-group/-->
+							<div class="form-group">
+								<label for="homet">Home Team:</label>
+								<input type="text" class="form-control" placeholder="Enter Home Team..." id="ht" name="ht">
+							</div><!--/.form-group/-->
+							<div class="form-group">
+								<label for="awat">Away Team:</label>
+								<input type="text" class="form-control" placeholder="Enter Away Team..." id="at" name="at">
+							</div><!--/.form-group/-->
+							<div class="form-group">
+								<label for="homsc">Home Score:</label>
+								<input type="number" class="form-control" placeholder="Home Player Score..." id="hsc" name="hsc">
+							</div><!--/.form-group/-->
+							<div class="form-group">
+								<label for="awasc">Away Score:</label>
+								<input type="number" class="form-control" placeholder="Away Player Score..." id="asc" name="asc">
+							</div><!--/.form-group/-->
+							<div class="form-group">
+								<p>FT or HT</p>
+								<span><strong>FT</strong></span>
+								<input type="radio" id="aet" name="charge" value="ft">
+								<span><strong>HT</strong></span>
+								<input type="radio" id="aet" name="charge" value="ht">
+							</div><!--/.form-group/-->
+							<div class="form-group">
+								<label for="awasc">Coupon:</label>
+								<input type="text" class="form-control" placeholder="Apply Code..." id="coup" name="coup" value="N/A">
+							</div><!--/.form-group/-->
+							<button type="submit" id="f2-looser-btn" class="btn btn-primary" name="recordm">Record</button>
+							<div id="recres"></div>
+						</form>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				<!--Fair Play-->
+
 			</div><!--/.container-fluid/-->
 		</section><!--usersf-->
 		<section id="f2-records">
@@ -298,6 +357,16 @@
 										<input type="text" class="form-control" id="trname" placeholder="Transactor...">
 									</div>
 									<div class="form-group">
+										<label for="mode">Payment Method</label>
+										<select name="txnMode" id="txnmode" class="form-control">
+											<option value=""></option>
+											<option value="cs">Cash</option>
+											<option value="mp">Mobile Money (Mpesa, Airtel Money, Tkash)</option>
+											<option value="bnk">Bank</option>
+											<option value="ot">Other</option>
+										</select>
+									</div>
+									<div class="form-group">
 										<label for="name">Amount: </label>
 										<input type="number" class="form-control" id="tramt" placeholder="Amount...">
 									</div>
@@ -408,5 +477,6 @@
 	<script src="../../js/regular.js" type="text/javascript"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="../../js/index.js" type="text/javascript"></script>
+	<script src="js/fifa22.js"></script>
 </body>
 </html>

@@ -229,6 +229,14 @@ body {
   padding: 10px;
 }
 
+#f2-looser-form {
+  text-align: center;
+}
+#f2-looser-form label {
+  font-weight: bold;
+  color: rgba(16, 24, 32, 0.863);
+}
+
 .f2-records {
   background: #32325d;
   margin-left: 2rem;
