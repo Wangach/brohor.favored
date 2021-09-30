@@ -219,7 +219,13 @@
       color: $theme;
     }
   }
-
+  div#results {
+    margin: 0;
+    border: 1px solid silver;
+    z-index: 9999;
+    overflow: scroll;
+    height: 250px;
+  }
   // Section 2
   .f2-records {
     background: #32325d;

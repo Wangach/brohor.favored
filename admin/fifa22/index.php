@@ -168,7 +168,7 @@
 									</div><!--f2-card-text-->
 									<div class="f2-card-stats">
 									  <div class="stat">
-										<button class="btn f2-btn">Record</button>
+										<button class="btn f2-btn" data-toggle="modal" data-target="#trModal"><i class="fas fa-search"></i></button>
 									  </div><!--stat-->
 									</div><!--f2-card-stats-->
 								</div><!--f2-card-->
@@ -190,7 +190,7 @@
 				        </button>
 				      </div>
 				      <div class="modal-body">
-				        <form action="#" id="f2-looser-form" method="POST">
+				        <form action="scripts/22master.php" id="f2-looser-form" method="POST">
 							<div class="form-group">
 								<label for="homp">Home Player:</label>
 								<input type="text" class="form-control" placeholder="Enter Home Player Name..." id="hp" name="hp">
@@ -216,24 +216,47 @@
 								<input type="number" class="form-control" placeholder="Away Player Score..." id="asc" name="asc">
 							</div><!--/.form-group/-->
 							<div class="form-group">
-								<p>FT or HT</p>
-								<span><strong>FT</strong></span>
-								<input type="radio" id="aet" name="charge" value="ft">
-								<span><strong>HT</strong></span>
-								<input type="radio" id="aet" name="charge" value="ht">
-							</div><!--/.form-group/-->
+								<label for="matchty">Match Type:</label>
+								<select name="matchType" id="mtyp" class="form-control">
+									<option value=""></option>
+									<option value="ht">Half Time</option>
+									<option value="ft">Full Time</option>
+								</select>
+							</div>
 							<div class="form-group">
 								<label for="awasc">Coupon:</label>
 								<input type="text" class="form-control" placeholder="Apply Code..." id="coup" name="coup" value="N/A">
 							</div><!--/.form-group/-->
 							<button type="submit" id="f2-looser-btn" class="btn btn-primary" name="recordm">Record</button>
-							<div id="recres"></div>
 						</form>
 				      </div>
 				    </div>
 				  </div>
 				</div>
 				<!--Fair Play-->
+				<!-- Transactions Modal -->
+				<div class="modal fade" id="trModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-sm" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Looser Pay</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        <form action="scripts/22searchtr.php" id="f2-looser-form" method="POST">
+							<div class="form-group">
+								<label for="trname">Enter Name:</label>
+								<input type="text" class="form-control" placeholder="Transactor Name..." id="tn" name="tn">
+							</div><!--/.form-group/-->
+							<button type="submit" id="f2-txn-btn" class="btn btn-primary" name="recordm">Record</button>
+						</form>
+				      </div>
+					  <div id="results"></div>
+				    </div>
+				  </div>
+				</div>
 
 			</div><!--/.container-fluid/-->
 		</section><!--usersf-->
@@ -344,7 +367,7 @@
 								<div class="form-top">
 									<h4>Pay Form</h4>
 								</div>
-								<form action="#" id="payments-form">
+								<form action="scripts/transact22.php" id="payments-form" method="POST">
 									<div class="form-group">
 										<select name="txnType" id="txntyp" class="form-control">
 											<option value=""></option>
@@ -354,7 +377,7 @@
 									</div>
 									<div class="form-group">
 										<label for="name">Transactor: </label>
-										<input type="text" class="form-control" id="trname" placeholder="Transactor...">
+										<input type="text" class="form-control" id="trname" placeholder="Transactor..." name="cusjina">
 									</div>
 									<div class="form-group">
 										<label for="mode">Payment Method</label>
@@ -368,9 +391,13 @@
 									</div>
 									<div class="form-group">
 										<label for="name">Amount: </label>
-										<input type="number" class="form-control" id="tramt" placeholder="Amount...">
+										<input type="number" class="form-control" id="tramt" placeholder="Amount..." name="kiwango">
 									</div>
-									<button type="submit" class="btn btn-warning">Submit</button>
+									<div class="form-group">
+										<label for="name">Description: </label>
+										<input type="text" class="form-control" id="trds" placeholder="Description..." name="maelezo">
+									</div>
+									<button type="submit" class="btn f2-btn">Submit</button>
 								</form>
 								
 							</div><!--form-side-->

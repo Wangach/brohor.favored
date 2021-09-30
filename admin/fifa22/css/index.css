@@ -237,6 +237,14 @@ body {
   color: rgba(16, 24, 32, 0.863);
 }
 
+div#results {
+  margin: 0;
+  border: 1px solid silver;
+  z-index: 9999;
+  overflow: scroll;
+  height: 250px;
+}
+
 .f2-records {
   background: #32325d;
   margin-left: 2rem;
