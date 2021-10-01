@@ -119,46 +119,69 @@ looserform.addEventListener("submit", function (event) {
       })
 });
 
+//defining the above functions
+function clearLooserForm(){
+  location.reload();
+  let homPlayValue = document.getElementById('hp').value;
+  let awayPlayValue =  document.getElementById('ap').value;
+  let homTeamVal = document.getElementById('ht').value;
+  let awTeamVal = document.getElementById('at').value;
+  let homScrVal = document.getElementById('hsc').value;
+  let awScrVal = document.getElementById('asc').value;
+  let mTypVal = document.getElementById('mtyp').value;
+  let vouchVal = document.getElementById('coup').value;
+
+  // clear the above fields
+  homPlayValue.value = '';
+  awayPlayValue.value = '';
+  homTeamVal.value = '';
+  awTeamVal.value = '';
+  homScrVal.value = '';
+  awScrVal.value = '';
+  mTypVal.value = '';
+  vouchVal.value = '';
+}
 //Payments
 //Showing Users Latest Transactions
-// let nameOfCst = document.getElementById('cusname');
-// let form = document.querySelector('form#search-form');
-// let disp = document.getElementById('results');
-// let url = form.getAttribute('action');
-// let payBtn = document.querySelector('#trans');
-
-// form.onsubmit = function(event){
-// 	event.preventDefault();
+let nameOfCst = document.getElementById('tn');
+let strform = document.querySelector('form#f2-search-form');
+let disp = document.getElementById('results');
+let url = strform.getAttribute('action');
 
 
-// 	var request = new XMLHttpRequest;
-// 	request.open('POST', url);
-// 	request.onreadystatechange = function(){
-// 		if (this.readyState == 4 && this.status == 200) {
-// 			let frmdb = this.responseText;
-// 			//show the results
-// 			disp.innerHTML = frmdb;
-// 		}
-// 	}
-// 	let fData = new FormData(form);
-// 	request.send(fData);
-// }
+strform.onsubmit = function(event){
+	event.preventDefault();
+
+
+	var request = new XMLHttpRequest;
+	request.open('POST', url);
+	request.onreadystatechange = function(){
+		if (this.readyState == 4 && this.status == 200) {
+			let frmdb = this.responseText;
+			//show the results
+			disp.innerHTML = frmdb;
+		}
+	}
+	let fData = new FormData(strform);
+	request.send(fData);
+}
 
 //Making Payments
-let paymentForm = document.querySelector('form#new-cs-form');
-let fromDb = document.getElementById('feedback');
+let paymentForm = document.querySelector('form#f2-payments-form');
+let payBtn = document.querySelector('#f2-pay');
 let paymentUrl = paymentForm.getAttribute('action');
 
 let transError = false;
 
-paymentForm.addEventListener("submit", function(e){
+paymentForm.addEventListener("submit", function(event){
 	event.preventDefault();
 	//form values 
 	let formVals = [
-		document.getElementById('aina').value,
-		document.getElementById('cusjina').value,
-		document.getElementById('kiwango').value,
-		document.getElementById('maelezo').value
+		document.getElementById('txntyp').value,
+		document.getElementById('trname').value,
+    document.getElementById('txnmode').value,
+		document.getElementById('tramt').value,
+		document.getElementById('trds').value
 	];
 	
 	checkTrans(formVals);
@@ -176,7 +199,7 @@ paymentForm.addEventListener("submit", function(e){
 
 		Swal.fire({
         title: 'You Sure?',
-        text: "Pay "+ document.getElementById('kiwango').value+ " By "+document.getElementById('cusjina').value,
+        text: "Pay "+ document.getElementById('tramt').value+ " By "+document.getElementById('trname').value,
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -249,14 +272,18 @@ function checkTrans(arr){
 function clearFields(){
 
 		location.reload();
-		let cashType = document.getElementById('aina');
-		let csName = document.getElementById('cusjina');
-		let amtOfCash = document.getElementById('kiwango');
-		let expl = document.getElementById('maelezo');
+    
+		
+		let cashType = document.getElementById('txntyp');
+		let csName = document.getElementById('trname');
+		let amtOfCash = document.getElementById('tramt');
+    let pmeth = document.getElementById('txnmode');
+		let expl = document.getElementById('trds');
 
 		//reset the above fields
 		cashType.value = '';
 		csName.value = '';
+    pmeth.value = '';
 		amtOfCash.value = '';
 		expl.value = '';
 	}

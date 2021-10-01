@@ -27,7 +27,7 @@ include 'database.php';
 				$holder = $holder.$genVal;
 			}
 			//Using The Values Obtained from the above
-			$mkTr = "INSERT INTO transactions(trName, trId, credit, debit, amount, pmeth, trDesc) 
+			$mkTr = "INSERT INTO f2transactions(trName, trId, credit, debit, amount, pmeth, trDesc) 
             VALUES('$nameOfTransactor', '$holder', '$moneyIn', '$moneyOut', '$totals',  '$paymentMethod', '$transactionDesc')";
 			$axn = mysqli_query($dbcon, $mkTr);
 
@@ -55,7 +55,7 @@ include 'database.php';
 				$holder = $holder.$genVal;
 			}
 			//Using The Values Obtained from the above
-			$mkTr = "INSERT INTO transactions(trName, trId, credit, debit, amount, pmeth, trDesc)
+			$mkTr = "INSERT INTO f2transactions(trName, trId, credit, debit, amount, pmeth, trDesc)
              VALUES('$nameOfTransactor', '$holder', '$moneyIn', '$moneyOut', '$totals', '$paymentMethod', '$transactionDesc')";
 			$axn = mysqli_query($dbcon, $mkTr);
 

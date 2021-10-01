@@ -239,18 +239,18 @@
 				  <div class="modal-dialog modal-sm" role="document">
 				    <div class="modal-content">
 				      <div class="modal-header">
-				        <h5 class="modal-title" id="exampleModalLabel">Looser Pay</h5>
+				        <h5 class="modal-title" id="exampleModalLabel">Search Transactions</h5>
 				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				          <span aria-hidden="true">&times;</span>
 				        </button>
 				      </div>
 				      <div class="modal-body">
-				        <form action="scripts/22searchtr.php" id="f2-looser-form" method="POST">
+				        <form action="scripts/22searchtr.php" id="f2-search-form" method="POST">
 							<div class="form-group">
 								<label for="trname">Enter Name:</label>
 								<input type="text" class="form-control" placeholder="Transactor Name..." id="tn" name="tn">
 							</div><!--/.form-group/-->
-							<button type="submit" id="f2-txn-btn" class="btn btn-primary" name="recordm">Record</button>
+							<button type="submit" id="f2-txn-btn" class="btn f2-btn" name="searchtr"><i class="fas fa-search"></i></button>
 						</form>
 				      </div>
 					  <div id="results"></div>
@@ -367,7 +367,7 @@
 								<div class="form-top">
 									<h4>Pay Form</h4>
 								</div>
-								<form action="scripts/transact22.php" id="payments-form" method="POST">
+								<form action="scripts/transact22.php" id="f2-payments-form" method="POST">
 									<div class="form-group">
 										<select name="txnType" id="txntyp" class="form-control">
 											<option value=""></option>
@@ -397,7 +397,7 @@
 										<label for="name">Description: </label>
 										<input type="text" class="form-control" id="trds" placeholder="Description..." name="maelezo">
 									</div>
-									<button type="submit" class="btn f2-btn">Submit</button>
+									<button type="submit" class="btn f2-btn" id="f2-pay">Submit</button>
 								</form>
 								
 							</div><!--form-side-->
