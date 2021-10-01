@@ -49,14 +49,14 @@
     border: .1rem solid #32325d;
     border-radius: .5rem;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-    height: 27.1rem;
-    overflow: scroll;
+    height: 35.9rem;
 }
 .form-side {
     grid-area: transact;
 }
 .trns-side {
     grid-area: records;
+    overflow: scroll;
 }
 
 //Media Queries
@@ -103,6 +103,11 @@
     }
     .trans-holder {
         @include mobilePsn;
+        height: 27.9rem;
+        width: 100%;
+    }
+    .f2-table {
+        @include resizeTable;
     }
 }
   

@@ -59,8 +59,7 @@ body {
   border: 0.1rem solid #32325d;
   border-radius: 0.5rem;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  height: 27.1rem;
-  overflow: scroll;
+  height: 35.9rem;
 }
 
 .form-side {
@@ -69,6 +68,7 @@ body {
 
 .trns-side {
   grid-area: records;
+  overflow: scroll;
 }
 
 @media (max-width: 768px) {
@@ -123,6 +123,12 @@ body {
     width: 70%;
     margin: 0 auto;
     transform: translateX(-5px);
+    height: 27.9rem;
+    width: 100%;
+  }
+
+  .f2-table {
+    font-size: 0.5rem;
   }
 }
 /*Custom Loaders*/

@@ -1,3 +1,7 @@
+<?php
+include 'scripts/f22counters.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,7 +127,7 @@
 									</div>
 									<div class="f2-card-text">
 									  <span class="date fas fa-sync"></span>
-									  <h2>1000</h2>
+									  <h2><?php looserCnt(); ?></h2>
 									  <p>Looser Games</p>
 									</div><!--f2-card-text-->
 									<div class="f2-card-stats">
@@ -143,7 +147,7 @@
 									</div>
 									<div class="f2-card-text">
 									  <span class="date fas fa-sync"></span>
-									  <h2>1000</h2>
+									  <h2><?php fairCnt(); ?></h2>
 									  <p>Fair Games</p>
 									</div><!--f2-card-text-->
 									<div class="f2-card-stats">
@@ -280,32 +284,21 @@
 										<div class="table-responsive">
 											<table class="table f2-table">
 												<thead>
-												  <tr>
-													<th scope="col">#</th>
-													<th scope="col">First</th>
-													<th scope="col">Last</th>
-													<th scope="col">Handle</th>
-												  </tr>
+													<tr>
+													<th scope='col'>H. Player</th>
+													<th scope='col'>A. Player</th>
+													<th scope='col'>H. Team</th>
+													<th scope='col'>A. Team</th>
+													<th scope='col'>H. Score</th>
+													<th scope='col'>A. Score</th>
+													<th class='text-danger'>Looser</th>
+													<th class='text-success'>Winner</th>
+													</tr>
 												</thead>
 												<tbody>
-												  <tr>
-													<th scope="row">1</th>
-													<td>Mark</td>
-													<td>Otto</td>
-													<td>@mdo</td>
-												  </tr>
-												  <tr>
-													<th scope="row">2</th>
-													<td>Jacob</td>
-													<td>Thornton</td>
-													<td>@fat</td>
-												  </tr>
-												  <tr>
-													<th scope="row">3</th>
-													<td>Larry</td>
-													<td>the Bird</td>
-													<td>@twitter</td>
-												  </tr>
+												  <?php
+													recLooser();
+												  ?>
 												</tbody>
 											  </table>
 										</div><!--table-responsive-->
@@ -407,69 +400,18 @@
 								</div>
 								<div class="trans-holder table-responsive">
 									<table class="table table-bordered f2-table">
-										<thead>
-										  <tr>
-											<th scope="col">#</th>
-											<th scope="col">First</th>
-											<th scope="col">Last</th>
-											<th scope="col">Handle</th>
-										  </tr>
-										</thead>
+									<thead>
+										<tr>
+										<th scope='col'>Transaction Id</th>
+										<th scope='col'>Transactor</th>
+										<th scope='col'>Amount</th>
+										<th scope='col'>Mode</th>
+										<th scope='col'>Description</th>
+										<th class='text text-danger'>Transaction Time</th>
+										</tr>
+									</thead>
 										<tbody>
-										  <tr>
-											<th scope="row">1</th>
-											<td>Mark</td>
-											<td>Otto</td>
-											<td>@mdo</td>
-										  </tr>
-										  <tr>
-											<th scope="row">2</th>
-											<td>Jacob</td>
-											<td>Thornton</td>
-											<td>@fat</td>
-										  </tr>
-										  <tr>
-											<th scope="row">3</th>
-											<td>Larry</td>
-											<td>the Bird</td>
-											<td>@twitter</td>
-										  </tr>
-										  <tr>
-											<th scope="row">4</th>
-											<td>Mark</td>
-											<td>Otto</td>
-											<td>@mdo</td>
-										  </tr>
-										  <tr>
-											<th scope="row">5</th>
-											<td>Jacob</td>
-											<td>Thornton</td>
-											<td>@fat</td>
-										  </tr>
-										  <tr>
-											<th scope="row">6</th>
-											<td>Larry</td>
-											<td>the Bird</td>
-											<td>@twitter</td>
-										  </tr>
-										  <tr>
-											<th scope="row">7</th>
-											<td>Mark</td>
-											<td>Otto</td>
-											<td>@mdo</td>
-										  </tr>
-										  <tr>
-											<th scope="row">8</th>
-											<td>Jacob</td>
-											<td>Thornton</td>
-											<td>@fat</td>
-										  </tr>
-										  <tr>
-											<th scope="row">9</th>
-											<td>Larry</td>
-											<td>the Bird</td>
-											<td>@twitter</td>
-										  </tr>
+											<?php recTrns(); ?>
 										</tbody>
 									  </table>
 								</div><!--trans-holder-->
