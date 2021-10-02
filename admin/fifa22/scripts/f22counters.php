@@ -121,11 +121,11 @@ function recFair(){
 function recTrns(){
     $showData = '';
 	
-	include '../../script/database.php';
+	include 'database.php';
 
 	//Fetching The latest transactions
-    $transGetter = "SELECT * FROM (SELECT * FROM f2transactions ORDER BY id DESC LIMIT 7) as r ORDER BY id";
-    $latestTrans = mysqli_query($initialize, $transGetter);
+    $transGetter = "SELECT * FROM (SELECT * FROM f2transactions ORDER BY id DESC LIMIT 5) as r ORDER BY id";
+    $latestTrans = mysqli_query($dbcon, $transGetter);
 
     if (mysqli_num_rows($latestTrans) > 0) {
         while ($row = mysqli_fetch_assoc($latestTrans)) {
