@@ -219,6 +219,7 @@
       color: $theme;
     }
   }
+  
   div#results {
     margin: 0;
     border: 1px solid silver;
@@ -243,7 +244,7 @@
   .form-top {
     @include myforms;
   }
-  #f2-payments-form {
+  #f2-payments-form, #f2-user-form {
     @include myforms;
   }
   .my-footer {

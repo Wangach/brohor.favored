@@ -54,7 +54,7 @@ body {
   border-radius: 0.5rem;
 }
 
-.trans-holder {
+.trans-holder, .data-side {
   background: #32325d;
   border: 0.1rem solid #32325d;
   border-radius: 0.5rem;
@@ -71,6 +71,54 @@ body {
   overflow: scroll;
 }
 
+.users {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "data adding";
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.add-user-side {
+  grid-area: adding;
+}
+
+.data-side {
+  grid-area: data;
+  margin-top: 2.5rem;
+}
+.data-side .data-holder {
+  border: 1px dotted #1DC4E7;
+  width: 60%;
+  margin: 10.9rem auto;
+  padding: 3rem;
+  text-align: center;
+}
+.data-side .data-holder .tusers {
+  color: #1DC4E7;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.data-side .data-holder .tusers:hover {
+  cursor: pointer;
+  animation-name: remba;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+.data-side .data-holder h4 {
+  color: #1DC4E7;
+}
+
+@keyframes remba {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
 @media (max-width: 768px) {
   .sidebar {
     position: static;
@@ -275,7 +323,7 @@ div#results {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
-#f2-payments-form {
+#f2-payments-form, #f2-user-form {
   background: #32325d;
   padding: 2rem;
   color: #fff;

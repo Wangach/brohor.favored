@@ -287,3 +287,126 @@ function clearFields(){
 		amtOfCash.value = '';
 		expl.value = '';
 	}
+
+  //Registering A new User
+let userForm = document.querySelector('form#f2-user-form');
+let regUserBtn = document.querySelector('#f2-user');
+let registerUrl = userForm.getAttribute('action');
+
+let regUserError = false;
+
+userForm.addEventListener("submit", function(event){
+	event.preventDefault();
+	//form values 
+	let regFormVals= [
+		document.getElementById('jina').value,
+		document.getElementById('alias').value,
+    document.getElementById('ph').value,
+		document.getElementById('ftm').value,
+		document.getElementById('un').value
+	];
+	
+	checkRegistration(regFormVals);
+	if (regUserError === true) {
+		//errors in the form
+		Swal.fire({
+		  icon: 'error',
+		  title: 'Oops...',
+		  text: 'Ensure That All Form Fields Are Duly Filled!'
+		})
+		console.log(regFormVals);
+		return false;
+	}else if(regUserError === false){
+		//No Errors found
+
+		Swal.fire({
+        title: 'You Sure?',
+        text: "Register "+ document.getElementById('jina').value+ " With Alias "+document.getElementById('alias').value +
+        " of Phone "+ document.getElementById('ph').value + "?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Register'
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+         	regUserBtn.setAttribute('disabled', 'true');
+					let registrationRequest = new XMLHttpRequest;
+					registrationRequest.open('POST', registerUrl);
+          	registrationRequest.onreadystatechange = function() {
+
+            if (this.readyState == 4 && this.status == 200){
+              let frmdb = this.responseText;
+              //check the text for error or success
+              if (frmdb.includes('Successful') > 0) {
+                //successful request
+                Swal.fire(
+                    'Registered!',
+                      frmdb,
+                    'success'
+                  )
+              }else if(frmdb.includes('Error') > 0){
+                //failed request
+                Swal.fire(
+                    'Uh-oh!',
+                    'Issue In Handling Request.',
+                    'error'
+                  )
+              }else{
+                Swal.fire(
+                    'Uknown!',
+                    'What Are You Saying?',
+                    'error'
+                  )
+              }
+            }
+        }
+        let regData = new FormData(userForm);
+		registrationRequest.send(regData);
+
+		//clear fields
+		setTimeout(clearRegFields, 4500);
+
+        }
+        else if (result.dismiss) {
+          swal.fire(
+            'Cancelled',
+            'The Payment Process Has Been Terminated!',
+            'error'
+          )
+        }
+      })
+	}
+});
+
+//Define the above functions
+function checkRegistration(arr){
+	for(i of arr){
+		if (i == '') {
+			regUserError = true;
+			return transError;
+		}else {
+			regUserError = false;
+			return transError;
+		}
+	}
+}
+function clearRegFields(){
+
+		location.reload();
+    
+		
+		let usNm = document.getElementById('jina');
+		let alNm = document.getElementById('alias');
+		let usPh = document.getElementById('ph');
+    let usFv = document.getElementById('ftm');
+		let usUn = document.getElementById('un');
+
+		//reset the above fields
+		usNm.value = '';
+		alNm.value = '';
+    usPh.value = '';
+		usFv.value = '';
+		usUn.value = '';
+	}

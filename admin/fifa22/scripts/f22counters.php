@@ -145,7 +145,7 @@ function recTrns(){
             }*/
             //html data
            
-            $showData .= "  <tr>
+            $showData = "  <tr>
                                 <td><a class='text-lg text-warning' href='#'>$transactionId</a></td>
                                 <td>$nameOfTransactor</td>
                                 <td>$transactedAmt</td>

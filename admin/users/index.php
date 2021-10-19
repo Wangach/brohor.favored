@@ -1,23 +1,21 @@
-<?php 
-//Check session
+<?php
+//include 'scripts/f22counters.php';
+?>
 
-include '../../script/session_checker.php';
-include 'userscr/usermaster.php';
-
- ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Broad Horizons Ent | Admin Users Page </title>
+	<title>Broad Horizons Ent | Users Page </title>
 	<!--/Precoded CSS files-->
 	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<link rel="stylesheet" href="../../css/all.css">
 	<link rel="stylesheet" href="../../css/solid.css">
 	<!--own css files-->
-	<link rel="stylesheet" href="../../css/admin.css">
-	<link rel="stylesheet" href="../../css/media.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<!-- <link rel="stylesheet" href="../../css/admin.css">
+	<link rel="stylesheet" href="../../css/media.css"> -->
 </head>
 <body>
 	<!--/Custom Loaders/-->
@@ -27,7 +25,7 @@ include 'userscr/usermaster.php';
 		</div>
     </div>
 	
-	<nav class="navbar navbar-expand-md navbar-light bg-light">
+	<nav class="navbar navbar-expand-md navbar-light nav-f2-bg">
 	  <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -37,7 +35,9 @@ include 'userscr/usermaster.php';
 	    	<div class="row">
 	    		<!--sidebar/-->
 	    		<div class="col-xl-2 col-md-4 col-lg-3 fixed-top sidebar">
-	    			<a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">BroadHorizonsEnt</a>
+	    			<a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">
+						<img class="profile img img-thumbnail" src="images/bgs/hild.jpg" alt="Johnito">
+					</a>
 
 	    			<!--Navigation items-->
 	    			<ul class="navbar-nav flex-column">
@@ -49,14 +49,14 @@ include 'userscr/usermaster.php';
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="index.php" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="../users/" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-users text-light mr-3 fa-lg"></i>
 	    						Users
 	    					</a>
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="../fifa/" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="index.php" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-gamepad text-light mr-3 fa-lg"></i>
 	    						Games
 	    					</a>
@@ -93,7 +93,7 @@ include 'userscr/usermaster.php';
 	    		</div><!--/.col-lg-3/-->
 
 	    		<!--topnav/-->
-	    		<div class="col-xl-10 col-md-8 col-lg-9 ml-auto bg-dark fixed-top py-2 top-navbar">
+	    		<div class="col-xl-10 col-md-8 col-lg-9 ml-auto fixed-top py-2 top-navbar">
 	    			<div class="row">
 	    				<div class="col-md-4">
 	    					<h4 class="text-light text-uppercase mb-0">Dashboard</h4>
@@ -112,135 +112,12 @@ include 'userscr/usermaster.php';
 	  </div>
 	</nav>	
 	
-	<section id="usersf">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-9 ml-auto">
-					<div class="row mt-3 mb-5 pt-5">
-						<div class="col-sm-6 p-2">
-							<div class="card">
-								<div class="card-body">
-									<div class="d-flex justify-content-between">
-										<i class="fas fa-user-check fa-3x text-warning"></i>
-										<div class="text-right text-secondary">
-											<h5>Registered Users</h5>
-											<h3><?php calcTotUsers(); ?></h3>
-										</div>
-									</div>
-								</div><!--/.card-body/-->
-								<div class="card-footer">
-									<a class="btn btn-link" href="viewuser.php" target="_blank">
-									<i class="fas fa-eye" aria-hidden="true"></i>
-									</a>
-								</div><!--/.card-footer/-->
-							</div><!--/card/-->
-						</div><!--/col-sm-6/-->
+	<main>
+		
+	</main>
 
-						<div class="col-sm-6 p-1">
-							<div class="card">
-								<div class="card-body">
-									<div class="d-flex justify-content-between">
-										<i class="fas fa-signal fa-3x text-success"></i>
-										<div class="text-right text-secondary">
-											<h5>Users Online</h5>
-											<h3><?php onlineUsers(); ?></h3>
-										</div>
-									</div>
-								</div><!--/.card-body/-->
-								<div class="card-footer">
-									<i class="fas fa-sync mr-3"></i>
-									<span>Update</span>
-								</div><!--/.card-footer/-->
-							</div><!--/card/-->
-						</div><!--/col-sm-6/-->
-					</div>
-				</div><!--/.end of column/-->
-			</div><!--/.row/-->
-		</div><!--/.container-fluid/-->
-	</section>
+	
 
-	<section id="userssec">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-9 ml-auto">
-					<div class="row style-bg">
-						<div class="col-md-6">
-							<div class="my-content">
-								<p>It's In The Game!</p>
-							</div>
-						</div><!--/.col-md-12/-->
-						<div class="col-md-6">
-							<div class="my-content">
-								<button class="btn btn-info" data-toggle="modal" data-target="#regUserModal">Add User <strong><i class="fas fa-user-plus"></i></strong></button>
-							</div>
-
-							<!--Registration Modal-->
-							<div class="modal fade" id="regUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-								<div class="modal-dialog modal-dialog-centered" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title text-dark">Register User</h5>
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div><!--/.modal-header-->
-										<div class="modal-body">
-											<form action="userscr/reguser.php" id="registration-form" method="POST">
-												<div class="form-group">
-													<label for="name">Customer's Name:</label>
-													<input type="text" class="form-control" placeholder="Customer Full Names..." id="cfn" name="fnam">
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="team">Password:</label>
-													<input type="password" class="form-control" placeholder="preset password..." id="cpwd" name="pass">
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="name">Customer Alias:</label>
-													<input type="text" class="form-control" placeholder="Nick Name..." id="cal" name="nickn">
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="team">Favorite Team:</label>
-													<input type="text" class="form-control" placeholder="E.g. Arsenal..." id="cft" name="favt">
-												</div><!--/.form-group/-->
-												<div class="form-group">
-													<label for="phone">Phone No.:</label>
-													<input type="number" class="form-control" placeholder="+254712 000 000..." id="cpn" name="phno">
-												</div><!--/.form-group/-->
-												
-												
-
-												<button id="reguser" type="submit" class="btn btn-success">Register</button>
-												<div id="regres"></div>
-											</form>
-										</div><!--modal-body-->
-									</div><!--Modal content-->
-								</div><!--modal-dialog-->
-							</div><!--/#regUserModal/-->
-
-
-						</div><!--/.col-md-12/-->
-					</div>
-				</div><!--/.col-lg-9-->
-			</div><!--/.row/-->
-		</div><!--/.container-fluid/-->
-	</section><!--usersec-->
-
-	<section id="userthrd">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-9 ml-auto">
-					<div class="row">
-						<div class="col-md-9 mb-2 mt-4">
-							<h3 class="text-center text-muted">Recently Added Users</h3>
-						</div>
-						<div class="col-md-12">
-							<?php showUsers(); ?>
-						</div><!--/col-md-12/-->
-					</div><!--/.nested row/-->
-				</div>
-			</div>
-		</div><!--/.container-fluid/-->
-	</section><!--sec/-->
 	<!--Footer-->
 	<div class="container-fluid">
 		<div class="row p-2 mt-2">
@@ -259,7 +136,8 @@ include 'userscr/usermaster.php';
 	<script src="../../js/all.js" type="text/javascript"></script>
 	<script src="../../js/fontawesome.js" type="text/javascript"></script>
 	<script src="../../js/regular.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="../../js/index.js" type="text/javascript"></script>
-	<script src="userjs/users.js" type="text/javascript"></script>
+	<script src="js/fifa22.js"></script>
 </body>
 </html>

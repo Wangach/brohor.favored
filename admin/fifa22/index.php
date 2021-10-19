@@ -422,6 +422,56 @@ include 'scripts/f22counters.php';
 				</div><!--/.row/-->
 			</div><!--/.container-fluid/-->
 		</section><!--f2-txns-->
+
+		<section id="f2-users">
+			<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-9 ml-auto">
+							<div class="section-heading">
+								<h4>Users</h4>
+							</div>
+							<div class="row mt-3 mb-5 pt-5 users">
+								<div class="data-side">
+									<div class="data-holder">
+										<span class="tusers">43</span>
+										<h4>Users</h4>
+									</div><!--/.data-holder-->									
+								</div><!--data-side-->
+								<div class="add-user-side">
+									<div class="form-top">
+										<h4>Add User</h4>
+									</div>
+									<form action="scripts/f2rusr.php" id="f2-user-form" method="POST">
+										<div class="form-group">
+											<label for="name">UserName: </label>
+											<input type="text" placeholder="User's Name..." class="form-control" id="jina" name="jina">
+										</div><!--form-group-->
+										<div class="form-group">
+											<label for="alias">Alias: </label>
+											<input type="text" placeholder="System Name..." class="form-control" id="alias" name="alias">
+										</div><!--form-group-->
+										<div class="form-group">
+											<label for="phone">Phone Number: </label>
+											<input type="number" placeholder="Phone..." class="form-control" id="ph" name="ph">
+										</div><!--form-group-->
+										<div class="form-group">
+											<label for="fav">Fav Team:</label>
+											<input type="text" placeholder="Eg Arsenal..." class="form-control" id="ftm" name="ftm">
+										</div><!--form-group-->
+										<div class="form-group">
+											<label for="uno">Limit: </label>
+											<input type="number" placeholder="100..." class="form-control" id="un" name="un">
+										</div><!--form-group-->
+
+										<button type="submit" class="btn f2-btn" id="f2-user"><i class="fas fa-user-plus"></i></button>
+									</form>
+									
+								</div><!--add-user-side-->
+							</div><!--transactions row-->
+						</div><!--/.end of column/-->
+					</div><!--/.row/-->
+				</div><!--/.container-fluid/-->
+		</section><!--/#f2-users-->
 	</main>
 
 	
