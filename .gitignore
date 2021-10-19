@@ -128,3 +128,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /admin/movies/movie_avatars
+/admin/fifa22/node_modules
