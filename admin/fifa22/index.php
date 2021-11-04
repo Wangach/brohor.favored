@@ -1,4 +1,7 @@
 <?php
+//Check session
+include '../../script/session_checker.php';
+include '../users/userscr/usermaster.php';
 include 'scripts/f22counters.php';
 ?>
 
@@ -7,7 +10,7 @@ include 'scripts/f22counters.php';
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Broad Horizons Ent | Admin Users Page </title>
+	<title><?php echo $admin; ?> | FIFA 22 Admin </title>
 	<!--/Precoded CSS files-->
 	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<link rel="stylesheet" href="../../css/all.css">
@@ -56,20 +59,13 @@ include 'scripts/f22counters.php';
 	    				</li>
 
 	    				<li class="nav-item mt-4">
-	    					<a href="index.php" class="nav-link text-white p-3 mb-2 sidebar-link">
-	    						<i class="fas fa-gamepad text-light mr-3 fa-lg"></i>
-	    						Games
-	    					</a>
-	    				</li>
-
-	    				<li class="nav-item mt-4">
 	    					<a href="../movies/" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-video text-light mr-3 fa-lg"></i>
 	    						Movies
 	    					</a>
 	    				</li>
 
-	    				<li class="nav-item mt-4">
+	    				<!-- <li class="nav-item mt-4">
 	    					<a href="../payments/" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-money-check-alt text-light mr-3 fa-lg"></i>
 	    						Financials
@@ -81,10 +77,10 @@ include 'scripts/f22counters.php';
 	    						<i class="fas fa-shopping-cart text-light mr-3 fa-lg"></i>
 	    						Sales
 	    					</a>
-	    				</li>
+	    				</li> -->
 
 	    				<li class="nav-item mt-4">
-	    					<a href="../script/login.php?logout=1" class="nav-link text-white p-3 mb-2 sidebar-link">
+	    					<a href="../../script/master.php?logout=1" class="nav-link text-white p-3 mb-2 sidebar-link">
 	    						<i class="fas fa-sign-out-alt text-light mr-3 fa-lg"></i>
 	    						LogOut
 	    					</a>
@@ -280,7 +276,7 @@ include 'scripts/f22counters.php';
 									</div>
 								</nav>
 								<div class="tab-content" id="nav-tabContent">
-									<div class="tab-pane fade show active" id="nav-fair" role="tabpanel" aria-labelledby="nav-home-tab">
+									<div class="tab-pane fade show active" id="nav-looser" role="tabpanel" aria-labelledby="nav-home-tab">
 										<div class="table-responsive">
 											<table class="table f2-table">
 												<thead>
@@ -303,7 +299,7 @@ include 'scripts/f22counters.php';
 											  </table>
 										</div><!--table-responsive-->
 									</div><!--tab-pane-->
-									<div class="tab-pane fade" id="nav-looser" role="tabpanel" aria-labelledby="nav-profile-tab">
+									<div class="tab-pane fade" id="nav-fair" role="tabpanel" aria-labelledby="nav-profile-tab">
 										<div class="table-responsive">
 											<table class="table f2-table">
 												<thead>
@@ -433,7 +429,7 @@ include 'scripts/f22counters.php';
 							<div class="row mt-3 mb-5 pt-5 users">
 								<div class="data-side">
 									<div class="data-holder">
-										<span class="tusers">43</span>
+										<span class="tusers"><?php calcTotUsers(); ?></span>
 										<h4>Users</h4>
 									</div><!--/.data-holder-->									
 								</div><!--data-side-->

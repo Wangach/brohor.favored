@@ -1,9 +1,9 @@
 <?php 
-include '../../../script/database.php';
+include 'db.php';
 
 $feedb = '';
 
-$mName = mysqli_real_escape_string($initialize, $_POST['nom']);
+$mName = mysqli_real_escape_string($initialize, $_POST['mn']);
 
 $searchQ = "SELECT * FROM bhmovies WHERE movieName LIKE '%$mName%'";
 $perform = mysqli_query($initialize, $searchQ);
@@ -22,7 +22,7 @@ if (mysqli_num_rows($perform) > 0) {
 
 		//Organize and Display Data
 		$feedb = "<div class='table-responsive'>";
-		$feedb .= "<table class='table table-bordered table-dark' id='multichange'>";
+		$feedb .= "<table class='table f2-table table-bordered' id='multichange'>";
 		$feedb .= "
 					<thead>
 					    <tr>

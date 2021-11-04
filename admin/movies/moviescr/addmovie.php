@@ -1,5 +1,5 @@
 <?php
-include '../../../script/database.php';
+include 'db.php';
 $feedback = '';
 
 	$random = ["M", "O", "P", "R", "n", "q", "0", "2", "4", "8", "6"];

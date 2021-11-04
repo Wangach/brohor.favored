@@ -1,5 +1,6 @@
 <?php
-include 'login.php';
+include 'master.php';
+//login();
 
 if (!isset($_SESSION['administrator']) || empty($_SESSION['administrator'])) {
 	#redirect to login page

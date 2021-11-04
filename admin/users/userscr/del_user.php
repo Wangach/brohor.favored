@@ -15,7 +15,7 @@ if (isset($_GET['uname']) && !empty($_GET['uname'])) {
 }
 
 function deleteUserFrmDb($initialize, $userInSearch) {
-	$myQ = "DELETE FROM users WHERE alias = '$userInSearch'";
+	$myQ = "DELETE FROM f2users WHERE alias = '$userInSearch'";
 	$exec = mysqli_query($initialize, $myQ);
 
 	if ($exec) {

@@ -2,7 +2,7 @@
 $feedb = '';
 
 include 'db.php';
-$latest = "SELECT * FROM(SELECT * FROM bhmovies ORDER BY id DESC LIMIT 4) AS x ORDER BY id";
+$latest = "SELECT * FROM(SELECT * FROM bhmovies ORDER BY id DESC LIMIT 5) AS x ORDER BY id";
 $getem = mysqli_query($initialize, $latest);
 
 if (mysqli_num_rows($getem) > 0) {
@@ -18,7 +18,7 @@ if (mysqli_num_rows($getem) > 0) {
 
 		//Organize and Display Data
 		$feedb = "<div class='table-responsive'>";
-		$feedb .= "<table class='table table-bordered table-dark' id='multichange'>";
+		$feedb .= "<table class='table table-bordered f2-table' id='multichange'>";
 		$feedb .= "
 					<thead>
 					    <tr>

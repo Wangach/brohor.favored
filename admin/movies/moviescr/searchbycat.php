@@ -1,10 +1,10 @@
 <?php 
 
-include '../../../script/database.php';
+include 'db.php';
 
 $feedb = '';
 
-$mCat = mysqli_real_escape_string($initialize, $_POST['ctom']);
+$mCat = mysqli_real_escape_string($initialize, $_POST['mc']);
 
 $searchQ = "SELECT * FROM bhmovies WHERE movieCat LIKE '%$mCat%'";
 $perform = mysqli_query($initialize, $searchQ);
@@ -23,7 +23,7 @@ if (mysqli_num_rows($perform) > 0) {
 
 		//Organize and Display Data
 		$feedb = "<div class='table-responsive'>"; 
-		$feedb .= "<table class='table table-bordered table-dark' id='multichange'>";
+		$feedb .= "<table class='table table-bordered f2-table' id='multichange'>";
 		$feedb .= "
 					<thead>
 					    <tr>

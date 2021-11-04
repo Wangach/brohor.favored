@@ -1,5 +1,5 @@
 <?php 
-include 'script/login.php';
+include 'script/master.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@ include 'script/login.php';
 				<span class="form-top-primary">Broad Horizons Ent <i class="fa fa-user"></i></span>
 				<span class="form-top-main">Admin Login</span>
 			</div><!--.form-top/-->
-			<form action="index.php" id="admin-login" method="POST">
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="admin-login" method="POST">
 				<div class="form-group">
 					<label for="uname">UserName:</label>
 					<input type="text" class="form-control" placeholder="Your UserName..." name="username">

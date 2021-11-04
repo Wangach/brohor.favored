@@ -71,7 +71,7 @@ function calcTotUsers() {
 	if (!$initialize) {
 		echo "Connection to the Database has not been successful!".mysqli_error($initialize);
 	}
-	$totalUsers = "SELECT * FROM users";
+	$totalUsers = "SELECT * FROM f2users";
 	$getUsers = mysqli_query($initialize, $totalUsers);
 
 	$hesabu = mysqli_num_rows($getUsers);
@@ -85,7 +85,7 @@ function onlineUsers(){
 	if (!$initialize) {
 		echo "Connection to the Database has not been successful!".mysqli_error($initialize);
 	}
-	$totalUsers = "SELECT * FROM users WHERE login = '1'";
+	$totalUsers = "SELECT * FROM f2users WHERE login = '1'";
 	$getOnlineUsers = mysqli_query($initialize, $totalUsers);
 
 	$hesabu = mysqli_num_rows($getOnlineUsers);
@@ -103,7 +103,7 @@ function bhentUsers(){
 	include '../../script/database.php';
 
 	//get users from the database
-	$userGetter = "SELECT * FROM (SELECT * FROM users ORDER BY id DESC) as r ORDER BY id";
+	$userGetter = "SELECT * FROM (SELECT * FROM f2users ORDER BY id DESC) as r ORDER BY id";
 	$allUsers = mysqli_query($initialize, $userGetter);
 
 	if (mysqli_num_rows($allUsers) > 0) {
@@ -115,6 +115,14 @@ function bhentUsers(){
 			$nameOfFavorite = $row['favteam'];
 			$dateOfRegistration = $row['regdate'];
 			$systName = $row['alias'];
+			$limitardos = $row['unomas'];
+			$userStatus = $row['login'];
+
+			if($userStatus == 0){
+				$realStat = 'Inactive';
+			}elseif ($userStatus == 1) {
+				$realStat = 'Active';
+			}
 			
 
 			/*Display The Results Depending on thecredit or debit value
@@ -123,35 +131,19 @@ function bhentUsers(){
 				print_r($key . $value);
 			}*/
 			//html data
-			$showData = "<div class='table-responsive'>";
-			$showData .= "<table class='table table-dark' id='multichange'>
-							<caption>Broad Horizons Users</caption>";
-			$showData .= "
-							<thead>
-                                <tr>
-                                <th scope='col'>Username</th>
-                                <th scope='col'>Phone</th>
-                                <th scope='col'>Favorite Team</th>
-                                <th scope='col'>Date Of Registration</th>
-                                <th scope='col'>Actions</th>
-                                </tr>
-                            </thead>";
-			$showData .= "<tbody>
-							<tr class='mt-5'>
+			
+			$showData = "<tr class='mt-5'>
 								<td><a class='text-lg text-success' href='#'>$nameOfUser</a></td>
 								<td>$phNumber</td>
 								<td>$nameOfFavorite</td>
-								<td>$dateOfRegistration</td>
+								<td>$realStat</td>
 								<td>
 									<button class='btn btn-primary' name='$systName'><i class='fas fa-eye'></i></button>
 									<button id='delbtn' class='btn btn-danger my-people' name='$systName' onclick='deleteData(this.name)'><i class='fas fa-trash-alt'></i></button>
 
 									<button class='btn btn-warning' name='$systName'><i class='fas fa-edit'></i></button>
 								</td>
-							</tr>
-						</tbody>";
-			$showData .= "</table>";
-			$showData .= "</div>";
+							</tr>";
 
 			echo $showData;
 		}

@@ -11,6 +11,165 @@ body {
   position: relative;
 }
 
+.nav-f2-bg {
+  background: #5e72e4;
+  color: #ccc;
+}
+
+.icon-success {
+  color: #2bffc6;
+}
+
+.icon-pinkie {
+  color: #e14eca;
+}
+
+.icon-info {
+  color: #5e72e4;
+}
+
+.f2-btn {
+  background: #5e72e4;
+  color: #ccc;
+  font-family: sans-serif;
+}
+
+.f2-table {
+  background: #32325d;
+  color: #2bffc6;
+}
+
+.section-heading {
+  text-align: center;
+  color: #ccc;
+  text-transform: uppercase;
+  padding: 2rem;
+  font-family: "Roboto";
+  width: 60%;
+  margin: 0 auto;
+  border: 0.5px solid #2bffc6;
+  outline: 1px solid #e14ecbe0;
+  outline-offset: 0.5em;
+  margin-bottom: 1rem;
+}
+
+.my-footer {
+  background: #5e72e4;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+#multichange {
+  font-size: 0.75rem;
+}
+
+.f2-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 85px 100px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
+  text-align: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin: 30px;
+}
+.f2-card-image span {
+  font-size: 4rem;
+  font-weight: bold;
+  display: block;
+  margin-top: 0rem;
+}
+.f2-card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.f2-card-image {
+  grid-area: image;
+}
+
+.f2-card-text {
+  grid-area: text;
+  background: #32325d;
+  color: #ccc;
+  outline: 0.5px solid #e14eca;
+}
+.f2-card-text p {
+  font-size: 15px;
+  font-weight: 300;
+}
+.f2-card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.f2-card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  outline: 0.5px solid #e14eca;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #32325d;
+}
+
+.f2-card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+
+.f2-card-text .date {
+  font-size: 13px;
+}
+
+.image-1, .image-2, .image-3 {
+  background: #32325d;
+}
+
+#mbn-results, #mbc-results {
+  margin: 0;
+  border: 1px solid silver;
+  z-index: 9999;
+  overflow: scroll;
+  height: 250px;
+}
+
+.many {
+  overflow-y: scroll;
+  height: 20rem;
+}
+
+.user-wrap, .movies-wrap {
+  margin-top: 1rem;
+  border: 1px dotted #32325d;
+  border-radius: 0.5rem;
+  background: #32325d;
+  padding: 2rem;
+  color: #ccc;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+/**********************************************
+****************Mobile Devices*****************
+**********************************************/
+@media (max-width: 768px) {
+  #multichange {
+    font-size: 0.5rem;
+  }
+}
 .loader {
   position: fixed;
   background-color: black;

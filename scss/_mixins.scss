@@ -1,0 +1,9 @@
+@mixin appl{
+    margin-top: 1rem;
+    border: 1px dotted $theme;
+    border-radius: .5rem;
+    background: $theme;
+    padding: 2rem;
+    color: $white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
