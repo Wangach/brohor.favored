@@ -178,6 +178,14 @@ body {
   .f2-table {
     font-size: 0.5rem;
   }
+
+  .users {
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "data" "adding";
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
 }
 /*Custom Loaders*/
 .loader {

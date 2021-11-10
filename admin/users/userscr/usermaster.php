@@ -138,10 +138,9 @@ function bhentUsers(){
 								<td>$nameOfFavorite</td>
 								<td>$realStat</td>
 								<td>
-									<button class='btn btn-primary' name='$systName'><i class='fas fa-eye'></i></button>
+									<button id='viewbtn' data-toggle='modal' data-target='#viewUserModal' class='btn btn-primary' name='$systName' onclick='viewUser(this.name)'><i class='fas fa-eye'></i></button>
 									<button id='delbtn' class='btn btn-danger my-people' name='$systName' onclick='deleteData(this.name)'><i class='fas fa-trash-alt'></i></button>
-
-									<button class='btn btn-warning' name='$systName'><i class='fas fa-edit'></i></button>
+									<button id='signoutbtn' class='btn btn-warning' name='$systName' onclick='admLogoutUser(this.name)'><i class='fas fa-sign-out-alt'></i></button>
 								</td>
 							</tr>";
 

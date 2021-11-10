@@ -67,6 +67,36 @@ body {
   font-size: 0.75rem;
 }
 
+.active {
+  color: #28a745;
+  animation-name: animateSuccess;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.inactive {
+  color: #dc3545;
+  animation-name: animateDanger;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animateSuccess {
+  from {
+    color: #28a745;
+  }
+  to {
+    color: #ccc;
+  }
+}
+@keyframes animateDanger {
+  from {
+    color: #dc3545;
+  }
+  to {
+    color: #ccc;
+  }
+}
 .f2-card {
   display: grid;
   grid-template-columns: 1fr;
@@ -160,6 +190,48 @@ body {
   padding: 2rem;
   color: #ccc;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.vuser_holder {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 90px 60px;
+  grid-template-areas: "logo" "heading" "miscellaneous";
+}
+
+.mhd {
+  grid-area: heading;
+  text-align: center;
+  margin: 2rem;
+  color: #381d2a;
+}
+
+.team-logo {
+  grid-area: logo;
+  display: block;
+  text-align: center;
+}
+.team-logo img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.misc {
+  grid-area: miscellaneous;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "phone status";
+  color: #381d2a;
+}
+
+.phn {
+  grid-area: phone;
+}
+
+.act-stat {
+  grid-area: status;
 }
 
 /**********************************************

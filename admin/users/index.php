@@ -26,7 +26,7 @@
 			<span></span>
 		</div>
     </div>
-	
+
 	<nav class="navbar navbar-expand-md navbar-light nav-f2-bg">
 	  <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
 	    <span class="navbar-toggler-icon"></span>
@@ -94,10 +94,10 @@
 	    					<h4 class="text-light text-uppercase mb-0">Dashboard</h4>
 	    				</div><!--/column/-->
 	    				<div class="col-md-4">
-	    					
+
 	    				</div><!--/column/-->
 	    				<div class="col-md-4">
-	    					
+
 	    				</div><!--/column/-->
 	    			</div><!--/.row/-->
 	    		</div><!--/col-lg-9/-->
@@ -105,8 +105,8 @@
 	    	</div><!--/row/-->
 	    </div><!--/.container-fluid/-->
 	  </div>
-	</nav>	
-	
+	</nav>
+
 	<main>
 	<section id="usersf">
 			<div class="container-fluid">
@@ -127,7 +127,7 @@
 									</div><!--f2-card-text-->
 								</div><!--f2-card-->
 							</div><!--/col-sm-4/-->
-	
+
 							<div class="col-sm-5 p-2">
 								<div class="f2-card card-warning">
 									<div class="f2-card-image image-2">
@@ -169,13 +169,29 @@
 													<th scope='col'>Actions</th>
 												</tr>
 											</thead>
-											<tbody>
+											<tbody id="users">
 												<?php bhentUsers(); ?>
 											</tbody>
 										</table>
 									</div><!--table-responsive-->
 								</div><!--/col-sm-12/-->
 							</div><!--row/-->
+							<!--ViewUser Modal -->
+							<div class="modal fade bd-example-modal-sm" id="viewUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<!-- <div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLongTitle">View User</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+										</button>
+									</div> -->
+									<div id="viewUserbody" class="modal-body">
+											
+									</div><!--#viewUserBody-->
+								</div><!--modal-content-->
+							</div><!--modal-dialog-->
+							</div><!--modal/-->
 						</div><!--/.user-wrap/-->
 					</div><!--/.end of column/-->
 				</div><!--/.row/-->
@@ -183,7 +199,7 @@
 		</section>
 	</main>
 
-	
+
 
 	<!--Footer-->
 	<div class="container-fluid">
@@ -222,30 +238,15 @@
 			  	let req = new XMLHttpRequest;
 				req.onreadystatechange = function(){
 					if (this.readyState == 4 && this.status == 200) {
+						let table_body = document.getElementById('users');
 						let frmdb = this.responseText;
+						table_body.innerHTML = frmdb;
 						console.log(frmdb);
-						//check the text for error or success
-						if (frmdb.includes('Successful') > 0) {
-							//successful request
-							Swal.fire(
+						Swal.fire(
 						      'Deleted!',
 						      user + ' has been deleted Successfully.',
 						      'success'
 						    )
-						}else if(frmdb.includes('Error') > 0){
-							//failed request
-							Swal.fire(
-						      'Network!',
-						      'Issue In Handling Request.',
-						      'error'
-			    			)
-						}else{
-							Swal.fire(
-						      'Uknown!',
-						      'What Are You Saying?',
-						      'error'
-						    )
-						}
 					}
 				}
 				req.open('GET', 'userscr/del_user.php?uname='+user);
@@ -260,6 +261,33 @@
 			  }
 			})
 		}
+
+		//View user details
+		function viewUser(user){
+			let userModalBody = document.getElementById("viewUserbody");
+			let req = new XMLHttpRequest;
+				req.onreadystatechange = function(){
+					if (this.readyState == 4 && this.status == 200) {
+						let frmdb = this.responseText;
+						console.log(frmdb);
+						userModalBody.innerHTML = frmdb;
+						let userStatus = document.getElementsByClassName("act-stat");
+						console.log(userStatus);
+						if (userStatus[0].innerHTML == "Active") {
+							userStatus[0].classList.add("active");
+							// console.log(userStatus);
+						}else if(userStatus[0].innerHTML == "Inactive"){
+							
+							userStatus[0].classList.add("inactive");
+						}
+
+					}
+				}
+				req.open('GET', 'userscr/viewuser.php?uname='+user);
+				req.send();
+		}
+
+		//Logout User
 		function refl(){
 			location.reload();
 		}

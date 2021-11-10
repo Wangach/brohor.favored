@@ -46,3 +46,31 @@
   #multichange {
     font-size: .75rem;
   }
+  .active {
+    color: $success;
+    animation-name: animateSuccess;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .inactive {
+    color: $danger;
+    animation-name: animateDanger;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes animateSuccess {
+    from {
+      color: $success;
+    }
+    to {
+      color: #ccc;
+    }
+  }
+  @keyframes animateDanger {
+    from {
+      color: $danger;
+    }
+    to {
+      color: #ccc;
+    }
+  }

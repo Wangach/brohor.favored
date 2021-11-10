@@ -158,5 +158,14 @@
     .f2-table {
         @include resizeTable;
     }
+    .users {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+        // grid-template-rows: 5rem 1fr;
+        grid-template-areas: "data" "adding";
+        padding: 2rem;
+        border-radius: .5rem;
+        
+    }
 }
   
