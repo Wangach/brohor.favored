@@ -78,35 +78,38 @@ looserform.addEventListener("submit", function (event) {
 
             if (this.readyState == 4 && this.status == 200){
               let frmdb = this.responseText;
-              console.log(frmdb);
-              //check the text for error or success
-              if (frmdb.includes('Successful') > 0) {
-                //successful request
-                Swal.fire(
-                    'Recorded!',
-                      frmdb,
-                    'success'
-                  )
-              }else if(frmdb.includes('Error') > 0){
-                //failed request
-                Swal.fire(
-                    'Network!',
-                    'Issue In Handling Request.',
-                    'error'
-                  )
-              }else{
-                Swal.fire(
-                    'Uknown!',
-                    'What Are You Saying?',
-                    'error'
-                  )
-              }
+              Swal.fire(
+                      'Recorded!',
+                        'successful match',
+                      'success'
+                    )
+              setTimeout(() => {
+                let looserHolder = document.querySelector('#lholder');
+                let clearBtn = document.getElementById('clear');
+                looserHolder.innerHTML = frmdb;
+                submitBtn.removeAttribute('disabled', 'true');
+                clearBtn.removeAttribute('disabled', 'true');
+                clearBtn.addEventListener('click', () => {
+                  document.getElementById('hp').value = '';
+                  document.getElementById('ap').value = '';
+                  document.getElementById('ht').value = '';
+                  document.getElementById('at').value = '';
+                  document.getElementById('hsc').value = '';
+                  document.getElementById('asc').value = '';
+                  document.getElementById('mtyp').value = '';
+                  document.getElementById('coup').value = '';
+
+                  //disable the button 2 secs after click
+                  setTimeout(() => {
+                    clearBtn.setAttribute('disabled', 'true');
+                  }, 2000)
+                })
+                
+              }, 3000);
             }
         }
         let looserData = new FormData(looserform);
         req.send(looserData);
-        //Execute clearing func
-        setTimeout(clearLooserForm, 10000);
 
         }
         else if (result.dismiss) {
@@ -118,28 +121,9 @@ looserform.addEventListener("submit", function (event) {
         }
       })
 });
-
-//defining the above functions
-function clearLooserForm(){
-  location.reload();
-  let homPlayValue = document.getElementById('hp').value;
-  let awayPlayValue =  document.getElementById('ap').value;
-  let homTeamVal = document.getElementById('ht').value;
-  let awTeamVal = document.getElementById('at').value;
-  let homScrVal = document.getElementById('hsc').value;
-  let awScrVal = document.getElementById('asc').value;
-  let mTypVal = document.getElementById('mtyp').value;
-  let vouchVal = document.getElementById('coup').value;
-
-  // clear the above fields
-  homPlayValue.value = '';
-  awayPlayValue.value = '';
-  homTeamVal.value = '';
-  awTeamVal.value = '';
-  homScrVal.value = '';
-  awScrVal.value = '';
-  mTypVal.value = '';
-  vouchVal.value = '';
+//Refreshing the total games
+const refreshFunc = () => {
+  
 }
 //Payments
 //Showing Users Latest Transactions

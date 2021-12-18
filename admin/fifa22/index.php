@@ -228,6 +228,7 @@ include 'scripts/f22counters.php';
 								<input type="text" class="form-control" placeholder="Apply Code..." id="coup" name="coup" value="N/A">
 							</div><!--/.form-group/-->
 							<button type="submit" id="f2-looser-btn" class="btn btn-primary" name="recordm">Record</button>
+							<button type="button" id="clear" class="btn btn-warning" disabled="true">Clear</button>
 						</form>
 				      </div>
 				    </div>
@@ -291,7 +292,7 @@ include 'scripts/f22counters.php';
 													<th class='text-success'>Winner</th>
 													</tr>
 												</thead>
-												<tbody>
+												<tbody id='lholder'>
 												  <?php
 													recLooser();
 												  ?>

@@ -74,15 +74,48 @@ $output = '';
 
 		//check whether submission is successful
 		if ($psh) {
-			$output = "Successful! <strong class='text text-danger'>".$rMate.
-            "</strong> Has Lost While <strong class='text text-success'>".$champion.
-            "</strong> Has Won At ".$gType." in match: <strong class='text text-info'>".$holder."</strong>";
+			$showData = '';
+			$matchGetter = "SELECT * FROM (SELECT * FROM f2looser ORDER BY id DESC LIMIT 4) as r ORDER BY id";
+			$latestMatches = mysqli_query($dbcon, $matchGetter);
 
-			echo $output;
+			if (mysqli_num_rows($latestMatches) > 0) {
+				while ($row = mysqli_fetch_assoc($latestMatches)) {
+					#get the rows individual data
+					$hmPl = $row['Hplayer'];
+					$awPl = $row['Aplayer'];
+					$hmTm = $row['Hteam'];
+					$awTm = $row['Ateam'];
+					$hmSc = $row['Hscore'];
+					$awSc = $row['Ascore'];
+					$loss = $row['looser'];
+					$wnr = $row['winner'];
+					$mId = $row['matchid'];
+
+					/*Display The Results Depending on thecredit or debit value
+					//Will do this later since I am on a deadline RN
+					foreach ($row as $key => $value) {
+						print_r($key . $value);
+					}*/
+					//html data
+					$showData = "
+									<tr>
+										<td>$hmPl</td>
+										<td>$awPl</td>
+										<td>$hmTm</td>
+										<td>$awTm</td>
+										<td>$hmSc</td>
+										<td>$awSc</td>
+										<td class='text-danger'>$loss</td>
+										<td class='text-success'>$wnr</td>
+									</tr>";
+
+					echo $showData;
+				}
+			}
 		}else{
-			$output = "There Has Been An Error In Handling Your Request!";
+			$showData = "There Has Been An Error In Handling Your Request!".mysqli_error($dbcon);
 
-			echo $output;
+			echo $showData;
 			//echo "There Has Been An Error ".mysqli_error($initialize);
 		}
 
