@@ -123,7 +123,9 @@ include 'scripts/f22counters.php';
 									</div>
 									<div class="f2-card-text">
 									  <span class="date fas fa-sync"></span>
-									  <h2><?php looserCnt(); ?></h2>
+									  <div class="looserCnt">
+											
+									  </div>
 									  <p>Looser Games</p>
 									</div><!--f2-card-text-->
 									<div class="f2-card-stats">
@@ -164,7 +166,7 @@ include 'scripts/f22counters.php';
 									<div class="f2-card-text">
 									  <span class="date fas fa-sync"></span>
 									  <h2>2000</h2>
-									  <p>Total Games</p>
+									  <p>Total Transactions</p>
 									</div><!--f2-card-text-->
 									<div class="f2-card-stats">
 									  <div class="stat">
@@ -254,7 +256,9 @@ include 'scripts/f22counters.php';
 							<button type="submit" id="f2-txn-btn" class="btn f2-btn" name="searchtr"><i class="fas fa-search"></i></button>
 						</form>
 				      </div>
-					  <div id="results"></div>
+					  <div id="results">
+						 
+					  </div>
 				    </div>
 				  </div>
 				</div>

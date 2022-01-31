@@ -1,57 +1,22 @@
-// window.onload = () =>{
-//    //alert(`Hello`);Get Button
-//    let menuBar = document.querySelector('#sidebar-btn');
-//    let sidebar = document.querySelector('.f2-sidebar');
-//    menuBar.addEventListener('click', () =>{
-//        sidebar.classList.toggle('return');
-//     //    linkspans.classList.toggle('hide');
-//     //    linkicons.classList.add('show-ic');
-//    })
 
-// }
-
-//Get Items
-// const looserForm = document.getElementById("f2-looser-form");
-// const submitLooserButton = document.getElementById('#f2-looser-btn');
-// let errorForm = false;
-
-// looserForm.addEventListener('submit', (event)=> {
-//     event.preventDefault();
-//     let formDets = [
-//         document.getElementById('hp').value,
-//         document.getElementById('ap').value,
-//         document.getElementById('ht').value,
-//         document.getElementById('at').value,
-//         document.getElementById('hsc').value,
-//         document.getElementById('asc').value,
-//         document.getElementById('mtyp').value,
-//         document.getElementById('coup').value
-//     ];
-
-//     checkFormErrors(formDets);
-//     //if error has been found
-//     if(errorForm === true){
-//         // alert('Kindly Ensure that there are no errors in form');
-//         console.log(formDets);
-//     }else if(errorForm === false){
-//         alert('There are no errors in form');
-//         console.log(formDets);
-//         console.log(errorForm);
-//     }
-// })
+//when the page load
+const refUrl = './scripts/loosercounter.php';
+let holder = document.querySelector('.looserCnt');
+let countLooser = () => {
+  async function fetchLoosers(){
+    let response = await fetch(refUrl);
+    let data = await response.text();
+    holder.innerText = data;
+    
+  }
+  fetchLoosers();
+}
+window.onload = countLooser();
+setInterval(countLooser, 300000)
 
 
-// function checkFormErrors(arr){
-// 	for(let dets of arr){
-// 		if (dets === '') {
-// 			errorForm = true;
-// 			return errorForm;
-// 		}else{
-// 			errorForm = false;
-// 			return errorForm;
-// 		}
-// 	}
-// }
+
+/*Looser Form Submission */
 let looserform = document.querySelector("form#f2-looser-form");
 let looserUrl = looserform.getAttribute("action");
 let submitBtn = document.querySelector('#f2-looser-btn');
@@ -90,21 +55,12 @@ looserform.addEventListener("submit", function (event) {
                 submitBtn.removeAttribute('disabled', 'true');
                 clearBtn.removeAttribute('disabled', 'true');
                 clearBtn.addEventListener('click', () => {
-                  document.getElementById('hp').value = '';
-                  document.getElementById('ap').value = '';
-                  document.getElementById('ht').value = '';
-                  document.getElementById('at').value = '';
-                  document.getElementById('hsc').value = '';
-                  document.getElementById('asc').value = '';
-                  document.getElementById('mtyp').value = '';
-                  document.getElementById('coup').value = '';
-
+                  looserform.reset();
                   //disable the button 2 secs after click
                   setTimeout(() => {
                     clearBtn.setAttribute('disabled', 'true');
                   }, 2000)
                 })
-                
               }, 3000);
             }
         }
@@ -121,11 +77,7 @@ looserform.addEventListener("submit", function (event) {
         }
       })
 });
-//Refreshing the total games
-const refreshFunc = () => {
-  
-}
-//Payments
+
 //Showing Users Latest Transactions
 let nameOfCst = document.getElementById('tn');
 let strform = document.querySelector('form#f2-search-form');
@@ -379,18 +331,18 @@ function checkRegistration(arr){
 function clearRegFields(){
 
 		location.reload();
-    
+    userForm.reset();
 		
-		let usNm = document.getElementById('jina');
-		let alNm = document.getElementById('alias');
-		let usPh = document.getElementById('ph');
-    let usFv = document.getElementById('ftm');
-		let usUn = document.getElementById('un');
+		// let usNm = document.getElementById('jina');
+		// let alNm = document.getElementById('alias');
+		// let usPh = document.getElementById('ph');
+    // let usFv = document.getElementById('ftm');
+		// let usUn = document.getElementById('un');
 
-		//reset the above fields
-		usNm.value = '';
-		alNm.value = '';
-    usPh.value = '';
-		usFv.value = '';
-		usUn.value = '';
+		// //reset the above fields
+		// usNm.value = '';
+		// alNm.value = '';
+    // usPh.value = '';
+		// usFv.value = '';
+		// usUn.value = '';
 	}

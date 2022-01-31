@@ -1,17 +1,5 @@
 <?php
 include 'database.php';
-
-//looser games
-function looserCnt(){
-    include 'database.php';
-    $getMatches = "SELECT * FROM f2looser";
-    $realGt = mysqli_query($dbcon, $getMatches);
-
-    $totalLooserMatches = mysqli_num_rows($realGt);
-
-    echo $totalLooserMatches;
-}
-
 //fair games counter
 function fairCnt(){
     include 'database.php';
