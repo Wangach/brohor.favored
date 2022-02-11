@@ -206,12 +206,29 @@ div.custom-des p a:hover {
   margin: 0 auto;
 }
 
+.btn-animate {
+  animation-name: refresh;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
 @keyframes remba {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(45deg);
+  }
+}
+@keyframes refresh {
+  0% {
+    color: red;
+    transform: rotate(0deg);
+  }
+  100% {
+    color: green;
+    transform: rotate(180deg);
   }
 }
 @media (max-width: 768px) {
@@ -394,6 +411,14 @@ div.custom-des p a:hover {
   color: rgba(16, 24, 32, 0.863);
 }
 
+#f2-fair-form {
+  text-align: center;
+}
+#f2-fair-form label {
+  font-weight: bold;
+  color: rgba(16, 24, 32, 0.863);
+}
+
 div#results {
   margin: 0;
   border: 1px solid silver;
@@ -470,6 +495,12 @@ div#results {
   background: #5e72e4;
   color: #fff;
   font-family: sans-serif;
+}
+
+#f2-fair-btn {
+  background: #ff4c52;
+  color: #fff;
+  font-family: "Rye", sans-serif;
 }
 
 .section-heading {

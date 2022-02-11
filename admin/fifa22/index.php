@@ -122,7 +122,7 @@ include 'scripts/f22counters.php';
 										</span>
 									</div>
 									<div class="f2-card-text">
-									  <span class="date fas fa-sync"></span>
+									  <span class="date fas fa-sync" id="refreshlooser"></span>
 									  <div class="looserCnt">
 											
 									  </div>
@@ -144,8 +144,10 @@ include 'scripts/f22counters.php';
 										</span>
 									</div>
 									<div class="f2-card-text">
-									  <span class="date fas fa-sync"></span>
-									  <h2><?php fairCnt(); ?></h2>
+									  <span class="date fas fa-sync" id="refreshfair"></span>
+									   <div class="fairCnt">
+											
+									  </div>
 									  <p>Fair Games</p>
 									</div><!--f2-card-text-->
 									<div class="f2-card-stats">
@@ -164,11 +166,13 @@ include 'scripts/f22counters.php';
 										</span>
 									</div>
 									<div class="f2-card-text">
-									  <span class="date fas fa-sync"></span>
-									  <h2>2000</h2>
+									  <span class="date fas fa-sync" id="refresh"></span>
+									  <div class="trCnt">
+										  
+									  </div>
 									  <p>Total Transactions</p>
 									</div><!--f2-card-text-->
-									<div class="f2-card-stats">
+									<div class="f2-card-stats" id="refreshtr">
 									  <div class="stat">
 										<button class="btn f2-btn" data-toggle="modal" data-target="#trModal"><i class="fas fa-search"></i></button>
 									  </div><!--stat-->
@@ -237,6 +241,40 @@ include 'scripts/f22counters.php';
 				  </div>
 				</div>
 				<!--Fair Play-->
+				<div class="modal fade" id="fairModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-sm" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Fair Play</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        <form action="scripts/gamechanger.php" id="f2-fair-form" method="POST">
+							<div class="form-group">
+								<label for="homet">Team 1:</label>
+								<input type="text" class="form-control" placeholder="Enter Home Team..." id="ht" name="ht">
+							</div><!--/.form-group/-->
+							<div class="form-group">
+								<label for="awat">Team 2:</label>
+								<input type="text" class="form-control" placeholder="Enter Away Team..." id="at" name="at">
+							</div><!--/.form-group/-->
+							<div class="form-group">
+								<label for="homsc">Home Score:</label>
+								<input type="number" class="form-control" placeholder="Home Player Score..." id="hsc" name="hsc">
+							</div><!--/.form-group/-->
+							<div class="form-group">
+								<label for="awasc">Away Score:</label>
+								<input type="number" class="form-control" placeholder="Away Player Score..." id="asc" name="asc">
+							</div><!--/.form-group/-->
+							<button type="submit" id="f2-fair-btn" class="btn" name="fairrec">Record</button>
+							<button type="button" id="fairclear" class="btn btn-warning" disabled="true">Clear</button>
+						</form>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 				<!-- Transactions Modal -->
 				<div class="modal fade" id="trModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				  <div class="modal-dialog modal-sm" role="document">
@@ -276,8 +314,8 @@ include 'scripts/f22counters.php';
 							<div class="col-md-12">
 								<nav>
 									<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-										<a class="nav-item nav-link active" id="nav-fair-tab" data-toggle="tab" href="#nav-fair" role="tab" aria-controls="nav-fair" aria-selected="true">Fair Games</a>
-										<a class="nav-item nav-link" id="nav-looser-tab" data-toggle="tab" href="#nav-looser" role="tab" aria-controls="nav-looser" aria-selected="false">Looser Games</a>
+										<a class="nav-item nav-link active" id="nav-looser-tab" data-toggle="tab" href="#nav-looser" role="tab" aria-controls="nav-looser" aria-selected="false">Looser Games</a>
+										<a class="nav-item nav-link" id="nav-fair-tab" data-toggle="tab" href="#nav-fair" role="tab" aria-controls="nav-fair" aria-selected="true">Fair Games</a>
 									</div>
 								</nav>
 								<div class="tab-content" id="nav-tabContent">
@@ -305,35 +343,26 @@ include 'scripts/f22counters.php';
 										</div><!--table-responsive-->
 									</div><!--tab-pane-->
 									<div class="tab-pane fade" id="nav-fair" role="tabpanel" aria-labelledby="nav-profile-tab">
+										<div class="btn-holder">
+											<button id="unpaid" class="btn btn-info">Show Unpaid</button>
+											<button id="pay" class="btn btn-info">Pay All</button>
+										</div>
 										<div class="table-responsive">
 											<table class="table f2-table">
 												<thead>
-												  <tr>
-													<th scope="col">#</th>
-													<th scope="col">First</th>
-													<th scope="col">Last</th>
-													<th scope="col">Handle</th>
-												  </tr>
+													<tr>
+													<th scope='col'>H. Team</th>
+													<th scope='col'>A. Team</th>
+													<th scope='col'>H. Score</th>
+													<th scope='col'>A. Score</th>
+													<th class='text-danger'>Payment Status</th>
+													<th class='text-warning'>Id</th>
+													</tr>
 												</thead>
-												<tbody>
-												  <tr>
-													<th scope="row">1</th>
-													<td>Mark</td>
-													<td>Otto</td>
-													<td>@mdo</td>
-												  </tr>
-												  <tr>
-													<th scope="row">2</th>
-													<td>Jacob</td>
-													<td>Thornton</td>
-													<td>@fat</td>
-												  </tr>
-												  <tr>
-													<th scope="row">3</th>
-													<td>Larry</td>
-													<td>the Bird</td>
-													<td>@twitter</td>
-												  </tr>
+												<tbody id='fholder'>
+												  <?php
+													recFair();
+												  ?>
 												</tbody>
 											  </table>
 										</div><!--table-responsive-->

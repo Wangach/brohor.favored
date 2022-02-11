@@ -8,6 +8,7 @@ CREATE TABLE `systwone`.`f2looser` ( `id` INT NOT NULL AUTO_INCREMENT, `Hplayer`
 
 
 /*Fifa 22 Fair Game*/
+CREATE TABLE `systwone`.`f2fair` ( `id` INT NOT NULL AUTO_INCREMENT , `Hteam` VARCHAR(100) NOT NULL , `Ateam` VARCHAR(100) NOT NULL , `Hscore` INT NOT NULL , `Ascore` INT NOT NULL , `matchId` VARCHAR(100) NOT NULL , `paymentstat` INT NOT NULL DEFAULT '0' , `timeplayed` DATETIME on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 
 -- Fifa 22 Transactions table

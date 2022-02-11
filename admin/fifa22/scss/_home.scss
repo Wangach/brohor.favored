@@ -199,7 +199,6 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-  
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background: #32325d;
@@ -213,6 +212,13 @@
     padding:10px;
   }
   #f2-looser-form {
+    text-align: center;
+    label{
+      font-weight: bold;
+      color: $theme;
+    }
+  }
+  #f2-fair-form {
     text-align: center;
     label{
       font-weight: bold;

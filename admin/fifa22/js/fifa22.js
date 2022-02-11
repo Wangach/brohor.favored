@@ -1,18 +1,52 @@
 
 //when the page load
 const refUrl = './scripts/loosercounter.php';
-let holder = document.querySelector('.looserCnt');
-let countLooser = () => {
-  async function fetchLoosers(){
-    let response = await fetch(refUrl);
-    let data = await response.text();
-    holder.innerText = data;
-    
+const fairUrl = './scripts/faircounter.php';
+const transUrl = './scripts/trcounter.php';
+let looserHolder = document.querySelector('.looserCnt');
+let fairHolder = document.querySelector('.fairCnt');
+let trHolder = document.querySelector('.trCnt');
+let refreshlost = document.querySelector('#refreshlooser');
+let refreshTrans = document.querySelector('#refreshtr');
+
+
+(function countLooser() {
+  let fetchLoosers = () => {
+    let loader = 'Loading...';
+    looserHolder.innerText = loader;
+    fetch(refUrl)
+    .then(response => response.text())
+    .then(data =>  looserHolder.innerText = data );
   }
   fetchLoosers();
-}
-window.onload = countLooser();
-setInterval(countLooser, 300000)
+  setInterval(fetchLoosers, 300000);
+})();
+
+(function countFair() {
+  let fetchFairGames = () => {
+    let loader = 'Loading...';
+    fairHolder.innerText = loader;
+    fetch(fairUrl)
+    .then(response => response.text())
+    .then(data =>  fairHolder.innerText = data );
+  }
+  fetchFairGames();
+  setInterval(fetchFairGames, 300000);
+})();
+
+(function countTransactions(){
+  
+  let fetchTrs = () => {
+    let loader = 'Loading...';
+    trHolder.innerText = loader;
+    fetch(transUrl)
+    .then(response => response.text())
+    .then(data =>  trHolder.innerText = data );
+  }
+  
+  fetchTrs();
+  setInterval(fetchTrs, 300000);
+})();
 
 
 
@@ -72,6 +106,59 @@ looserform.addEventListener("submit", function (event) {
           swal.fire(
             'Cancelled',
             'Process Has Been Terminated',
+            'error'
+          )
+        }
+      })
+});
+//Fair Form Submission
+let fairform = document.querySelector("form#f2-fair-form");
+let fairFormUrl = fairform.getAttribute("action");
+let fairBtn = document.querySelector('#f2-fair-btn');
+
+fairform.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+
+  Swal.fire({
+        title: 'Are you sure?',
+        text: "Record Match",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes G'
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          fairBtn.setAttribute('disabled', 'true');
+          let formOptions = {
+            method : fairform.getAttribute('method'),
+            body : new FormData(fairform)
+          };
+          fetch(fairFormUrl, formOptions)
+          .then(function(response) {
+            return response.text();
+            console.log(response);
+          })
+          .then(setTimeout(function(data) {
+            let fairHolder = document.querySelector('#fholder');
+            fairHolder.innerHTML = data;
+            let fairClearBtn = document.getElementById('fairclear');
+            fairClearBtn.removeAttribute('disabled', 'true');
+            fairClearBtn.addEventListener('click', () => {
+              fairform.reset();
+              fairBtn.removeAttribute('disabled', 'true');
+              fairClearBtn.setAttribute('disabled', 'true');
+            });
+            console.log(data);
+          }, 3000))
+
+        }
+        else if (result.dismiss) {
+          swal.fire(
+            'Cancelled',
+            'Match Has Not Been Recorded',
             'error'
           )
         }
@@ -222,7 +309,37 @@ function clearFields(){
     pmeth.value = '';
 		amtOfCash.value = '';
 		expl.value = '';
-	}
+}
+
+//Making Fair Play Payments
+let showMatches = document.getElementById('unpaid');
+let fpayBtn = document.getElementById('pay');
+let payUrl = './scripts/payfair.php';
+let getFairUrl = './scripts/funpaid.php'
+
+showMatches.addEventListener('click', () => {
+  fetch(getFairUrl)
+  .then((response) => {
+    return response.text();
+  })
+  .then((data)=> {
+    alert(`There are ${data} Unpaid matches in the Database`);
+  })
+})
+
+fpayBtn.addEventListener('click', () => {
+  fetch(payUrl)
+  .then((response) => {
+    return response.text();
+  })
+  .then((data) => {
+    Swal.fire(
+      'Good job!',
+      data,
+      'success'
+    )
+  })
+})
 
   //Registering A new User
 let userForm = document.querySelector('form#f2-user-form');
@@ -332,17 +449,4 @@ function clearRegFields(){
 
 		location.reload();
     userForm.reset();
-		
-		// let usNm = document.getElementById('jina');
-		// let alNm = document.getElementById('alias');
-		// let usPh = document.getElementById('ph');
-    // let usFv = document.getElementById('ftm');
-		// let usUn = document.getElementById('un');
-
-		// //reset the above fields
-		// usNm.value = '';
-		// alNm.value = '';
-    // usPh.value = '';
-		// usFv.value = '';
-		// usUn.value = '';
 	}
