@@ -3,13 +3,24 @@
 const refUrl = './scripts/loosercounter.php';
 const fairUrl = './scripts/faircounter.php';
 const transUrl = './scripts/trcounter.php';
+let looserform = document.querySelector("form#f2-looser-form");
+let looserUrl = looserform.getAttribute("action");
+let submitBtn = document.querySelector('#f2-looser-btn');
 let looserHolder = document.querySelector('.looserCnt');
 let fairHolder = document.querySelector('.fairCnt');
 let trHolder = document.querySelector('.trCnt');
 let refreshlost = document.querySelector('#refreshlooser');
 let refreshTrans = document.querySelector('#refreshtr');
+let clearBtn = document.getElementById('clear');
 
 
+//disable the clear button by default
+clearBtn.addEventListener('click', () => {
+  looserform.reset();
+  setTimeout(() => {
+    clearBtn.setAttribute('disabled', 'true');
+  }, 3000)
+});
 (function countLooser() {
   let fetchLoosers = () => {
     let loader = 'Loading...';
@@ -51,12 +62,11 @@ let refreshTrans = document.querySelector('#refreshtr');
 
 
 /*Looser Form Submission */
-let looserform = document.querySelector("form#f2-looser-form");
-let looserUrl = looserform.getAttribute("action");
-let submitBtn = document.querySelector('#f2-looser-btn');
+
 
 looserform.addEventListener("submit", function (event) {
   event.preventDefault();
+  clearBtn.removeAttribute("disabled");
 
 
   Swal.fire({
@@ -87,7 +97,6 @@ looserform.addEventListener("submit", function (event) {
                 let clearBtn = document.getElementById('clear');
                 looserHolder.innerHTML = frmdb;
                 submitBtn.removeAttribute('disabled', 'true');
-                clearBtn.removeAttribute('disabled', 'true');
                 clearBtn.addEventListener('click', () => {
                   looserform.reset();
                   //disable the button 2 secs after click
